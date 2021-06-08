@@ -10,7 +10,7 @@ class Product extends Model
     use HasFactory;
     protected $table = 'products';
 
-    protected $fillable=['name','description','quantity', 'trademark_id' ,'barcode'];
+    protected $fillable=['name','description','quantity', 'trademark_id', 'subcategory_id', 'category_id','barcode'];
     
 
     //alcanze con el modelo Trademark
