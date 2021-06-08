@@ -24,5 +24,17 @@ class Product extends Model
     {
         return $this->belongsTo(Product_variation::class);
     }
+    
 
+    //alcanze con el modelo SubCategory
+    public function SubCate()
+    {
+        return $this->belongsTo(SubCategory::class);
+    }
+
+    //alcanze con el modelo Category
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

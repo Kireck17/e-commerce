@@ -12,9 +12,16 @@ class Attribute_value extends Model
 
     protected $fillable=['attribute_id','value'];
 
+    //alcanze con el modelo Attribute_value_variation
+    public function attributValueVari()
+    {
+        return $this->belongsTo(Attribute_value_variation::class);
+    }
+
     //alcanze con el modelo Attribute
     public function attribut()
     {
         return $this->belongsTo(Attribute::class);
     }
+    
 }

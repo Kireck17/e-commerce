@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Trademark;
 
+
 class TrademarkSeeder extends Seeder
 {
     /**
@@ -92,6 +93,24 @@ class TrademarkSeeder extends Seeder
 
         $trademark = new Trademark ();
         $trademark->name = 'Sony is real';
+        $trademark=new Trademark();
+        $trademark->name="Redmi";
+        $trademark->save();
+
+        $trademark=new Trademark();
+        $trademark->name="Samsung";
+        $trademark->save();
+
+        $trademark=new Trademark();
+        $trademark->name="Sony";
+        $trademark->save();
+
+        $trademark=new Trademark();
+        $trademark->name="Alcatel";
+        $trademark->save();
+
+        $trademark=new Trademark();
+        $trademark->name="LG";
         $trademark->save();
     }
 }
