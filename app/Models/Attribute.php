@@ -13,4 +13,10 @@ class Attribute extends Model
     protected $fillable=['type'];
     
 
+    //alcanze con el modelo Attribute_value
+    public function attribut_value()
+    {
+        return $this->belongsTo(Attribute_value::class);
+    }
+
 }
