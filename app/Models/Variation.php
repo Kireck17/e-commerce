@@ -8,7 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Variation extends Model
 {
     use HasFactory;
-    protected $table = 'variation';
-
-    //protected $fillable=['type'];
+    protected $table = 'variations';
 }
