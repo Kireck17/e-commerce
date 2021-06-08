@@ -58,4 +58,35 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+//modelos
+
+    //alcanze con el modelo Direction
+    public function address()
+    {
+        return $this->belongsTo(Direction::class);
+    }
+
+    //alcanze con el modelo Phone
+    public function phone()
+    {
+        return $this->belongsTo(Phone::class);
+    }
+
+    //alcanze con el modelo Order
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
+    //alcanze con el modelo Shipping_package
+    public function shipp_pack()
+    {
+        return $this->belongsTo(Shipping_package::class);
+    }
+
+    //alcanze con el modelo Product_user
+    public function product_user()
+    {
+        return $this->belongsTo(Product_user::class);
+    }
 }
