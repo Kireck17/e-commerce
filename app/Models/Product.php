@@ -10,7 +10,7 @@ class Product extends Model
     use HasFactory;
     protected $table = 'products';
 
-    protected $fillable=['name','description','quantity', 'trademark_id' ,'barcode'];
+    protected $fillable=['name','description','category_id','subcategory', 'trademark_id' ,'barcode'];
     
 
     //alcanze con el modelo Trademark
@@ -24,5 +24,17 @@ class Product extends Model
     {
         return $this->belongsTo(Product_variation::class);
     }
+    
 
+    //alcanze con el modelo SubCategory
+    public function SubCate()
+    {
+        return $this->belongsTo(SubCategory::class);
+    }
+
+    //alcanze con el modelo Category
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

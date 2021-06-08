@@ -8,10 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Attribute extends Model
 {
     use HasFactory;
-    protected $table = 'attribute';
+    protected $table = 'attributes';
 
     protected $fillable=['type'];
-    
 
     //alcanze con el modelo Attribute_value
     public function attribut_value()
