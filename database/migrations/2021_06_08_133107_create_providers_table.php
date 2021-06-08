@@ -16,7 +16,7 @@ class CreateProvidersTable extends Migration
         Schema::create('providers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('origin_id');
-            $table->string('name',255);
+            $table->string('name');
             $table->timestamps();
             $table->foreign('origin_id')
             ->references('id')
@@ -52,6 +52,11 @@ class CreateProvidersTable extends Migration
         Schema::create('providers', function (Blueprint $table) {
             $table->dropForeign(['origin_id']);
         });
+        Schema::create('provider_variation', function (Blueprint $table) {
+            $table->dropForeign(['provider_id']);
+            $table->dropForeign(['variation_id']);
+        });
         Schema::dropIfExists('providers');
+        Schema::dropIfExists('provider_variation');
     }
 }
