@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Trademark extends Model
 {
     use HasFactory;
-    protected $table = 'marks';
+    protected $table = 'trademarks';
 
-    protected $fillable=['name','photo'];
+    protected $fillable=['name'];
     
 
     //alcanze con el modelo product
