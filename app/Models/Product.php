@@ -79,4 +79,11 @@ class Product extends Model
     {
         return $this->belongsTo(Order::class);
     }
+
+    //alcanze con el modelo Product_variation
+    public function prod_vari()
+    {
+        return $this->belongsTo(Product_variation::class);
+    }
+
 }
