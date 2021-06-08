@@ -1442,6 +1442,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/jetstream/zipball/38f756d615a58dc16d2949ef69187b6d7487fa1c",
                 "reference": "38f756d615a58dc16d2949ef69187b6d7487fa1c",
+<<<<<<< HEAD
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1449,6 +1450,9 @@
                         "preferred": true
                     }
                 ]
+=======
+                "shasum": ""
+>>>>>>> 9e7275b55fe12dce55e3efe37f271770046b2e87
             },
             "require": {
                 "ext-json": "*",
@@ -6468,6 +6472,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/77fb31eb48de9971af1fe0c6b47be3da6b869dfd",
                 "reference": "77fb31eb48de9971af1fe0c6b47be3da6b869dfd",
+<<<<<<< HEAD
                 "shasum": "",
                 "mirrors": [
                     {
@@ -6475,6 +6480,9 @@
                         "preferred": true
                     }
                 ]
+=======
+                "shasum": ""
+>>>>>>> 9e7275b55fe12dce55e3efe37f271770046b2e87
             },
             "require": {
                 "illuminate/console": "^8.0|^9.0",
