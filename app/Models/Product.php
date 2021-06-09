@@ -19,10 +19,10 @@ class Product extends Model
         return $this->belongsTo(Trademark::class);
     }
 
-    //alcanze con el modelo Product_variation
-    public function prod_vari()
+    //alcanze con el modelo variation
+    public function vari()
     {
-        return $this->belongsTo(Product_variation::class);
+        return $this->belongsTo(Variation::class);
     }
     
 

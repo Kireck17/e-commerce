@@ -10,27 +10,15 @@ class Variation extends Model
     use HasFactory;
     protected $table = 'variations';
 
-    //protected $fillable=['attribute_value_variations','product_variations'];
-    
-
-    //alcanze con el modelo Attribute_value_variation
-    public function attribut_va_vari()
+    public function attribute_value()
     {
-        return $this->belongsTo(Attribute_value_variation::class);
+        return $this->belongsToMany(AttributeValue::class);
     }
 
-    //alcanze con el modelo Product_variation
-    public function ProdVari()
+    //alcanze con el modelo Product
+    public function product()
     {
-        return $this->belongsTo(Product_variation::class);
+        return $this->belongsToMany(Product::class);
     }
-
-    //alcanze con el modelo Kid_Detail
-    public function kidDet()
-    {
-        return $this->belongsTo(Kid_Detail::class);
-    }
-
-    
 
 }

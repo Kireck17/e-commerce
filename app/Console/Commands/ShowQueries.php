@@ -11,7 +11,8 @@ use App\Models\SubCategory;
 use App\Models\Variation;
 use App\Models\Kit;
 use App\Models\Attribute;
-use App\Models\Attribute_value;
+use App\Models\AttributeValue;
+use App\Models\Product;
 
 class ShowQueries extends Command
 {
@@ -61,15 +62,6 @@ class ShowQueries extends Command
             echo " | ".$subcategorie->id." | ".$subcategorie->name." | ";
             echo "\n";
         }
-
-        $variations=Variation::all();
-        echo "------------------Variation------------------------";
-        echo "\n";
-        foreach ($variations as $variation) {
-            echo " | ".$variation->id." | ";
-            echo "\n";
-        }
-
         $kits=Kit::all();
         echo "------------------Kits------------------------";
         echo "\n";
@@ -86,28 +78,35 @@ class ShowQueries extends Command
             echo "\n";
         }
 
-        $attribute_values=Attribute_value::all();
+        $attribute_values=AttributeValue::all();
         echo "------------------Attributes Values------------------------";
         echo "\n";
         foreach ($attribute_values as $attribute_value) {
-            echo " | ".$attribute_value->id." | ".$attribute_value->atribute_id." | ".$attribute_value->value." | ";
+            echo " | ".$attribute_value->id." | ".$attribute_value->attribute()->first()->type." | ".$attribute_value->value." | ";
             echo "\n";
         }
 
-        $product_variation=Variation::all();
-        echo "------------------Product Variation------------------------";
+        $products=Product::all();
+        echo "------------------Product------------------------";
         echo "\n";
-        foreach ($product_variation as $product_variations) {
-            echo " | ".$product_variation->id." | ".$product_variation->product_id." | ".$product_variation->variation_id." | ";
+        foreach ($products as $product) {
+            echo " | ".$product->id." | ".$product->name." | ";
             echo "\n";
         }
 
-        $attribute_value_variations=Variation::all();
-        echo "------------------Product Variation------------------------";
+        $variations=Variation::all();
+        echo "------------------Variation------------------------";
         echo "\n";
-        foreach ($attribute_value_variations as $attribute_value_variation) {
-            echo " | ".$attribute_value_variation->id." | ".$attribute_value_variation->attribute_value_id." | ".$attribute_value_variation->variation_id." | ";
+        foreach ($variations as $variation) {
+            echo " | ".$variation->id." | ".$variation->product()->first()->name;
             echo "\n";
+            foreach ($variation->attribute_value()->get() as $attribute_value){
+                echo " | ".$attribute_value->attribute()->first()->type." | ".$attribute_value->value;
+                echo "\n";
+            }
+                
         }
+
+        
     }
 }

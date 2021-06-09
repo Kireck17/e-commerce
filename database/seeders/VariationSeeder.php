@@ -14,25 +14,26 @@ class VariationSeeder extends Seeder
      */
     public function run()
     {
-         //
+         /*
          $variations=new Variation();
-         
          $variations->save();
+         $variations->product()->attach(5);
+         $variations->attribute_value()->attach(1);
+         $variations->attribute_value()->attach(2);
          //
          $variations=new Variation();
-         
          $variations->save();
+         $variations->product()->attach(5);
+         $variations->attribute_value()->attach(3);
+         $variations->attribute_value()->attach(4);
          //
          $variations=new Variation();
+         $variations->save();
+         $variations->product()->attach(5);
+         $variations->attribute_value()->attach(1);
+         $variations->attribute_value()->attach(4);
+         */
         
-         $variations->save();
-         //
-         $variations=new Variation();
-         
-         $variations->save();
-         //
-         $variations=new Variation();
-         
-         $variations->save();
+
     }
 }

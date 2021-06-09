@@ -1,8 +1,9 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Product;
+//use App\Models\Product;
 use App\Models\Variation;
+//use App\Models\Product;
 
 use Illuminate\Database\Seeder;
 
@@ -15,19 +16,9 @@ class ProductVariationSeeder extends Seeder
      */
     public function run()
     {
-        
          $product_variation=new Variation();
          $product_variation->save();
-         $product_variation->Product()->attach(1);
-         $product_variation->Variation()->attach(1);
-        
-         //
-         $product_variation=new Variation();
-         $product_variation->save();
-         $product_variation->Product()->attach(2);
-         $product_variation->Variation()->attach(2);
-         
-        
-         //
+         $product_variation->pro()->attach(4);
+        // $product_variation->vari()->attach(1);
     }
 }
