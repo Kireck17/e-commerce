@@ -10,7 +10,7 @@ class Variation extends Model
     use HasFactory;
     protected $table = 'variations';
 
-    protected $fillable=['attribute_value_variations','product_variations'];
+    //protected $fillable=['attribute_value_variations','product_variations'];
     
 
     //alcanze con el modelo Attribute_value_variation
