@@ -9,8 +9,6 @@ class Variation extends Model
 {
     use HasFactory;
     protected $table = 'variations';
-<<<<<<< HEAD
-=======
 
     protected $fillable=['attribute_value_variations','product_variations'];
     
@@ -35,5 +33,4 @@ class Variation extends Model
 
     
 
->>>>>>> 82d3ee4979e4c27870a8ac366f8bd19c2c7b9c3e
 }
