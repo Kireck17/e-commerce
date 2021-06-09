@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('category_id')->nullable();
             $table->unsignedBigInteger('subcategory_id')->nullable();
-            $table->unsignedBigInteger('trademark_id')->nullable();
+            $table->unsignedBigInteger('trademark_id');
             $table->longText('description');
             $table->timestamps();
             $table->foreign('trademark_id')
@@ -31,12 +31,12 @@ class CreateProductsTable extends Migration
                   ->references('id')
                   ->on('subcategories')
                   ->onUpdate('cascade')
-                  ->onDelete('cascade');
+                  ->onDelete('set null');
             $table->foreign('category_id')
                   ->references('id')
                   ->on('categories')
                   ->onUpdate('cascade')
-                  ->onDelete('cascade');
+                  ->onDelete('set null');
         });
     }
 

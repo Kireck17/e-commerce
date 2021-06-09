@@ -15,8 +15,8 @@ class CreateStocksTable extends Migration
     {
         Schema::create('stocks', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('kit_id');
-            $table->unsignedBigInteger('provider_id');
+            $table->unsignedBigInteger('kit_id')->nullable();
+            $table->unsignedBigInteger('provider_id')->nullable();
             $table->unsignedBigInteger('warehouse_id');
             $table->integer('quantity');
             $table->decimal('price');
@@ -25,12 +25,12 @@ class CreateStocksTable extends Migration
                   ->references('id')
                   ->on('kits')
                   ->onUpdate('cascade')
-                  ->onDelete('cascade');
+                  ->onDelete('set null');
             $table->foreign('provider_id')
                   ->references('id')
                   ->on('providers')
                   ->onUpdate('cascade')
-                  ->onDelete('cascade');
+                  ->onDelete('set null');
             $table->foreign('warehouse_id')
                   ->references('id')
                   ->on('warehouses')

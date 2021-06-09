@@ -15,14 +15,14 @@ class CreateProvidersTable extends Migration
     {
         Schema::create('providers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('origin_id');
+            $table->unsignedBigInteger('origin_id')->nullable();
             $table->string('name');
             $table->timestamps();
             $table->foreign('origin_id')
             ->references('id')
             ->on('origins')
             ->onUpdate('cascade')
-            ->onDelete('cascade');
+            ->onDelete('set null');
         });
 
         Schema::create('provider_variation', function (Blueprint $table) {
