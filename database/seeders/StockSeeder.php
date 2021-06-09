@@ -53,13 +53,5 @@ class StockSeeder extends Seeder
         $stock -> quantity = 5;
         $stock -> price = 500;
         $stock -> save();
-
-        $stock = new Stock();
-        $stock-> kit_id = 6;
-        $stock->provider_id = 6;
-        $stock -> warehouse_id = 6;
-        $stock -> quantity =6 ;
-        $stock -> price = 600;
-        $stock -> save();
     }
 }

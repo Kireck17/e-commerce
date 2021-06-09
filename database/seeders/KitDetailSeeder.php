@@ -45,8 +45,8 @@ class KitDetailSeeder extends Seeder
         $kitdetail ->save();
 
         $kitdetail = new KitDetail();
-        $kitdetail ->kit_id = 30;
-        $kitdetail ->variation_id = 30;
+        $kitdetail ->kit_id = 3;
+        $kitdetail ->variation_id = 3;
         $kitdetail ->quantity = 42;
         $kitdetail ->save();
 
