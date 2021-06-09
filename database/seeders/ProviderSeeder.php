@@ -14,6 +14,7 @@ class ProviderSeeder extends Seeder
      */
     public function run()
     {
+        /*
         $provider = new Provider();
         $provider -> origin_id = 1;
         $provider -> name = 'Orlando Ivan Basulto Benitez';
@@ -37,27 +38,30 @@ class ProviderSeeder extends Seeder
         $provider = new Provider();
         $provider -> origin_id = 5;
         $provider -> name = 'Alfonzo Ramirez Zapata';
+        $provider -> save();*/
+
+        $provider = new Provider();
+        $provider -> origin_id = 1;
+        $provider -> name = 'Anguel Zambenito de la Luz';
         $provider -> save();
+        $provider -> variation()->attach(1);
 
-        $provider = new provider();
-        $provider = save();
-        $provider->variation()->attach(1);
-
-        $provider = new provider();
+        /*
+        $provider = new Provider();
         $provider = save();
         $provider->variation()->attach(2);
 
-        $provider = new provider();
+        $provider = new Provider();
         $provider = save();
         $provider->variation()->attach(3);
 
-        $provider = new provider();
+        $provider = new Provider();
         $provider = save();
         $provider->variation()->attach(4);
 
-        $provider = new provider();
+        $provider = new Provider();
         $provider = save();
-        $provider->variation()->attach(5);
+        $provider->variation()->attach(5);*/
 
     }
 }

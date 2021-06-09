@@ -51,7 +51,7 @@ class ProductSeeder extends Seeder
         $product -> save();
 
         $product = new Product();
-        $product -> barcode = 024861691;
+        $product -> barcode = 1523687;
         $product -> name = 'Memoria SSD';
         $product -> category_id = 4;
         $product -> subcategory_id = 4;
