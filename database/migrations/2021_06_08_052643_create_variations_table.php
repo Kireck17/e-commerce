@@ -18,7 +18,7 @@ class CreateVariationsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('attribute_value_variation', function (Blueprint $table) {
+        Schema::create('attribute_value_variations', function (Blueprint $table) {
             $table->unsignedBigInteger('attribute_value_id');
             $table->unsignedBigInteger('variation_id');
             $table->foreign('attribute_value_id')
@@ -33,7 +33,7 @@ class CreateVariationsTable extends Migration
                   ->onDelete('cascade');
         });
         
-        Schema::create('product_variation', function (Blueprint $table) {
+        Schema::create('product_variations', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('variation_id');
             $table->foreign('product_id')
@@ -57,12 +57,12 @@ class CreateVariationsTable extends Migration
      */
     public function down()
     {
-        Schema::table('product_variation', function (Blueprint $table) {
+        Schema::table('product_variations', function (Blueprint $table) {
             $table->dropForeign(['product_id']);
             $table->dropForeign(['variation_id']);
         });
 
-        Schema::table('attribute_value_variation', function (Blueprint $table) {
+        Schema::table('attribute_value_variations', function (Blueprint $table) {
             $table->dropForeign(['attribute_value_id']);
             $table->dropForeign(['variation_id']);
         });

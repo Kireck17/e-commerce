@@ -26,17 +26,17 @@ class CreateProductsTable extends Migration
                   ->references('id')
                   ->on('trademarks')
                   ->onUpdate('cascade')
-                  ->onDelete('set null');
+                  ->onDelete('cascade');
             $table->foreign('subcategory_id')
                   ->references('id')
                   ->on('subcategories')
                   ->onUpdate('cascade')
-                  ->onDelete('set null');
+                  ->onDelete('cascade');
             $table->foreign('category_id')
                   ->references('id')
                   ->on('categories')
                   ->onUpdate('cascade')
-                  ->onDelete('set null');
+                  ->onDelete('cascade');
         });
     }
 

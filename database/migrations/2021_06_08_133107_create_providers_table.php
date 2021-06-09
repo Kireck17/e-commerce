@@ -49,10 +49,10 @@ class CreateProvidersTable extends Migration
      */
     public function down()
     {
-        Schema::create('providers', function (Blueprint $table) {
+        Schema::table('providers', function (Blueprint $table) {
             $table->dropForeign(['origin_id']);
         });
-        Schema::create('provider_variation', function (Blueprint $table) {
+        Schema::table('provider_variation', function (Blueprint $table) {
             $table->dropForeign(['provider_id']);
             $table->dropForeign(['variation_id']);
         });
