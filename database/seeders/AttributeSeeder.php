@@ -32,5 +32,17 @@ class AttributeSeeder extends Seeder
          $attributes=new Attribute();
          $attributes->type="Camara";
          $attributes->save();
+         //
+         $attributes=new Attribute();
+         $attributes->type="Talla";
+         $attributes->save();
+         //
+         $attributes=new Attribute();
+         $attributes->type="Material";
+         $attributes->save();
+         //
+         $attributes=new Attribute();
+         $attributes->type="Almacenamiento";
+         $attributes->save();
     }
 }

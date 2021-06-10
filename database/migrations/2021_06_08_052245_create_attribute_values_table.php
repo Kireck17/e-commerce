@@ -33,9 +33,15 @@ class CreateAttributeValuesTable extends Migration
      */
     public function down()
     {
+        Schema::table('attribute_values', function (Blueprint $table) {
+            $table->dropForeign(['attribute_id']);
+        });
+        /*
+        En las funciones dow no pude haber un método create
         Schema::create('attribute_values', function (Blueprint $table) {
             $table->dropForeign(['attribute_id']);
         });
+        */
         Schema::dropIfExists('attribute_values');
     }
 }
