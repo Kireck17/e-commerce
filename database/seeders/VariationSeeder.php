@@ -43,7 +43,7 @@ class VariationSeeder extends Seeder
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(5);
-         $variations->attribute_value()->attach(2);
+         $variations->attribute_value()->attach(5);
          //6
          $variations=new Variation();
          $variations->save();
