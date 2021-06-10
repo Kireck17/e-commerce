@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\WereHouse;
+use App\Models\WareHouse;
 
 class WarehouseSeeder extends Seeder
 {
@@ -14,25 +14,20 @@ class WarehouseSeeder extends Seeder
      */
     public function run()
     {
-        $warehouse = new WereHouse ();
+        $warehouse = new WareHouse();
         $warehouse -> name = 'centro';
         $warehouse ->save();
 
-
-        $warehouse = new WereHouse ();
-        $warehouse -> name = 'prymari';
-        $warehouse ->save();
-
-        $warehouse = new WereHouse ();
+        $warehouse = new WareHouse();
         $warehouse -> name = 'centro industrial';
         $warehouse ->save();
 
-        $warehouse = new WereHouse ();
-        $warehouse -> name = 'UTP';
+        $warehouse = new WareHouse();
+        $warehouse -> name = 'Parque Puebla';
         $warehouse ->save();
 
-        $warehouse = new WereHouse ();
-        $warehouse -> name = 'Por piesta';
+        $warehouse = new WareHouse();
+        $warehouse -> name = 'Plaza Dorada';
         $warehouse ->save();
 
 

@@ -15,20 +15,21 @@ class TrademarkSeeder extends Seeder
      */
     public function run()
     {
+        //marca de mascotas y animales
         $trademark = new Trademark ();
-        $trademark->name = 'Carista';
+        $trademark->name = 'Toopske';
         $trademark->save();
 
         $trademark = new Trademark ();
-        $trademark->name = 'Adidas';
+        $trademark->name = 'Koz Ropa';
         $trademark->save();
 
         $trademark = new Trademark ();
-        $trademark->name = 'Nike';
+        $trademark->name = 'Bandai';
         $trademark->save();
 
         $trademark = new Trademark ();
-        $trademark->name = 'Jordan';
+        $trademark->name = 'BAKU';
         $trademark->save();
 
         $trademark = new Trademark ();
@@ -36,67 +37,14 @@ class TrademarkSeeder extends Seeder
         $trademark->save();
 
         $trademark = new Trademark ();
-        $trademark->name = 'Adventure';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Sony';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Alcatel';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Motorola';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Sams';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Ferrari';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Gucci';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Balenciaga';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'LobosBuap';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Pirma';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Charly';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'Underarmor';
-        $trademark->save();
-
-        $trademark = new Trademark ();
-        $trademark->name = 'LG';
+        $trademark->name = 'XIAOMI';
         $trademark->save();
 
         $trademark = new Trademark ();
         $trademark->name = 'LuisButton';
         $trademark->save();
 
-        $trademark = new Trademark ();
-        $trademark->name = 'Sony is real';
-        $trademark=new Trademark();
-        $trademark->name="Redmi";
-        $trademark->save();
-
+    
         $trademark=new Trademark();
         $trademark->name="Samsung";
         $trademark->save();

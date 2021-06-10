@@ -16,23 +16,27 @@ class SubCategorySeeder extends Seeder
     {
         //
         $subcategories=new SubCategory();
-        $subcategories->name="Calzado";
+        $subcategories->name="Sudaderas";
         $subcategories->save();
         //
         $subcategories=new SubCategory();
-        $subcategories->name="Pantalones";
+        $subcategories->name="Figuras";
         $subcategories->save();
         //
         $subcategories=new SubCategory();
-        $subcategories->name="Caballero";
+        $subcategories->name="Articulos";
         $subcategories->save();
         //
         $subcategories=new SubCategory();
-        $subcategories->name="Dama";
+        $subcategories->name="Celulares y Telefonia";
         $subcategories->save();
         //
         $subcategories=new SubCategory();
-        $subcategories->name="AElectronica";
+        $subcategories->name="Herramientas";
+        $subcategories->save();
+        //
+        $subcategories=new SubCategory();
+        $subcategories->name="Animales y Mascotas";
         $subcategories->save();
     }
 }

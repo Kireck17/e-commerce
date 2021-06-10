@@ -15,7 +15,7 @@ class AttributeValueVariationSeeder extends Seeder
      */
     public function run()
     {
-        //
+        /*no se toca, semilla mal echa
          $attribute_value_variations=new Variation();
          $attribute_value_variations->save();
          $attribute_value_variations->attribute_value()->attach(1);
@@ -26,5 +26,6 @@ class AttributeValueVariationSeeder extends Seeder
          $attribute_value_variations->save();
          $attribute_value_variations->attribute_value()->attach(2);
          $attribute_value_variations->Variation()->attach(2);
+         */
     }
 }

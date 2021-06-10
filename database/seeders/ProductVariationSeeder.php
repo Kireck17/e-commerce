@@ -16,9 +16,11 @@ class ProductVariationSeeder extends Seeder
      */
     public function run()
     {
+        /*esta semilla no sirve, esta mal estructurada
          $product_variation=new Variation();
          $product_variation->save();
          $product_variation->pro()->attach(4);
         // $product_variation->vari()->attach(1);
+        */
     }
 }

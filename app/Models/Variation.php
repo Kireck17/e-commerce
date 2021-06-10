@@ -21,4 +21,10 @@ class Variation extends Model
         return $this->belongsToMany(Product::class);
     }
 
+    //alcanze con el modelo Product
+    public function provider()
+    {
+        return $this->belongsToMany(Provider::class);
+    }
+
 }
