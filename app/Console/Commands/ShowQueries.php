@@ -2,8 +2,16 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Trademark;
 use Illuminate\Console\Command;
+use App\Models\Trademark;
+//instanciamos modelos
+
+use App\Models\Category;
+use App\Models\SubCategory;
+use App\Models\Variation;
+use App\Models\Kit;
+use App\Models\Attribute;
+use App\Models\Attribute_value;
 
 class ShowQueries extends Command
 {
@@ -38,18 +46,59 @@ class ShowQueries extends Command
      */
     public function handle()
     {
-        $trademarks=Trademark::all();
-        echo "-------------Marcas-------------------";
+        $categories=Category::all();
+        echo "------------------Categories------------------------";
         echo "\n";
-        foreach ($trademarks as $trademark) {
-            echo " | ".$trademark->id." | ".$trademark->name." | ";
+        foreach ($categories as $categorie) {
+            echo " | ".$categorie->id." | ".$categorie->name." | ";
             echo "\n";
         }
-        echo "---------------Productos--------------------------";
+
+        $subcategories=SubCategory::all();
+        echo "------------------SubCategories------------------------";
         echo "\n";
-        $trademarks=Trademark::all();
-        foreach ($trademarks as $trademark) {
-            echo " | ".$trademark->id." | ".$trademark->name." | ";
+        foreach ($subcategories as $subcategorie) {
+            echo " | ".$subcategorie->id." | ".$subcategorie->name." | ";
+            echo "\n";
+        }
+
+        $variations=Variation::all();
+        echo "------------------Variation------------------------";
+        echo "\n";
+        foreach ($variations as $variation) {
+            echo " | ".$variation->id." | ";
+            echo "\n";
+        }
+
+        $kits=Kit::all();
+        echo "------------------Kits------------------------";
+        echo "\n";
+        foreach ($kits as $kit) {
+            echo " | ".$kit->id." | ";
+            echo "\n";
+        }
+
+        $attributes=Attribute::all();
+        echo "------------------Attributes------------------------";
+        echo "\n";
+        foreach ($attributes as $attribute) {
+            echo " | ".$attribute->id." | ".$attribute->type." | ";
+            echo "\n";
+        }
+
+        $attribute_values=Attribute_value::all();
+        echo "------------------Attributes Values------------------------";
+        echo "\n";
+        foreach ($attribute_values as $attribute_value) {
+            echo " | ".$attribute_value->id." | ".$attribute_value->atribute_id." | ".$attribute_value->value." | ";
+            echo "\n";
+        }
+
+        $product_variation=Variation::all();
+        echo "------------------Product Variation------------------------";
+        echo "\n";
+        foreach ($product_variation as $product_variations) {
+            echo " | ".$product_variation->id." | ".$product_variation->product_id." | ".$product_variation->variation_id." | ";
             echo "\n";
         }
     }
