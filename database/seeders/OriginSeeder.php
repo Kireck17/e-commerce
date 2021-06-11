@@ -25,7 +25,7 @@ class OriginSeeder extends Seeder
         $origin = new Origin();
         $origin -> country= 'USA';
         $origin -> save();
-
+//
         $origin = new Origin();
         $origin -> country= 'Inglaterra';
         $origin -> save();

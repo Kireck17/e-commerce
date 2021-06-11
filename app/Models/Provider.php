@@ -19,6 +19,12 @@ class Provider extends Model
         return $this->belongsTo(Origin::class);
     }
 
+    //alcanze con el modelo Origin
+    public function Variation()
+    {
+        return $this->belongsToMany(Variation::class);
+    }
+
     //alcanze con el modelo Stock
     public function stock()
     {

@@ -10,25 +10,24 @@ class Stock extends Model
     use HasFactory;
     protected $table = 'stocks';
 
-    protected $fillable=['kid_id','provider_id','warehouse_id','quantity','price'];
+    protected $fillable=['stockable_id','stockable_type','provider_id','warehouse_id','quantity','price'];
     
 
-    //alcanze con el modelo Kid
-    public function kid()
+    public function stockable()
     {
-        return $this->belongsTo(Kid::class);
+        return $this->morphTo();
     }
 
     //alcanze con el modelo Provider
-    public function prov()
+    public function provider()
     {
         return $this->belongsTo(Provider::class);
     }
 
     //alcanze con el modelo WereHouse
-    public function wehouse()
+    public function warehouse()
     {
-        return $this->belongsTo(WereHouse::class);
+        return $this->belongsTo(WareHouse::class);
     }
     
 }

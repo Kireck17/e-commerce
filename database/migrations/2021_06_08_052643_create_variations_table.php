@@ -18,6 +18,10 @@ class CreateVariationsTable extends Migration
             $table->timestamps();
         });
 
+        /*
+            Las tablas pivote se declaran en singular
+            Schema::create('attribute_value_variations', function (Blueprint $table) {
+        */
         Schema::create('attribute_value_variation', function (Blueprint $table) {
             $table->unsignedBigInteger('attribute_value_id');
             $table->unsignedBigInteger('variation_id');
@@ -32,7 +36,10 @@ class CreateVariationsTable extends Migration
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
         });
-        
+        /*
+            Las tablas pivote se declaran en singular
+            Schema::create('product_variations', function (Blueprint $table) {
+        */
         Schema::create('product_variation', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('variation_id');
@@ -67,8 +74,8 @@ class CreateVariationsTable extends Migration
             $table->dropForeign(['variation_id']);
         });
 
-        Schema::dropIfExists('attribute_value_variations');
-
+        Schema::dropIfExists('attribute_value_variation');
         Schema::dropIfExists('variations');
+        Schema::dropIfExists('product_variation');
     }
 }

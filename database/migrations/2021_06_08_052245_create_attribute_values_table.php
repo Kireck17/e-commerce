@@ -15,14 +15,14 @@ class CreateAttributeValuesTable extends Migration
     {
         Schema::create('attribute_values', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('attribute_id');
+            $table->unsignedBigInteger('attribute_id')->nullable();
             $table->string("value");
             $table->timestamps();
             $table->foreign('attribute_id')
                   ->references('id')
                   ->on('attributes')
                   ->onUpdate('cascade')
-                  ->onDelete('cascade');
+                  ->onDelete('set null');
         });
     }
 
@@ -33,9 +33,15 @@ class CreateAttributeValuesTable extends Migration
      */
     public function down()
     {
+        Schema::table('attribute_values', function (Blueprint $table) {
+            $table->dropForeign(['attribute_id']);
+        });
+        /*
+        En las funciones dow no pude haber un método create
         Schema::create('attribute_values', function (Blueprint $table) {
             $table->dropForeign(['attribute_id']);
         });
+        */
         Schema::dropIfExists('attribute_values');
     }
 }

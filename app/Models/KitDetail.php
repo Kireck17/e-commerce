@@ -19,8 +19,8 @@ class KitDetail extends Model
     }
     
     //alcanze con el modelo Kid
-    public function kids()
+    public function kit()
     {
-        return $this->belongsTo(Kid::class);
+        return $this->belongsTo(Kit::class);
     }
 }

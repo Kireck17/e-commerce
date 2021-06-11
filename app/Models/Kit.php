@@ -14,10 +14,14 @@ class Kit extends Model
    // protected $fillable=['name'];
 
    //alcanze con el modelo Kid_Detail
-    public function kidDet()
+    public function kitdetail()
     {
-        return $this->belongsTo(Kid_Detail::class);
+        return $this->belongsTo(KitDetail::class);
     }
-
+    //alcanze con el modelo stock
+    public function stock()
+    {
+        return $this->morphOne(Stock::class, 'stockable');
+    }
    
 }

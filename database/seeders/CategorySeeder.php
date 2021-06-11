@@ -20,15 +20,15 @@ class CategorySeeder extends Seeder
         $categories->save();
         //
         $categories=new Category();
-        $categories->name="Impresoras y Etiquetas";
+        $categories->name="Anime";
         $categories->save();
         //
         $categories=new Category();
-        $categories->name="Accesorios para Vehiculo";
+        $categories->name="Electronica";
         $categories->save();
         //
         $categories=new Category();
-        $categories->name="Celulares y Telefonia";
+        $categories->name="Tecnologia";
         $categories->save();
         //
         $categories=new Category();

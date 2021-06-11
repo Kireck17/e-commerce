@@ -5,23 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Attribute_value extends Model
+class AttributeValue extends Model
 {
     use HasFactory;
     protected $table = 'attribute_values';
 
     protected $fillable=['attribute_id','value'];
 
-    //alcanze con el modelo Attribute_value_variation
-    public function attributValueVari()
+   
+    public function variation()
     {
-        return $this->belongsTo(Attribute_value_variation::class);
+        return $this->belongsToMany(Variation::class);
     }
 
-    //alcanze con el modelo Attribute
-    public function attribut()
+    public function attribute()
     {
         return $this->belongsTo(Attribute::class);
     }
-    
 }
