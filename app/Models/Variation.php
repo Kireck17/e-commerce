@@ -38,5 +38,4 @@ class Variation extends Model
     {
         return $this->morphOne(Stock::class, 'stockable');
     }
-
 }
