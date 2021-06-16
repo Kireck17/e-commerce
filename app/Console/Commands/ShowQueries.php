@@ -13,6 +13,7 @@ use App\Models\Kit;
 use App\Models\Attribute;
 use App\Models\AttributeValue;
 use App\Models\Product;
+use App\Models\File;
 
 class ShowQueries extends Command
 {
@@ -91,6 +92,19 @@ class ShowQueries extends Command
         echo "\n";
         foreach ($products as $product) {
             echo " | ".$product->id." | ".$product->name." | ";
+            echo "\n";
+        }
+        echo "------------------Product------------------------";
+        foreach ($products->file()->get() as $file) {
+            echo " | ".$file->id." | ".$file->url." | ";
+            echo "\n";
+        }
+
+        $files=File::all();
+        echo "------------------file------------------------";
+        echo "\n";
+        foreach ($files as $file) {
+            echo " | ".$file->id." | ".$file->url." | ";
             echo "\n";
         }
 
