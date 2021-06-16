@@ -10,6 +10,13 @@ class Variation extends Model
     use HasFactory;
     protected $table = 'variations';
 
+
+    //alcanze con el modelo File
+    public function file()
+    {
+        return $this->morphMany(File::class);
+    }
+
     public function attribute_value()
     {
         return $this->belongsToMany(AttributeValue::class);

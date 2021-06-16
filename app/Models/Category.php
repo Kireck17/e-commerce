@@ -12,4 +12,9 @@ class Category extends Model
 
     protected $fillable=['name'];
    
+     //alcanze con el modelo File
+     public function file()
+     {
+         return $this->morphOne(File::class);
+     }
 }
