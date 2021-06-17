@@ -14,7 +14,7 @@ class Variation extends Model
     //alcanze con el modelo File
     public function file()
     {
-        return $this->morphMany(File::class);
+        return $this->morphMany(File::class, 'fileable');
     }
 
     public function attribute_value()
@@ -44,5 +44,10 @@ class Variation extends Model
     public function stock()
     {
         return $this->morphOne(Stock::class, 'stockable');
+    }
+    
+    public function file()
+    {
+        return $this->morphMany(File::class, 'fileable');
     }
 }

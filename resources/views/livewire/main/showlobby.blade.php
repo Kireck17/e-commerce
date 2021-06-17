@@ -185,77 +185,18 @@
             Categorías populares
         </h4>
         <section class="px-6 my-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-1">
-            <div class="p-2 md:w-40">
-                <div class="flex justify-around items-center px-2 py-3 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100">
-                    <svg class="h-6 fill-current hover:text-gray-100" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Symfony icon</title><path d="M19.197 1.608l.003-.006h-4.425L12 6.4v.002l-2.772-4.8H4.803v.005H0l12 20.786L24 1.608"/></svg>
-                    <div>
-                    <p class="text-xs font-medium ml-2 ">
-                        Celulares y accesorios
-                    </p>
-
+           @foreach($categories as $category)  
+                <div class="p-2 md:w-40">
+                    <div class="flex justify-around items-center px-2 py-3 bg-blue-500 text-turquoise-dark rounded-lg shadow-xs cursor-pointer hover:bg-gray-700 hover:text-gray-100">
+                        <svg class="h-6 fill-current hover:text-gray-100" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>Symfony icon</title>
+                        <path d="M19.197 1.608l.003-.006h-4.425L12 6.4v.002l-2.772-4.8H4.803v.005H0l12 20.786L24 1.608"/></svg>
+                        <p class="text-sm font-extrabold ml-2 ">
+                            {{$category->name}}
+                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="p-2 md:w-40 ">
-                <div class="flex justify-around items-center px-2 py-3 bg-purple-300 rounded-lg shadow-xs cursor-pointer hover:bg-purple-500 hover:text-gray-100">
-
-                    <svg class="h-6 fill-current hover:text-gray-100" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5 icon</title><path d="M19.197 1.608l.003-.006h-4.425L12 6.4v.002l-2.772-4.8H4.803v.005H0l12 20.786L24 1.608"/></svg>
-                    <div>
-                    <p class=" text-xs font-medium ml-2 ">
-                        Accesorios Vehiculos
-                    </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="p-2 md:w-40 ">
-                <div class="flex justify-around items-center px-2 py-3 bg-green-200 rounded-lg shadow-xs cursor-pointer hover:bg-green-500 hover:text-gray-100">
-
-                    <svg class="h-6 fill-current hover:text-gray-100" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Vue.js icon</title><path d="M19.197 1.608l.003-.006h-4.425L12 6.4v.002l-2.772-4.8H4.803v.005H0l12 20.786L24 1.608"/></svg>
-                    <div>
-                    <p class=" text-xs font-medium ml-2 ">
-                        Calzado
-                    </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="p-2 md:w-40 ">
-                <div class="flex justify-around items-center px-2 py-3 bg-yellow-200 rounded-lg shadow-xs cursor-pointer hover:bg-yellow-500 hover:text-gray-100">
-
-                    <svg class="h-6 fill-current hover:text-gray-100" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>JavaScript icon</title><path d="M19.197 1.608l.003-.006h-4.425L12 6.4v.002l-2.772-4.8H4.803v.005H0l12 20.786L24 1.608"/></svg>
-                    <div>
-                    <p class=" text-xs font-medium text-uppercase ml-2 ">
-                        Pantalones
-                    </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="p-2 md:w-40 ">
-                <div class="flex justify-around items-center px-2 py-3 bg-indigo-200 rounded-lg shadow-xs cursor-pointer hover:bg-indigo-500 hover:text-gray-100">
-
-                    <svg class="h-6 fill-current hover:text-gray-100" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CSS3 icon</title><path d="M19.197 1.608l.003-.006h-4.425L12 6.4v.002l-2.772-4.8H4.803v.005H0l12 20.786L24 1.608"/></svg>
-                    <div>
-                    <p class=" text-xs font-medium ml-2 ">
-                        Impresoras y ..
-                    </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="p-2 md:w-40 ">
-                <div class="flex justify-around items-center px-2 py-3 bg-red-200 rounded-lg shadow-xs cursor-pointer hover:bg-red-500 hover:text-gray-100">
-
-                    <svg class="h-6 fill-current hover:text-gray-100" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Laravel icon</title><path d="M19.197 1.608l.003-.006h-4.425L12 6.4v.002l-2.772-4.8H4.803v.005H0l12 20.786L24 1.608"/></svg>
-                    <div>
-                    <p class=" text-xs font-medium ml-2 ">
-                        Accesorios
-                    </p>
-
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </section>
    </div>
 </div>
