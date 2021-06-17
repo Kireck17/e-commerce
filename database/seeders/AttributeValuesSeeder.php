@@ -94,6 +94,146 @@ class AttributeValuesSeeder extends Seeder
          $attribute_values->attribute_id="7";
          $attribute_values->value="128GB";
          $attribute_values->save();
+         //
+         //17
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="5";
+         $attribute_values->value="22";
+         $attribute_values->save();
+         //18
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="5";
+         $attribute_values->value="23";
+         $attribute_values->save();
+         //19
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="5";
+         $attribute_values->value="24";
+         $attribute_values->save();
+         //20
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="5";
+         $attribute_values->value="25";
+         $attribute_values->save();
+         //21
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="5";
+         $attribute_values->value="27";
+         $attribute_values->save();
+         //22
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="5";
+         $attribute_values->value="28";
+         $attribute_values->save();
+         //
+         //23
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="1";
+         $attribute_values->value="Vino";
+         $attribute_values->save();
+         //24
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="1";
+         $attribute_values->value="Rosa Frances";
+         $attribute_values->save();
+         //NEGRO SE REPITE Y TIENE EL ID 1
+
+         //25
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="1";
+         $attribute_values->value="Rosa";
+         $attribute_values->save();
+
+         //26
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="1";
+         $attribute_values->value="Mezcla de varios colores";
+         $attribute_values->save();
+
+         //27
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="1";
+         $attribute_values->value="Gris";
+         $attribute_values->save();
+
+         //28
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="1";
+         $attribute_values->value="Verde Militar";
+         $attribute_values->save();
+
+         //seccion hombres 
+         //29
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="1";
+         $attribute_values->value="Azul Marino";
+         $attribute_values->save();
+
+         //30
+         $attribute_values=new AttributeValue();
+         $attribute_values->attribute_id="1";
+         $attribute_values->value="Café Obscuro";
+         $attribute_values->save();
+
+        //31
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="6";
+        $attribute_values->value="Algodón";
+        $attribute_values->save();
          
+        //32
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="6";
+        $attribute_values->value="Poliester";
+        $attribute_values->save();
+
+        //33
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="6";
+        $attribute_values->value="Mezclilla";
+        $attribute_values->save();
+
+        //34
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="5";
+        $attribute_values->value="30";
+        $attribute_values->save();
+
+        //35
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="5";
+        $attribute_values->value="32";
+        $attribute_values->save();
+
+        //36
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="5";
+        $attribute_values->value="33";
+        $attribute_values->save();
+
+        //37
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="5";
+        $attribute_values->value="34";
+        $attribute_values->save();
+
+        //38
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="5";
+        $attribute_values->value="36";
+        $attribute_values->save();
+
+        //39
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="8";
+        $attribute_values->value="Slim";
+        $attribute_values->save();
+
+        //40
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="8";
+        $attribute_values->value="Skinny";
+        $attribute_values->save();
+
     }
 }

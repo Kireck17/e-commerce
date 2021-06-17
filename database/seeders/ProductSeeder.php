@@ -235,7 +235,194 @@ class ProductSeeder extends Seeder
          grandes resultados.";
         $product -> save();
 
+//16
+        //Mujeres
+        $product = new Product();
+        $product -> barcode = 398587;
+        $product -> name = 'Conjunto Pants Para Dama Barcelona';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 7;
+        $product -> trademark_id = 7;
+        $product -> description = "Las tallas vienen dobles , es importante mencionar que la tela cuenta con strech.
+        • CH/M : ESTA TALLA LE QUEDA A UNA 30, 32
+        • G/XG: ESTA TALLA LE QUEDA A UNA 34, 36
+        ES IMPORTANTE MENCIONAR QUE LA TALLA G/XG AUNQUE CUENTE CON STRECH DIFICILMENTE DARA UNA TALLA MAS ¡¡¡¡ 
+        TE SUGERIMOS ADQUIRIR LA TALLA QUE REGULARMENTE USAS ¡¡";
+        $product -> save();
+        
+        //17
+        $product = new Product();
+        $product -> barcode = 937463;
+        $product -> name = 'Playera Crop Top Deportivo Girl Power Ropa Mujer Deportiva';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 8;
+        $product -> trademark_id = 8;
+        $product -> description = "Crop Top camiseta femenina de algodón sólido cuello redondo de manga corta
+        Camisetas para mujeres USO cintura alta Slim Short Sport Blanc Femme camiset.
+        EFECTO SUELTO
+        Luce chic y presume tu ombligo O SUBE TU PANTS A LA CINTURA para lucir sencillamente genial con este 
+        lindo crop top. Es ideal para llevar con tus pants, leggings, jeans, shorts y minifaldas.
+        Este lindo crop top se ha destacado como una prenda que puede usarse en cualquier ocasión casual. 
+        Tiene un diseño corto con manga corta para que lo combines con una variedad de prendas que lucen
+        maravillosas.
+        ---El paquete Contiene:
+        1x Blusa.---ATRÉVETE A LUCIRLO!!!
+        TELA LIGERA !
+        100% ALGODÓN Super suave, NO tieso, ni áspero , hermosa sensación en la piel
+        camiseta corta TIPO premium excelente calidad y diseño en ALTA COSTURA...
+        Disponible en talla XS, S, M, L, XL ";
+        $product -> save();
 
+        //18
+        $product = new Product();
+        $product -> barcode = 294754;
+        $product -> name = 'Leggins Mujer , Licra Colombiana Deportivos Ejercicio Moda';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 9;
+        $product -> trademark_id = 9;
+        $product -> description = "Leggins licra colombiana de Dama deportivos , casual , Gym , correr , yoga.
+        5 increíbles colores de calidad
+        -Alta Calidad
+        -Cintura Alta que le da forma a tu Cuerpo
+        -Super Calidad y Ajuste
+        -Licra Resistentes, No Transparenta
+        -Elasticos (Con Spandex para mejor ajuste y movimientos)
+        -Licra y estilo colombiano
+        -Levanta pompa
+        -Sexy
+        -ayuda molestias de celulitis
+        -Tallas S, M, L";
+        $product -> save();
+
+        //19
+        $product = new Product();
+        $product -> barcode = 304858;
+        $product -> name = 'Blusa Ropa Dama Mujer Precio Mayoreo Palassi Moda';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 10;
+        $product -> trademark_id = 10;
+        $product -> description = "
+        -Alta Calidad
+        -Super Calidad y Ajuste";
+        $product -> save();
+
+        //20
+        $product = new Product();
+        $product -> barcode = 837649;
+        $product -> name = 'Sudadera Tie Dye Chamarras Mujer Blusas Dama Ropa Mujer';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 1;
+        $product -> trademark_id = 8;
+        $product -> description = "CHICA: Busto 115 a 120 cm, Manga 49 cm, Largo 65 cm
+        MEDIANA: Busto 120 a 125 cm, Manga 50 cm, Largo 66 cm
+        GRANDE: Busto 125 a 130 cm, Manga 51 cm, Largo 67 cm";
+        $product -> save();
+
+        //21
+        $product = new Product();
+        $product -> barcode = 4098641;
+        $product -> name = 'Pantufla Glam Shoes';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 11;
+        $product -> trademark_id = 11;
+        $product -> description = "Hermosa pantufla sandalia de moda con los mejores materiales mejor
+        calidad y el mejor surtido en colores, somos fabricantes";
+        $product -> save();
+
+        //22
+        $product = new Product();
+        $product -> barcode = 6395023;
+        $product -> name = 'Conjunto Pants Para Dama Arsenal';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 9;
+        $product -> trademark_id = 7;
+        $product -> description = "TALLAS
+        Las tallas vienen dobles , es importante mencionar que la tela cuenta con strech.
+        • CH/M : ESTA TALLA LE QUEDA A UNA 30, 32
+        • G/XG: ESTA TALLA LE QUEDA A UNA 34, 36
+        ES IMPORTANTE MENCIONAR QUE LA TALLA G/XG AUNQUE CUENTE CON STRECH DIFICILMENTE DARA UNA TALLA MAS ¡¡¡¡ 
+        TE SUGERIMOS ADQUIRIR LA TALLA QUE REGULARMENTE USAS ¡¡
+        MATERIALES
+        • Tela French Terry
+        95% Polyester
+        5% Elastano";
+        $product -> save();
+
+        //23
+        $product = new Product();
+        $product -> barcode = 21203945;
+        $product -> name = 'Pantalon Pants Dama Stretch Sin Felpa Jogger Gym Majo Moda';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 9;
+        $product -> trademark_id = 10;
+        $product -> description = "Pantalon tipo jogger de dama.
+        -Garantía: La garantía es de 15 días en su empaque original.
+        -Corte a la cintura, super comodo para todo tipo de cuerpos.
+        -Ajustable, con elastico en la cintura y jaretas para el perfecto ajuste.
+        -Ligeros sin felpa pero muy confortables al estar hechos con algodón, sirven para hacer ejercicio o estar simplente comodas.
+        -Hechos en México.
+        -Excelente calidad.
+        -Disponible de la talla XCH, M, y G , consulte guía de tallas.";
+        $product -> save();
+
+//productos hombres
+        //24
+        $product = new Product();
+        $product -> barcode = 679320987;
+        $product -> name = 'Playera tipo Polo Blanca';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 8;
+        $product -> trademark_id = 12;
+        $product -> description = "Playera casual tipo polo, presenta una suave confección de algodón y 
+        poliéster, beneficiando tu día de forma estupenda. ¡Adquiere la tuya!";
+        $product -> save();
+
+        //25
+        $product = new Product();
+        $product -> barcode = 455938402;
+        $product -> name = 'Playera tipo Polo Negra';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 8;
+        $product -> trademark_id = 13;
+        $product -> description = "Se trata de una prenda tipo polo, confeccionada con materiales 
+        duraderos, en negro: es de manga corta con franjas en tonos gris y amarillo que resaltan y 
+        lo más imporntante en la parte de enfrente trae el logo de tu equipo favorito.";
+        $product -> save();
+
+        //26
+        $product = new Product();
+        $product -> barcode = 430297284;
+        $product -> name = 'Playera tipo Polo Azul Marino';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 8;
+        $product -> trademark_id = 13;
+        $product -> description = "Es una prenda básica en azul marino, con cuello tipo polo acompañado de 
+        botones de ajuste; es de manga corta con líneas gruesas en gris y rojo, lo que le da un toque especial.
+        En la parte de enfrente tiene el nombre del equipo y en una manga el logo de la marca.";
+        $product -> save();
+
+        //27
+        $product = new Product();
+        $product -> barcode = 224695543;
+        $product -> name = 'Pantalón casual';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 12;
+        $product -> trademark_id = 14;
+        $product -> description = "Jeans Contempo de caballero tela premium corte slim cintura media";
+        $product -> save();
+
+        //28
+        $product = new Product();
+        $product -> barcode = 11093853;
+        $product -> name = 'Jeans Silver';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 12;
+        $product -> trademark_id = 15;
+        $product -> description = "Jeans Silver Plate corte skinny con bolsillos para caballero";
+        $product -> save();
+
+
+        
 
     }
 }

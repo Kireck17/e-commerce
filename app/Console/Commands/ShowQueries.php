@@ -93,12 +93,13 @@ class ShowQueries extends Command
         foreach ($products as $product) {
             echo " | ".$product->id." | ".$product->name." | ";
             echo "\n";
+            foreach ($product->file()->get() as $file) {
+                echo " | ".$file->id." | ".$file->url." | ";
+                echo "\n";
+            }
         }
-        echo "------------------Product------------------------";
-        foreach ($products->file()->get() as $file) {
-            echo " | ".$file->id." | ".$file->url." | ";
-            echo "\n";
-        }
+        
+        
 
         $files=File::all();
         echo "------------------file------------------------";
@@ -144,19 +145,23 @@ class ShowQueries extends Command
                     echo $attribute_value->value;
                     echo "\n";
                 }
-                foreach ($variation->stock()->get() as $stock) {
-                    echo "Cantidad de productos en el inventario: ".$stock->quantity;
-                    echo "          ";
-                    echo "Precio por unidad: ".$stock->price;
-                    echo "\n";
-                    echo "Almacén: ".$stock->warehouse()->first()->name;
-                    echo "          ";
-                    echo "Proveedor: ".$stock->provider()->first()->name;
-                    echo "          ";
-                    echo "País de origen del proveedor: ".$stock->provider()->first()->origin()->first()->country;
-                    echo "\n";
+                if ($variation->stock()->get() ->count() > 0){
+                    foreach ($variation->stock()->get() as $stock) {
+                        echo "Cantidad de productos en el inventario: ".$stock->quantity;
+                        echo "          ";
+                        echo "Precio por unidad: ".$stock->price;
+                        echo "\n";
+                        echo "Almacén: ".$stock->warehouse()->first()->name;
+                        echo "          ";
+                        echo "Proveedor: ".$stock->provider()->first()->name;
+                        echo "          ";
+                        echo "País de origen del proveedor: ".$stock->provider()->first()->origin()->first()->country;
+                        echo "\n";
+                    }
                 }
-                foreach ($variation->kitdetail()->get() as $kit) {
+                
+                
+               /* foreach ($variation->kitdetail()->get() as $kit) {
                     $stock=$kit->kit()->first()->stock()->first();
                     echo "Kit: ".$kit->id;
                     echo "          ";
@@ -172,7 +177,7 @@ class ShowQueries extends Command
                     echo "          ";
                     echo "País de origen del proveedor: ".$stock->provider()->first()->origin()->first()->country;
                     echo "\n";
-                }
+                }*/
             }
             echo "\n";
             echo "\n";
