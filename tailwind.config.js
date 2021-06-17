@@ -21,6 +21,10 @@ module.exports = {
                 'turquoise-dark': '#122e31',
                 'turquoise-light': '#365558',
             },
+            boxShadow: {
+                '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+                '4xl': '0 45px 70px -25px rgba(0, 0, 0, 0.4)',
+              },
         },
     },
 
