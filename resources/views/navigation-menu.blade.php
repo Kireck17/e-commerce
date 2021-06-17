@@ -10,10 +10,11 @@
             <x-nav-links.normal href="{{route('lobby')}}" :active="request()->routeIs('lobby')">
                 {{__('Inicio')}}
             </x-nav-links.normal>
-            <x-nav-links.normal href="{{route('lobby')}}" :active="request()->routeIs('lobby')">
+            <x-nav-links.normal href="{{route('search.show')}}" :active="request()->routeIs('search.show')">
                 {{__('Busqueda')}}
             </x-nav-links.normal>
-            
+
+            <!-- Category Link-->
             <div x-data="{ open:false }" :aria-expanded="open">
                         <div class="inline-flex ml-4">
                             <button @click="open = !open" 
@@ -30,26 +31,29 @@
                             id = "nav-list"
                             class="absolute  overflow-hidden ">
                             <div class="block w-full h-32 border shadow-md space-y-2 overflow-x-auto bg-gray-50">
-                                <li>Celulares y Accesorios</li>
-                                <li>Sccesorios para Veiculos</li>
-                                <li>Celulares y Accesorios</li>
-                                <li>Sccesorios para Veiculos</li>
-                                <li>Celulares y Accesorios</li>
-                                <li>Sccesorios para Veiculos</li>
-                                <li>Celulares y Accesorios</li>
-                                <li>Sccesorios para Veiculos</li>
+                            @foreach(App\Models\Category::has('product')->get()->unique('name') as $category)
+                                <li>
+                                    <x-jet-nav-link href="{{ route('category.show',['category' => $category->id]) }}">
+                                        {{ __($category->name) }}
+                                    </x-jet-nav-link>
+                                </li>
+                            @endforeach
                             </div>
                         </ul>
             </div>
+
             <x-nav-links.normal href="/" :active="request()->routeIs('prototipo.mark')">
                 {{__('Tutoriales')}}
             </x-nav-links.normal>
+
             <x-nav-links.normal href="/" :active="request()->routeIs('photo.edit')">
                 {{__('Contactanos')}}
             </x-nav-links.normal>
-            <x-nav-links.normal href="/" :active="request()->routeIs('photo.edit')">
+
+            <x-nav-links.normal class="rounded-full border-2" href="/" :active="request()->routeIs('photo.edit')">
                 <i class="fas fa-shopping-cart"></i>
             </x-nav-links.normal>
+
         </div>
         @auth
             <div class="hidden sm:flex sm:items-center sm:mr-6">
