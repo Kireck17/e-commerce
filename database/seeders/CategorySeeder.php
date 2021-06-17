@@ -16,7 +16,7 @@ class CategorySeeder extends Seeder
     {
         //1
         $categories=new Category();
-        $categories->name="Accesorios";
+        $categories->name="Accesorios Para Mascota";
         $categories->save();
         //2
         $categories=new Category();
