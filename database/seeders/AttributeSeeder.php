@@ -47,6 +47,31 @@ class AttributeSeeder extends Seeder
          $attributes=new Attribute();
          $attributes->type="Corte";
          $attributes->save();
-         
+         //9
+         $attributes=new Attribute();
+         $attributes->type="Modelo";
+         $attributes->save();
+         //10
+         $attributes=new Attribute();
+         $attributes->type="Idioma";
+         $attributes->save();
+         //11
+         $attributes=new Attribute();
+         $attributes->type="Compatible";
+         $attributes->save();
+
+         //12
+         $attributes=new Attribute();
+         $attributes->type="Volumen de la unidad";
+         $attributes->save();
+
+         //13
+         $attributes=new Attribute();
+         $attributes->type="Logo";
+         $attributes->save();
+         //14
+         $attributes=new Attribute();
+         $attributes->type="Modelo";
+         $attributes->save();
     }
 }

@@ -234,6 +234,57 @@ class AttributeValuesSeeder extends Seeder
         $attribute_values->attribute_id="8";
         $attribute_values->value="Skinny";
         $attribute_values->save();
+//carro
+//41 primer pro
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="6";
+        $attribute_values->value="Cable";
+        $attribute_values->save();
+
+        //42
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="10";
+        $attribute_values->value="Español y Ingles";
+        $attribute_values->save();
+
+        //43 segundo
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="11";
+        $attribute_values->value="Android Y Apple Licencia";
+        $attribute_values->save();
+
+        //44 tercero
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="12";
+        $attribute_values->value="250 mL";
+        $attribute_values->save();
+
+        //45 cuarto
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="13";
+        $attribute_values->value="JOHN COOPER WORKS";
+        $attribute_values->save();
+
+        //46 cuarto
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="13";
+        $attribute_values->value="Mini con circulo";
+        $attribute_values->save();
+
+        //47 quinto
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="14";
+        $attribute_values->value="BMW";
+        $attribute_values->save();
+
+        //48 quinto
+        $attribute_values=new AttributeValue();
+        $attribute_values->attribute_id="14";
+        $attribute_values->value="SERIE M";
+        $attribute_values->save();
+
+
+        
 
     }
 }

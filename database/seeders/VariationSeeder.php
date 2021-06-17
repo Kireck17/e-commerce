@@ -580,6 +580,52 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(31);
         $variations->attribute_value()->attach(38);
         $variations->attribute_value()->attach(40);
-//
+//variaciones autos 
+        //84
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(29);
+        $variations->attribute_value()->attach(41);
+        $variations->attribute_value()->attach(42);
+
+        //85
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(30);
+        $variations->attribute_value()->attach(43);
+        
+        //86
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(31);
+        $variations->attribute_value()->attach(44);
+
+        //87
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(32);
+        $variations->attribute_value()->attach(45);
+
+        //88
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(32);
+        $variations->attribute_value()->attach(46);
+
+        //89
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(33);
+        $variations->attribute_value()->attach(47);
+        //90
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(33);
+        $variations->attribute_value()->attach(48);
+
+
+        
+
+
     }
 }

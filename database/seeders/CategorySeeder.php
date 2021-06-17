@@ -42,6 +42,10 @@ class CategorySeeder extends Seeder
         $categories=new Category();
         $categories->name="Hombre";
         $categories->save();
+        //8
+        $categories=new Category();
+        $categories->name="Autos";
+        $categories->save();
 
 
     }

@@ -77,5 +77,23 @@ class TrademarkSeeder extends Seeder
         $trademark->name="Silver Plate";
         $trademark->save();
 
+//16
+        $trademark=new Trademark();
+        $trademark->name="VAG COM";
+        $trademark->save();
+//17
+        $trademark=new Trademark();
+        $trademark->name="Carista";
+        $trademark->save();
+
+//18
+        $trademark=new Trademark();
+        $trademark->name="Monkey Wash";
+        $trademark->save();
+        
+//19
+        $trademark=new Trademark();
+        $trademark->name="SAX CAR Boutique";
+        $trademark->save();
     }
 }

@@ -527,6 +527,56 @@ class KitDetailSeeder extends Seeder
         $kitdetail ->variation_id = 83;
         $kitdetail ->quantity = 1;
         $kitdetail ->save();
+//variaciones autos
+        //82
+        $kitdetail = new KitDetail();
+        $kitdetail ->kit_id = 82;
+        $kitdetail ->variation_id = 84;
+        $kitdetail ->quantity = 1;
+        $kitdetail ->save();
+
+        //83
+        $kitdetail = new KitDetail();
+        $kitdetail ->kit_id = 83;
+        $kitdetail ->variation_id = 85;
+        $kitdetail ->quantity = 1;
+        $kitdetail ->save();
+
+        //84
+        $kitdetail = new KitDetail();
+        $kitdetail ->kit_id = 84;
+        $kitdetail ->variation_id = 86;
+        $kitdetail ->quantity = 1;
+        $kitdetail ->save();
+
+        //85
+        $kitdetail = new KitDetail();
+        $kitdetail ->kit_id = 85;
+        $kitdetail ->variation_id = 87;
+        $kitdetail ->quantity = 1;
+        $kitdetail ->save();
+
+        //86
+        $kitdetail = new KitDetail();
+        $kitdetail ->kit_id = 86;
+        $kitdetail ->variation_id = 88;
+        $kitdetail ->quantity = 1;
+        $kitdetail ->save();
+
+        //87
+        $kitdetail = new KitDetail();
+        $kitdetail ->kit_id = 87;
+        $kitdetail ->variation_id = 89;
+        $kitdetail ->quantity = 1;
+        $kitdetail ->save();
+
+        //88
+        $kitdetail = new KitDetail();
+        $kitdetail ->kit_id = 88;
+        $kitdetail ->variation_id = 90;
+        $kitdetail ->quantity = 1;
+        $kitdetail ->save();
+
 
 
 

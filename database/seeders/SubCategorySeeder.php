@@ -64,5 +64,10 @@ class SubCategorySeeder extends Seeder
         $subcategories=new SubCategory();
         $subcategories->name="Jeans";
         $subcategories->save();
+
+        //13
+        $subcategories=new SubCategory();
+        $subcategories->name="Accesorios Para Autos";
+        $subcategories->save();
     }
 }

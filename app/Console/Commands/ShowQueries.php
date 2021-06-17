@@ -54,9 +54,13 @@ class ShowQueries extends Command
         foreach ($categories as $categorie) {
             echo " | ".$categorie->id." | ".$categorie->name." | ";
             echo "\n";
+            foreach ($categorie->file()->get() as $file) {
+                echo " | ".$file->id." | ".$file->url." | ";
+                echo "\n";
+            }
         }
 
-        $subcategories=SubCategory::all();
+      /*  $subcategories=SubCategory::all();
         echo "------------------SubCategories------------------------";
         echo "\n";
         foreach ($subcategories as $subcategorie) {
@@ -93,12 +97,9 @@ class ShowQueries extends Command
         foreach ($products as $product) {
             echo " | ".$product->id." | ".$product->name." | ";
             echo "\n";
-            foreach ($product->file()->get() as $file) {
-                echo " | ".$file->id." | ".$file->url." | ";
-                echo "\n";
-            }
+            
         }
-        
+        */
         
 
         $files=File::all();
@@ -118,10 +119,14 @@ class ShowQueries extends Command
             foreach ($variation->attribute_value()->get() as $attribute_value){
                 echo " | ".$attribute_value->attribute()->first()->type." | ".$attribute_value->value;
                 echo "\n";
+                foreach ($variation->file()->get() as $file) {
+                    echo " | ".$file->id." | ".$file->url." | ";
+                    echo "\n";
+                }
             }
             echo "------------------fin del producto------------------------";
             echo "\n";
-        }
+        }/*
         echo "------------------Inventario------------------------";
         echo "\n";
         $products=Product::all();
@@ -177,13 +182,13 @@ class ShowQueries extends Command
                     echo "          ";
                     echo "País de origen del proveedor: ".$stock->provider()->first()->origin()->first()->country;
                     echo "\n";
-                }*/
+                }
             }
             echo "\n";
             echo "\n";
             echo "-------------------------------------------------------------------";
             echo "\n";
             echo "\n";
-        }
+        }*/
     }
 }

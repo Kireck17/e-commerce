@@ -776,6 +776,68 @@ class StockSeeder extends Seeder
         $stock -> quantity = 16;
         $stock -> price = 500;
         $stock -> save();
+//seccion automotriz
+        $stock = new Stock();
+        $stock-> stockable_id = 85;
+        $stock-> stockable_type="App\Models\Variation";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 1;
+        $stock -> quantity = 16;
+        $stock -> price = 900;
+        $stock -> save();
 
+        $stock = new Stock();
+        $stock-> stockable_id = 86;
+        $stock-> stockable_type="App\Models\Variation";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 2;
+        $stock -> quantity = 40;
+        $stock -> price = 1220;
+        $stock -> save();
+
+        $stock = new Stock();
+        $stock-> stockable_id = 87;
+        $stock-> stockable_type="App\Models\Variation";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 3;
+        $stock -> quantity = 56;
+        $stock -> price = 850;
+        $stock -> save();
+
+        $stock = new Stock();
+        $stock-> stockable_id = 88;
+        $stock-> stockable_type="App\Models\Variation";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 4;
+        $stock -> quantity = 16;
+        $stock -> price = 1890;
+        $stock -> save();
+
+        $stock = new Stock();
+        $stock-> stockable_id = 89;
+        $stock-> stockable_type="App\Models\Variation";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 4;
+        $stock -> quantity = 16;
+        $stock -> price = 1890;
+        $stock -> save();
+
+        $stock = new Stock();
+        $stock-> stockable_id = 90;
+        $stock-> stockable_type="App\Models\Variation";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 1;
+        $stock -> quantity = 16;
+        $stock -> price = 2000;
+        $stock -> save();
+
+        $stock = new Stock();
+        $stock-> stockable_id = 91;
+        $stock-> stockable_type="App\Models\Variation";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 1;
+        $stock -> quantity = 16;
+        $stock -> price = 2000;
+        $stock -> save();
     }
 }

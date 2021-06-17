@@ -421,7 +421,139 @@ class ProductSeeder extends Seeder
         $product -> description = "Jeans Silver Plate corte skinny con bolsillos para caballero";
         $product -> save();
 
+//productos de autos
+        //29
+        $product = new Product();
+        $product -> barcode = 20485855;
+        $product -> name = 'Vagcom 20.12 Version Mas Actual Y Completa Vw Audi Seat Vcds';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 16;
+        $product -> description = "CABLE VAGCOM 20.12 COMPLETO EN INGLÉS Y ESPAÑOL VERSION 20.4.2
+        CALIDAD PREMIUM
+        ES LA VERSION MÁS RECIENTE PARA MODELOS 2021
+        Compatible con los últimos Motores FSI TDI TFSI TSI
+        Del grupo VW (Seat, Audi y Volkswagen) fabricados desde 1994 hasta 2020
+        Excepto ibiza A Partir del 2018
+        Con este dispositivo usted podrá realizar funciones a nivel concesionario como:
+        Adaptación, codificación, ajustes Básicos, lectura de fallas y Eliminación de Testigos, reseteo de
+        intervalos de servicio, análisis OBD2, mediciones y gráficas individuales de sensores, pruebas de
+        actuadores.
+        CARACTERISTICAS
+        Este cable Le permite probar actuadores, indicadores y realizar ajustes de Sistema CAN-BUS como:
+        • cuerpo de aceleración
+        • Programación de llaves
+        • Lectura de kilometraje real
+        • Reseteo de intervalos de servicio,
+        • Activar Cámaras
+        • Inmovilizadores.
+        • Control de Tracción.
+        • Sistema de tracción Quattro y 4Motion.
+        • Asistencia de estacionamiento
+        • ABS
+        • Airbags
+        • Bombas Diésel
+        • Cajas Automáticas.
+        • Tableros de Instrumentos
+        • Climatizador Electrónico
+        • Centrales de Confort
+        • Radio
+        • Alarma
+        • Luz de estacionamiento Izquierda y Derecha.
+        • Navegador GPS
+        • Dirección Hidráulica.
+        • Techo Automático y quemacocos.
+        • Sistema de Sonido
+        • Control Eléctrico
+        • Suspensión";
+        $product -> save();
 
+        //30
+        $product = new Product();
+        $product -> barcode = 553943056;
+        $product -> name = 'Carista Scanner Original Obd2 Bluetooth Para Android Y Apple Licencia';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 17;
+        $product -> description = "JESCANER AVANZADO OBD2 BLUETOOTH
+        Cada auto tiene personalizaciones y ajustes diferentes. Esto depende de los módulos disponibles
+        de su vehículo, por lo que lo invitamos a verificar que hace con su vehículo en la página oficial.
+        Revise compatibilidad antes de comprar en la página oficial no hay cambios o no aceptamos reclamos
+        por no funcionar en su auto.
+        Al seleccionar su auto viene todo lo que puede hacer incluso una lista de ejemplos de 
+        personalización.
+        Carista le ofrece todo esto por una mínima parte de lo que le costaría una visita al concesionario.
+        Carista es compatible con numerosos modelos de Volkswagen, Audi, BMW, Lexus, Mini, Scion, Toyota,
+        SEAT y Skoda.
+        Hágase con el adaptador Carista OBD2 y obtendrá:
+        —1 mes de prueba con opciones de compra en la app.
+        —Compatibilidad con gran cantidad de aplicaciones asociadas
+        como Engie, Torque Pro, DashCommand, OBD Fussion, OBD Car Doctor entre otras.
+        —Compatibilidad con sistemas iOS y Android.
+        Las opciones avanzadas solo son compatibles con algunos modelos de Volkswagen, Audi, BMW, Lexus,
+        Mini, Scion, Toyota, SEAT y Skoda.
+        Asegúrese de que su vehículo es compatible con el adaptador antes de adquirirlo.
+        —Con la compra del adaptador Carista OBD2 obtendrá 1 mes de prueba de todas las funciones de pago que ofrece la aplicación Carista. Para poder seguir utilizando estas opciones tras el período de prueba deberá adquirir una suscripción.
+        Entre las funcionalidades se encuentran :
+        -Escaneo de autos para códigos de falla.
+        -Activación de diversas funciones como barrido de agujas del tablero, modo verano, leaving home, 
+        coming home, reseteo de testigo de servicio, reseteo de testigos en general, kilómetros por litro, 
+        activar o desactivar el pitido de la alarma y del cinturón de seguridad, activación de cierre y 
+        apertura de puertas, entre otras.";
+        $product -> save();
+
+        //31
+        $product = new Product();
+        $product -> barcode = 1304500573;
+        $product -> name = 'Baba De Monito Original Abrillantador Detallado Automotriz';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 18;
+        $product -> description = "Abrillantador Detallado Automotriz";
+        $product -> save();
+
+        //32
+        $product = new Product();
+        $product -> barcode = 3304855;
+        $product -> name = 'Luz Cortesia Proyector Puertas Mini Cooper Logos Originales';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 19;
+        $product -> description = "COMPATIBLES CON VEHICULOS QUE TENGAN LUCES DE CORTESÍA DEBAJO DE LAS PUERTAS.
+        INCLUYE:
+        •2 Proyectores ( útiles para 2 puertas)
+        •Tecnología LED
+        •Emblema proyectado (Varios modelos)
+        •Fácil Instalación sin adaptaciones
+        • Calidad PREMIUM
+        Sin cortar cables sólo quitas las luces actuales de cortesia de tu vehículo e instalas
+        ****Se entrega en caja";
+        $product -> save();
+
+        //33
+        $product = new Product();
+        $product -> barcode = 6637593;
+        $product -> name = 'Luz De Cortesia Proyector Led Para Puertas Bmw Serie M';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 19;
+        $product -> description = "Compatibilidad modelos:
+        • 3 series-E90 E91 E92 E93 M3
+        • 5 series-E60 E61 F10 F07 M5
+        • 6 series-E63 E64 F12 F13 M6
+        • 7 series-E65 E66 E67 E68 F01 F02
+        • Z series-E85 E86 E89 Z4
+        • Serie GT-2010-14
+        COMPATIBLES CON VEHICULOS QUE TENGAN LUCES DE CORTESÍA DEBAJO DE LAS PUERTAS.
+        INCLUYE:
+        •2 Proyectores ( útiles para 2 puertas)
+        •Tecnología LED
+        •Emblema proyectado (Varios modelos)
+        •Fácil Instalación sin adaptaciones
+        • Calidad PREMIUM
+        ***Sin cortar cables sólo quitas las luces actuales de cortesia de tu vehículo e instalas
+        ****Se entrega en caja";
+        $product -> save();
         
 
     }
