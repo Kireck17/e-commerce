@@ -16,6 +16,7 @@
                         {{ __('Inicio') }}
                     </x-jet-nav-link>
                 </div>
+                
             </div>
             @auth
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
