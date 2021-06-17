@@ -38,4 +38,9 @@ class Variation extends Model
     {
         return $this->morphOne(Stock::class, 'stockable');
     }
+    
+    public function file()
+    {
+        return $this->morphMany(File::class, 'fileable');
+    }
 }

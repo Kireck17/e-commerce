@@ -11,5 +11,10 @@ class Category extends Model
     protected $table = 'categories';
 
     protected $fillable=['name'];
-   
+
+    
+    public function file()
+    {
+        return $this->morphOne(File::class, 'fileable');
+    }
 }
