@@ -15,6 +15,12 @@
                     <x-jet-nav-link href="{{ route('lobby') }}" :active="request()->routeIs('lobby')">
                         {{ __('Inicio') }}
                     </x-jet-nav-link>
+                    {{-- Modelo ->get()  collection laravel ->unique('name') --}}
+                    @foreach(App\Models\Category::has('product')->get()->unique('name') as $category)
+                        <x-jet-nav-link href="{{ route('category.show',['category' => $category->id]) }}">
+                            {{ __($category->name) }}
+                        </x-jet-nav-link>
+                    @endforeach
                 </div>
                 
             </div>

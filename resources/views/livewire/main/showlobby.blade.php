@@ -1,4 +1,5 @@
 <div>
+<<<<<<< HEAD
    {{--Carrusel--}}
    <div class="container mx-auto bg-white py-16 my-4 border rounded-lg overflow-hidden shadow-xl">
         {{-- Inicio del carousel --}}
@@ -258,4 +259,12 @@
             </div>
         </section>
    </div>
+=======
+    <x-slot name="header">
+        Titulo de showlobby
+    </x-slot>
+    <div class="mt-8">
+        <h2>Hola desde showlobby</h2>
+    </div>
+>>>>>>> a6a908970292d1f79faa4535318af81bb5cbbadd
 </div>
