@@ -18,63 +18,57 @@ class VariationSeeder extends Seeder
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(1);
-         $variations->attribute_value()->attach(1);
-         $variations->attribute_value()->attach(11);
+         $variations->attribute_value()->attach(1);//negro
+         $variations->attribute_value()->attach(11);//plaastico
 
          //2
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(1);
-         $variations->attribute_value()->attach(2);
+         $variations->attribute_value()->attach(2);//blanco
          $variations->attribute_value()->attach(11);
 
-         //2
+         //3
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(2);
          $variations->attribute_value()->attach(2);
          $variations->attribute_value()->attach(11);
-         //3
+         //4
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(3);
          $variations->attribute_value()->attach(2);
          $variations->attribute_value()->attach(11);
-         //4
+         //5
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(4);
          $variations->attribute_value()->attach(15);
          $variations->attribute_value()->attach(2);
-         //5
+         //6
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(5);
          $variations->attribute_value()->attach(5);
-         //6
-         $variations=new Variation();
-         $variations->save();
-         $variations->product()->attach(6);
-         $variations->attribute_value()->attach(1);
-         $variations->attribute_value()->attach(10);
          //7
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(6);
          $variations->attribute_value()->attach(1);
-         $variations->attribute_value()->attach(8);
+         $variations->attribute_value()->attach(10);
          //8
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(6);
          $variations->attribute_value()->attach(1);
-         $variations->attribute_value()->attach(9);
+         $variations->attribute_value()->attach(8);
          //9
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(6);
-         $variations->attribute_value()->attach(2);
-         $variations->attribute_value()->attach(10);
+         $variations->attribute_value()->attach(1);
+         $variations->attribute_value()->attach(9);
          //10
          $variations=new Variation();
          $variations->save();
@@ -86,47 +80,47 @@ class VariationSeeder extends Seeder
          $variations->save();
          $variations->product()->attach(6);
          $variations->attribute_value()->attach(2);
-         $variations->attribute_value()->attach(10);
+         $variations->attribute_value()->attach(8);
          //12
+         $variations=new Variation();
+         $variations->save();
+         $variations->product()->attach(6);
+         $variations->attribute_value()->attach(2);
+         $variations->attribute_value()->attach(9);
+         //13
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(7);
          $variations->attribute_value()->attach(5);
          $variations->attribute_value()->attach(11);
-         //13
+         //14
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(8);
          $variations->attribute_value()->attach(13);
-         //14
+         //15
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(9);
          $variations->attribute_value()->attach(14);
-         //15
-         $variations=new Variation();
-         $variations->save();
-         $variations->product()->attach(10);
-         $variations->attribute_value()->attach(1);
-         $variations->attribute_value()->attach(10);
          //16
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(10);
          $variations->attribute_value()->attach(1);
-         $variations->attribute_value()->attach(8);
+         $variations->attribute_value()->attach(10);
          //17
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(10);
          $variations->attribute_value()->attach(1);
-         $variations->attribute_value()->attach(9);
+         $variations->attribute_value()->attach(8);
          //18
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(10);
-         $variations->attribute_value()->attach(2);
-         $variations->attribute_value()->attach(10);
+         $variations->attribute_value()->attach(1);
+         $variations->attribute_value()->attach(9);
          //19
          $variations=new Variation();
          $variations->save();
@@ -142,26 +136,32 @@ class VariationSeeder extends Seeder
          //21
          $variations=new Variation();
          $variations->save();
+         $variations->product()->attach(10);
+         $variations->attribute_value()->attach(2);
+         $variations->attribute_value()->attach(10);
+         //22
+         $variations=new Variation();
+         $variations->save();
          $variations->product()->attach(11);
          $variations->attribute_value()->attach(3);
          $variations->attribute_value()->attach(11);
-         //22
+         //23
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(12);
          $variations->attribute_value()->attach(12);
-         //23
+         //24
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(13);
          $variations->attribute_value()->attach(14);
          $variations->attribute_value()->attach(5);
-         //24
+         //25
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(14);
          $variations->attribute_value()->attach(14);
-         //25
+         //26
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(15);
@@ -169,57 +169,57 @@ class VariationSeeder extends Seeder
          $variations->attribute_value()->attach(7);
          $variations->attribute_value()->attach(16);
 //
-         //26 chica vino
+         //27 chica vino
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(16);
          $variations->attribute_value()->attach(23);
          $variations->attribute_value()->attach(10);
-         //27 medina
+         //28 medina
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(16);
          $variations->attribute_value()->attach(23);
          $variations->attribute_value()->attach(8);
-         //28 grande
+         //29 grande
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(16);
          $variations->attribute_value()->attach(23);
          $variations->attribute_value()->attach(9);
 
-         //29 chica rosa frances
+         //30 chica rosa frances
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(16);
          $variations->attribute_value()->attach(24);
          $variations->attribute_value()->attach(10);
-         //30 medina
+         //31 medina
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(16);
          $variations->attribute_value()->attach(24);
          $variations->attribute_value()->attach(8);
-         //31 grande
+         //32 grande
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(16);
          $variations->attribute_value()->attach(24);
          $variations->attribute_value()->attach(9);
 
-         //32 chica negro
+         //33 chica negro
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(16);
          $variations->attribute_value()->attach(1);
          $variations->attribute_value()->attach(10);
-         //33 medina
+         //34 medina
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(16);
          $variations->attribute_value()->attach(1);
          $variations->attribute_value()->attach(8);
-         //34 grande
+         //35 grande
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(16);
@@ -227,171 +227,171 @@ class VariationSeeder extends Seeder
          $variations->attribute_value()->attach(9);
 //        
 
-         //35 chica negro playera
+         //36 chica negro playera
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(17);
          $variations->attribute_value()->attach(1);
          $variations->attribute_value()->attach(10);
-         //36 medina
+         //37 medina
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(17);
          $variations->attribute_value()->attach(1);
          $variations->attribute_value()->attach(8);
-         //37 grande
+         //38 grande
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(17);
          $variations->attribute_value()->attach(1);
          $variations->attribute_value()->attach(9);
 
-         //38 chica negro
+         //39 chica blanca
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(17);
          $variations->attribute_value()->attach(2);
          $variations->attribute_value()->attach(10);
-         //39 medina
+         //40 medina
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(17);
          $variations->attribute_value()->attach(2);
          $variations->attribute_value()->attach(8);
-         //40 grande
+         //41 grande
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(17);
          $variations->attribute_value()->attach(2);
          $variations->attribute_value()->attach(9);
 //
-        //41 chica negro leggins
+        //42 chica negro leggins
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(18);
         $variations->attribute_value()->attach(1);
         $variations->attribute_value()->attach(10);
-        //42 medina
+        //43 medina
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(18);
         $variations->attribute_value()->attach(1);
         $variations->attribute_value()->attach(8);
-        //43 grande
+        //44 grande
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(18);
         $variations->attribute_value()->attach(1);
         $variations->attribute_value()->attach(9);
 
-         //44 chica negro playera
+         //45 chica rosa
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(18);
          $variations->attribute_value()->attach(25);
          $variations->attribute_value()->attach(10);
-         //45 medina
+         //46 medina
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(18);
          $variations->attribute_value()->attach(25);
          $variations->attribute_value()->attach(8);
-         //46 grande
+         //47 grande
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(18);
          $variations->attribute_value()->attach(25);
          $variations->attribute_value()->attach(9);
 //
-        //47 chica negro playera flores
+        //48 chica negro playera flores
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(19);
         $variations->attribute_value()->attach(1);
         $variations->attribute_value()->attach(10);
-        //48 medina
+        //49 medina
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(19);
         $variations->attribute_value()->attach(1);
         $variations->attribute_value()->attach(8);
-        //49 grande
+        //50 grande
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(19);
         $variations->attribute_value()->attach(1);
         $variations->attribute_value()->attach(9);
 //
-         //50 chica sudadera colores
+         //51 chica sudadera colores
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(20);
          $variations->attribute_value()->attach(26);
          $variations->attribute_value()->attach(10);
-         //51 medina
+         //52 medina
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(20);
          $variations->attribute_value()->attach(26);
          $variations->attribute_value()->attach(8);
-         //52 grande
+         //53 grande
          $variations=new Variation();
          $variations->save();
          $variations->product()->attach(20);
          $variations->attribute_value()->attach(26);
          $variations->attribute_value()->attach(9);
 //
-        //53  pantufla vino 
+        //54  pantufla vino 
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(21);
         $variations->attribute_value()->attach(23);
         $variations->attribute_value()->attach(17);
-        //54 
+        //55 
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(21);
         $variations->attribute_value()->attach(23);
         $variations->attribute_value()->attach(19);
-        //55 
+        //56 
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(21);
         $variations->attribute_value()->attach(23);
         $variations->attribute_value()->attach(21);
 
-        //56  pantufla rosa
+        //57  pantufla rosa
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(21);
         $variations->attribute_value()->attach(25);
         $variations->attribute_value()->attach(18);
-        //57 
+        //58 
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(21);
         $variations->attribute_value()->attach(25);
         $variations->attribute_value()->attach(20);
-        //58
+        //59
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(21);
         $variations->attribute_value()->attach(25);
         $variations->attribute_value()->attach(22);
 //
-        //59  paans gris
+        //60  paans gris
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(22);
         $variations->attribute_value()->attach(27);
         $variations->attribute_value()->attach(10);
-        //60 
+        //61
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(22);
         $variations->attribute_value()->attach(27);
         $variations->attribute_value()->attach(8);
-        //61
+        //62
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(22);
@@ -399,19 +399,19 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(9);
 //
         
-        //62  pantalon verde militar
+        //63  pantalon verde militar
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(23);
         $variations->attribute_value()->attach(28);
         $variations->attribute_value()->attach(10);
-        //63 
+        //64
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(23);
         $variations->attribute_value()->attach(28);
         $variations->attribute_value()->attach(8);
-        //64
+        //65
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(23);
@@ -419,21 +419,13 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(9);
 //
 //seccion de variaciones de hombres
-        //65 playera chica blanca
+        //66 playera chica blanca
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(24);
         $variations->attribute_value()->attach(2);
         $variations->attribute_value()->attach(31);
         $variations->attribute_value()->attach(10);
-
-        //66
-        $variations=new Variation();
-        $variations->save();
-        $variations->product()->attach(24);
-        $variations->attribute_value()->attach(2);
-        $variations->attribute_value()->attach(31);
-        $variations->attribute_value()->attach(8);
 
         //67
         $variations=new Variation();
@@ -441,23 +433,23 @@ class VariationSeeder extends Seeder
         $variations->product()->attach(24);
         $variations->attribute_value()->attach(2);
         $variations->attribute_value()->attach(31);
+        $variations->attribute_value()->attach(8);
+
+        //68
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(24);
+        $variations->attribute_value()->attach(2);
+        $variations->attribute_value()->attach(31);
         $variations->attribute_value()->attach(9);
 //
-        //68 playera chica negra
+        //69 playera chica negra
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(25);
         $variations->attribute_value()->attach(1);
         $variations->attribute_value()->attach(32);
         $variations->attribute_value()->attach(10);
-
-        //69
-        $variations=new Variation();
-        $variations->save();
-        $variations->product()->attach(25);
-        $variations->attribute_value()->attach(1);
-        $variations->attribute_value()->attach(32);
-        $variations->attribute_value()->attach(8);
 
         //70
         $variations=new Variation();
@@ -465,9 +457,17 @@ class VariationSeeder extends Seeder
         $variations->product()->attach(25);
         $variations->attribute_value()->attach(1);
         $variations->attribute_value()->attach(32);
+        $variations->attribute_value()->attach(8);
+
+        //71
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(25);
+        $variations->attribute_value()->attach(1);
+        $variations->attribute_value()->attach(32);
         $variations->attribute_value()->attach(9);
 //
-        //71 playera chica azul
+        //72 playera chica azul
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(26);
@@ -475,7 +475,7 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(32);
         $variations->attribute_value()->attach(10);
 
-        //72
+        //73
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(26);
@@ -483,7 +483,7 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(32);
         $variations->attribute_value()->attach(8);
 
-        //73
+        //74
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(26);
@@ -491,22 +491,13 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(32);
         $variations->attribute_value()->attach(9);
 //
-        //74 pantalon
+        //75 pantalon
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(27);
         $variations->attribute_value()->attach(29);
         $variations->attribute_value()->attach(33);
         $variations->attribute_value()->attach(34);
-        $variations->attribute_value()->attach(39);
-
-        //75
-        $variations=new Variation();
-        $variations->save();
-        $variations->product()->attach(27);
-        $variations->attribute_value()->attach(29);
-        $variations->attribute_value()->attach(33);
-        $variations->attribute_value()->attach(35);
         $variations->attribute_value()->attach(39);
 
         //76
@@ -515,7 +506,7 @@ class VariationSeeder extends Seeder
         $variations->product()->attach(27);
         $variations->attribute_value()->attach(29);
         $variations->attribute_value()->attach(33);
-        $variations->attribute_value()->attach(36);
+        $variations->attribute_value()->attach(35);
         $variations->attribute_value()->attach(39);
 
         //77
@@ -524,7 +515,7 @@ class VariationSeeder extends Seeder
         $variations->product()->attach(27);
         $variations->attribute_value()->attach(29);
         $variations->attribute_value()->attach(33);
-        $variations->attribute_value()->attach(37);
+        $variations->attribute_value()->attach(36);
         $variations->attribute_value()->attach(39);
 
         //78
@@ -533,10 +524,19 @@ class VariationSeeder extends Seeder
         $variations->product()->attach(27);
         $variations->attribute_value()->attach(29);
         $variations->attribute_value()->attach(33);
+        $variations->attribute_value()->attach(37);
+        $variations->attribute_value()->attach(39);
+
+        //79
+        $variations=new Variation();
+        $variations->save();
+        $variations->product()->attach(27);
+        $variations->attribute_value()->attach(29);
+        $variations->attribute_value()->attach(33);
         $variations->attribute_value()->attach(38);
         $variations->attribute_value()->attach(39);
 //
-        //79 pantalon
+        //80 pantalon
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(28);
@@ -545,7 +545,7 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(34);
         $variations->attribute_value()->attach(40);
 
-        //80
+        //81
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(28);
@@ -554,7 +554,7 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(35);
         $variations->attribute_value()->attach(40);
 
-        //81
+        //82
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(28);
@@ -563,7 +563,7 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(36);
         $variations->attribute_value()->attach(40);
 
-        //82
+        //83
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(28);
@@ -572,7 +572,7 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(37);
         $variations->attribute_value()->attach(40);
 
-        //83
+        //84
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(28);
@@ -581,43 +581,43 @@ class VariationSeeder extends Seeder
         $variations->attribute_value()->attach(38);
         $variations->attribute_value()->attach(40);
 //variaciones autos 
-        //84
+        //85
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(29);
         $variations->attribute_value()->attach(41);
         $variations->attribute_value()->attach(42);
 
-        //85
+        //86
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(30);
         $variations->attribute_value()->attach(43);
         
-        //86
+        //87
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(31);
         $variations->attribute_value()->attach(44);
 
-        //87
+        //88
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(32);
         $variations->attribute_value()->attach(45);
 
-        //88
+        //89
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(32);
         $variations->attribute_value()->attach(46);
 
-        //89
+        //90
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(33);
         $variations->attribute_value()->attach(47);
-        //90
+        //91
         $variations=new Variation();
         $variations->save();
         $variations->product()->attach(33);
