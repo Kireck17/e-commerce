@@ -2,11 +2,8 @@
 
 use App\Http\Livewire\Category\ShowCategory;
 use App\Http\Livewire\Main\Showlobby;
-<<<<<<< HEAD
 use App\Http\Livewire\Main\MensClothing;
-=======
 use Illuminate\Support\Facades\Route;
->>>>>>> a6a908970292d1f79faa4535318af81bb5cbbadd
 
 
 
@@ -17,3 +14,22 @@ Route::prefix('category')->group(function(){
             ->name('show');
     });
 });
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    // Ruta para entrar al dashboard
+    Route::get('/dashboard',Showlobby::class);
+});
+
+//vista prototipo para oferta
+Route::get('/oferts', function () {
+    return view('category.oferts');
+})->name('oferts');
+
+//vista prototipo para articulos mas vendidos
+Route::get('/best', function () {
+    return view('category.best-selling');
+})->name('best');
+
+//vista prototipo para articulos mas vendidos
+Route::get('/woman', function () {
+    return view('category.woman');
+})->name('woman');

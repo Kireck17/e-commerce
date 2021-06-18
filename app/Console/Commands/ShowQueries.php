@@ -54,9 +54,13 @@ class ShowQueries extends Command
         foreach ($categories as $categorie) {
             echo " | ".$categorie->id." | ".$categorie->name." | ";
             echo "\n";
+            foreach ($categorie->file()->get() as $file) {
+                echo " | ".$file->id." | ".$file->url." | ";
+                echo "\n";
+            }
         }
 
-        $subcategories=SubCategory::all();
+      /*  $subcategories=SubCategory::all();
         echo "------------------SubCategories------------------------";
         echo "\n";
         foreach ($subcategories as $subcategorie) {
@@ -93,12 +97,10 @@ class ShowQueries extends Command
         foreach ($products as $product) {
             echo " | ".$product->id." | ".$product->name." | ";
             echo "\n";
+            
         }
-        echo "------------------Product------------------------";
-        foreach ($products->file()->get() as $file) {
-            echo " | ".$file->id." | ".$file->url." | ";
-            echo "\n";
-        }
+        */
+        
 
         $files=File::all();
         echo "------------------file------------------------";
@@ -117,10 +119,14 @@ class ShowQueries extends Command
             foreach ($variation->attribute_value()->get() as $attribute_value){
                 echo " | ".$attribute_value->attribute()->first()->type." | ".$attribute_value->value;
                 echo "\n";
+                foreach ($variation->file()->get() as $file) {
+                    echo " | ".$file->id." | ".$file->url." | ";
+                    echo "\n";
+                }
             }
             echo "------------------fin del producto------------------------";
             echo "\n";
-        }
+        }/*
         echo "------------------Inventario------------------------";
         echo "\n";
         $products=Product::all();
@@ -144,19 +150,23 @@ class ShowQueries extends Command
                     echo $attribute_value->value;
                     echo "\n";
                 }
-                foreach ($variation->stock()->get() as $stock) {
-                    echo "Cantidad de productos en el inventario: ".$stock->quantity;
-                    echo "          ";
-                    echo "Precio por unidad: ".$stock->price;
-                    echo "\n";
-                    echo "Almacén: ".$stock->warehouse()->first()->name;
-                    echo "          ";
-                    echo "Proveedor: ".$stock->provider()->first()->name;
-                    echo "          ";
-                    echo "País de origen del proveedor: ".$stock->provider()->first()->origin()->first()->country;
-                    echo "\n";
+                if ($variation->stock()->get() ->count() > 0){
+                    foreach ($variation->stock()->get() as $stock) {
+                        echo "Cantidad de productos en el inventario: ".$stock->quantity;
+                        echo "          ";
+                        echo "Precio por unidad: ".$stock->price;
+                        echo "\n";
+                        echo "Almacén: ".$stock->warehouse()->first()->name;
+                        echo "          ";
+                        echo "Proveedor: ".$stock->provider()->first()->name;
+                        echo "          ";
+                        echo "País de origen del proveedor: ".$stock->provider()->first()->origin()->first()->country;
+                        echo "\n";
+                    }
                 }
-                foreach ($variation->kitdetail()->get() as $kit) {
+                
+                
+               /* foreach ($variation->kitdetail()->get() as $kit) {
                     $stock=$kit->kit()->first()->stock()->first();
                     echo "Kit: ".$kit->id;
                     echo "          ";
@@ -179,6 +189,6 @@ class ShowQueries extends Command
             echo "-------------------------------------------------------------------";
             echo "\n";
             echo "\n";
-        }
+        }*/
     }
 }
