@@ -23,13 +23,15 @@
                         {{$product->name}}
                     </x-slot>
                     <x-slot name="category">
-                        categoria : {{$product->category->first()->name}} Marca : {{$product->trademark()->first()->name}}
+                        categoria : {{$product->category->first()->name}}, {{$product->subcategory()->first()->name}} 
+                       <br>
+                       Marca : {{$product->trademark()->first()->name}}
                     </x-slot>
                     <x-slot name="img">
                         <img class="object-cover w-full h-full mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
                     </x-slot>
                     <x-slot name="price">
-                        $ {{$product->variation()->first()->stock()->first()->price}}
+                        $ {{$product->variation()->first()->stock()->first()->price}} ({{$product->variation()->first()->stock()->first()->quantity}})
                     </x-slot>
                 </x-design.card-search>
             @endforeach

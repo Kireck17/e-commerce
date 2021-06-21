@@ -10,6 +10,13 @@ class Variation extends Model
     use HasFactory;
     protected $table = 'variations';
 
+
+    //alcanze con el modelo File
+    public function file()
+    {
+        return $this->morphMany(File::class, 'fileable');
+    }
+
     public function attribute_value()
     {
         return $this->belongsToMany(AttributeValue::class);
@@ -39,8 +46,5 @@ class Variation extends Model
         return $this->morphOne(Stock::class, 'stockable');
     }
     
-    public function file()
-    {
-        return $this->morphMany(File::class, 'fileable');
-    }
+    
 }

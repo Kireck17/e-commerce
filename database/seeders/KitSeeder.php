@@ -15,7 +15,7 @@ class kitseeder extends Seeder
     public function run()
         //
     {
-        for ($i=0; $i < 26; $i++) {
+        for ($i=0; $i < 300; $i++) {
             $kits=new Kit();
             $kits->save();
         }
