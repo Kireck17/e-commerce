@@ -20,14 +20,13 @@ class DatabaseSeeder extends Seeder
             SubcategorySeeder::class,
             AttributeSeeder::class,
             AttributeValuesSeeder::class,
-            //KitSeeder::class,
             OriginSeeder::class,
             WarehouseSeeder::class,
             ProductSeeder::class,
             VariationSeeder::class,
-            //KitDetailSeeder::class,
             ProviderSeeder::class,
             StockSeeder::class,
+            FileSeeder::class,
         ]);
     }
 }
