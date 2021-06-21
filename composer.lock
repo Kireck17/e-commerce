@@ -1166,7 +1166,34 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/a18266c612e0e6aba5e0174b3c873d2d217dccfb",
                 "reference": "a18266c612e0e6aba5e0174b3c873d2d217dccfb",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 82d3ee4979e4c27870a8ac366f8bd19c2c7b9c3e
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+<<<<<<< HEAD
+=======
                 "shasum": ""
+>>>>>>> 9e7275b55fe12dce55e3efe37f271770046b2e87
+=======
+>>>>>>> 82d3ee4979e4c27870a8ac366f8bd19c2c7b9c3e
+=======
+>>>>>>> f7b25160d401467b81f00adec599c75f5ac32f03
+                "shasum": ""
+>>>>>>> 4dec10491e388e1d7c73022a9307f3ecb150bbf6
+=======
+                "shasum": ""
+>>>>>>> 733765970954d2cea7f6bf422376c3a4105392b2
             },
             "require": {
                 "doctrine/inflector": "^1.4|^2.0",

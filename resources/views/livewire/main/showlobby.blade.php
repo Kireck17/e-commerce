@@ -200,4 +200,8 @@
             @endforeach
         </section>
    </div>
+    <x-slot name="header">
+        Titulo de showlobby
+    </x-slot>
+    
 </div>

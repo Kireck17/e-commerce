@@ -1,3 +1,4 @@
+
 <nav x-data="{ open: false }" class="bg-white border-b border-turquoise-dark">
     {{-- Navegación normal --}}
     <div class="hidden lg:flex lg:justify-between lg:items-center lg:h-24">
@@ -14,32 +15,29 @@
                 {{__('Busqueda')}}
             </x-nav-links.normal>
             
-            <div x-data="{ open:false }" :aria-expanded="open">
-                        <div class="inline-flex ml-4">
-                            <button @click="open = !open" 
-                                    :aria-expanded="open"
-                                    aria-controls="nav-list"
-                                    class="text-lg font-semibold text-turquoise-dark px-3 py-2 mr-4" >
-                                {{__('Categories')}}
-                            </button>
-                            
-                            <i x-bind:class="{'fas fa-caret-up':open,'fas fa-caret-down':!open}"></i>
-                        </div>
-                        <ul  
-                            :hidden="!open" 
-                            id = "nav-list"
-                            class="absolute  overflow-hidden ">
-                            <div class="block w-full h-32 border shadow-md space-y-2 overflow-x-auto bg-gray-50">
-                                <li>Celulares y Accesorios</li>
-                                <li>Sccesorios para Veiculos</li>
-                                <li>Celulares y Accesorios</li>
-                                <li>Sccesorios para Veiculos</li>
-                                <li>Celulares y Accesorios</li>
-                                <li>Sccesorios para Veiculos</li>
-                                <li>Celulares y Accesorios</li>
-                                <li>Sccesorios para Veiculos</li>
-                            </div>
-                        </ul>
+            <div x-data="{ open:false }">
+                <button @click="open = !open"
+                        class="text-lg font-semibold text-turquoise-dark px-3 py-2 flex justify-center items-center focus:outline-none" >
+                    {{__('Categorias')}}
+                    <i class="ml-3" x-bind:class="{'fas fa-caret-up':open,'fas fa-caret-down':!open}"></i>
+                </button>
+                <div
+                    :hidden="!open"
+                    class="absolute overflow-hidden rounded-bl-md rounded-br-md border-l border-b border-r border-gray-300 mt-3 z-40 bg-white w-96">
+                    <div class="grid grid-cols-2 gap-1">
+                        @foreach(App\Models\Category::has('product')->get()->unique('name') as $category)
+                            <a class="p-1 uppercase font-bold text-xs" href="{{ route('category.show',['category' => $category->id]) }}"> {{ __($category->name) }}</a>
+                        @endforeach
+                    </div>
+                    {{--<div class="block w-full h-32 border shadow-md space-y-2 overflow-x-auto bg-gray-50">
+                    @foreach(App\Models\Category::has('product')->get()->unique('name') as $category)
+
+                        <a href="{{ route('category.show',['category' => $category->id]) }}"> {{ __($category->name) }}</a>
+
+
+                    @endforeach
+                    </div>--}}
+                </div>
             </div>
             <x-nav-links.normal href="/" :active="request()->routeIs('prototipo.mark')">
                 {{__('Tutoriales')}}
