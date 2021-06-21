@@ -48,7 +48,7 @@
             <span class="text-black font-bold text-center text-4xl">
                 Ofertas
             </span>
-            <a href="#" class="text-blue-500 font-extrabold underline text-center text-base hover:text-yellow-500">
+            <a href="/oferts" class="text-blue-500 font-extrabold underline text-center text-base hover:text-yellow-500">
                 Ver mas
             </a> 
         </div>
@@ -109,6 +109,7 @@
                     $98.00
                 </x-slot>
             </x-design.card-offer>
+        </div>
    </div>
    {{--popular--}}
    <div class="container mx-auto bg-white py-4 px-4 my-4 border rounded-lg overflow-hidden shadow-xl">
@@ -116,7 +117,7 @@
             <span class="text-black font-bold text-center text-4xl">
                 Arítulos más comprados
             </span>
-            <a href="#" class="text-blue-500 font-extrabold underline text-center text-base hover:text-yellow-500">
+            <a href="/best" class="text-blue-500 font-extrabold underline text-center text-base hover:text-yellow-500">
                 Ver mas
             </a> 
         </div>

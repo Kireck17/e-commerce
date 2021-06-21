@@ -66,113 +66,113 @@ class FileSeeder extends Seeder
 //APARTADO VARIACIONES 
 //1
         $file = new File();
-        $file-> fileable_id = 9;
+        $file-> fileable_id = 1;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_877585-CBT43277996445_082020-O.webp";
         $file -> save();
 //2
         $file = new File();
-        $file-> fileable_id = 10;
+        $file-> fileable_id = 2;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_976294-CBT46282821253_062021-O.webp";
         $file -> save();
 //3
         $file = new File();
-        $file-> fileable_id = 11;
+        $file-> fileable_id = 3;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_676907-CBT45649300832_042021-O.webp";
         $file -> save();
 //4
         $file = new File();
-        $file-> fileable_id = 12;
+        $file-> fileable_id = 4;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_825029-MLM44817156040_022021-O.webp";
         $file -> save();
 //5
         $file = new File();
-        $file-> fileable_id = 13;
+        $file-> fileable_id = 5;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_731633-MLM43766394561_102020-O.webp";
         $file -> save();
         //6
         $file = new File();
-        $file-> fileable_id = 14;
+        $file-> fileable_id = 6;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_624844-MLM44299820264_122020-O.webp";
         $file -> save();
         //7
         $file = new File();
-        $file-> fileable_id = 15;
+        $file-> fileable_id = 7;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_872579-MLM42379516497_062020-O.webp";
         $file -> save();
         //8
         $file = new File();
-        $file-> fileable_id = 16;
+        $file-> fileable_id = 8;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_792499-MLM42379516481_062020-O.webp";
         $file -> save();
         //9
         $file = new File();
-        $file-> fileable_id = 17;
+        $file-> fileable_id = 9;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_628780-MLM45560478361_042021-O.webp";
         $file -> save();
 
         //10
         $file = new File();
-        $file-> fileable_id = 18;
+        $file-> fileable_id = 10;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_886172-MLM43370610116_092020-O.webp";
         $file -> save();
         //11
         $file = new File();
-        $file-> fileable_id = 19;
+        $file-> fileable_id = 11;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_2X_815374-MLM43370596459_092020-F.webp";
         $file -> save();
         //12
         $file = new File();
-        $file-> fileable_id = 20;
+        $file-> fileable_id = 12;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_876632-MLM43370600377_092020-O.webp";
         $file -> save();
 
         //13
         $file = new File();
-        $file-> fileable_id = 21;
+        $file-> fileable_id = 13;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_774846-MLM45644778711_042021-O.webp";
         $file -> save();
 
         //14
         $file = new File();
-        $file-> fileable_id = 22;
+        $file-> fileable_id = 14;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_656032-MLM42947051399_072020-O.webp";
         $file -> save();
         //15
         $file = new File();
-        $file-> fileable_id = 23;
+        $file-> fileable_id = 15;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_637381-MLM44241309181_122020-O.webp";
         $file -> save();
         //negro
         //16
         $file = new File();
-        $file-> fileable_id = 24;
+        $file-> fileable_id = 16;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_836144-CBT45578637938_042021-O.webp";
         $file -> save();
         //17
         $file = new File();
-        $file-> fileable_id = 25;
+        $file-> fileable_id = 17;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_963334-CBT45578637940_042021-O.webp";
         $file -> save();
         //18
         $file = new File();
-        $file-> fileable_id = 26;
+        $file-> fileable_id = 18;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_839842-CBT45397675103_032021-O.webp";
         $file -> save();
@@ -180,86 +180,86 @@ class FileSeeder extends Seeder
         //blanco
         //19
         $file = new File();
-        $file-> fileable_id = 27;
+        $file-> fileable_id = 19;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_816107-MLM32906321323_112019-O.webp";
         $file -> save();
         //20
         $file = new File();
-        $file-> fileable_id = 28;
+        $file-> fileable_id = 20;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_841941-MLM32906320849_112019-O.webp";
         $file -> save();
         //21
         $file = new File();
-        $file-> fileable_id = 29;
+        $file-> fileable_id = 21;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_794883-MLM44320778909_122020-O.webp";
         $file -> save();
 
         //22
         $file = new File();
-        $file-> fileable_id = 30;
+        $file-> fileable_id = 22;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_880856-MLM46264998858_062021-O.webp";
         $file -> save();
 
         //23
         $file = new File();
-        $file-> fileable_id = 31;
+        $file-> fileable_id = 23;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_741411-MLM42340485104_062020-O.webp";
         $file -> save();
 
         //24
         $file = new File();
-        $file-> fileable_id = 32;
+        $file-> fileable_id = 24;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_888338-MLM32005403748_082019-O.webp";
         $file -> save();
 
         //25
         $file = new File();
-        $file-> fileable_id = 33;
+        $file-> fileable_id = 25;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_852362-MLM43400803253_092020-O.webp";
         $file -> save();
 
         //26
         $file = new File();
-        $file-> fileable_id = 34;
+        $file-> fileable_id = 26;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_766154-MLA46168604011_052021-O.webp";
         $file -> save();
 
         //27
         $file = new File();
-        $file-> fileable_id = 35;
+        $file-> fileable_id = 27;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_607475-MLM45133046439_032021-O.webp";
         $file -> save();
         //28
         $file = new File();
-        $file-> fileable_id = 36;
+        $file-> fileable_id = 28;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_989342-MLM45076499530_032021-O.webp";
         $file -> save();
         //29
         $file = new File();
-        $file-> fileable_id = 37;
+        $file-> fileable_id = 29;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_607475-MLM45133046439_032021-O.webp";
         $file -> save();
 
         //30
         $file = new File();
-        $file-> fileable_id = 38;
+        $file-> fileable_id = 30;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_675080-MLM45133046576_032021-O.webp";
         $file -> save();
         //31
         $file = new File();
-        $file-> fileable_id = 39;
+        $file-> fileable_id = 31;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_750776-MLM45076511467_032021-O.webp";
         $file -> save();
