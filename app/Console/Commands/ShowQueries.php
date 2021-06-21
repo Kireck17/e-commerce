@@ -126,7 +126,7 @@ class ShowQueries extends Command
             }
             echo "------------------fin del producto------------------------";
             echo "\n";
-        }/*
+        }
         echo "------------------Inventario------------------------";
         echo "\n";
         $products=Product::all();
@@ -166,7 +166,7 @@ class ShowQueries extends Command
                 }
                 
                 
-               /* foreach ($variation->kitdetail()->get() as $kit) {
+               foreach ($variation->kitdetail()->get() as $kit) {
                     $stock=$kit->kit()->first()->stock()->first();
                     echo "Kit: ".$kit->id;
                     echo "          ";
@@ -189,6 +189,6 @@ class ShowQueries extends Command
             echo "-------------------------------------------------------------------";
             echo "\n";
             echo "\n";
-        }*/
+        }
     }
 }

@@ -42,7 +42,7 @@
                 @foreach($products as $product)
                     <x-cards.main>
                         <x-slot name="image">
-                            1
+                          1
                         </x-slot>
                         <x-slot name="trademark">
                             {{$product->trademark()->first()->name}}
