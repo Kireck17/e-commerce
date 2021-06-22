@@ -20,6 +20,7 @@ module.exports = {
                 'cian-light': '#87bbc8',
                 'turquoise-dark': '#122e31',
                 'turquoise-light': '#365558',
+                'verde-limon': '#26A70C',
             },
             boxShadow: {
                 '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',

@@ -1,18 +1,33 @@
+@props(['link'])
 {{-- Emulando las tarjetas --}}
-<div class="w-full h-40 sm:h-64 rounded-md shadow-md flex flex-row sm:flex-col bg-blue-400">
+<div class="border-2 border-yellow-dark w-full h-56 sm:h-80 rounded-md shadow-md flex flex-row sm:flex-col bg-white transform hover:-translate-y-1 hover:scale-110 duration-300 ease-in-out">
+
     <div class="w-1/2 sm:w-full sm:h-1/2 py-2 flex justify-center">
-        {{--<img src="https://images-na.ssl-images-amazon.com/images/I/81AT%2BFlc%2BEL._AC_SX679_.jpg" alt="" class="w-3/4 h-full rounded-md">--}}
-        <div class="w-3/4 h-full rounded-md bg-white"></div>
+        
+        
+        <div class="w-3/4 h-full flex justify-center">
+            {{$image}}
+        </div>
     </div>
-    <div class="w-1/2 sm:w-full sm:h-1/2 py-1 px-3 flex-1 min-w-0 space-y-3">
-        <span class="uppercase text-xl font-bold text-white">
+    
+    <div class="w-1/2 sm:w-full sm:h-1/2 sm:py-1 py-3 px-3 sm:flex-1 sm:min-w-0 flex flex-col justify-between  sm:justify-start space-y-3">
+    
+        <p class="uppercase text-xl font-bold text-yellow-dark text-center">
             {{$trademark}}
-        </span>
-        <p class="text-lg font-medium leading-4 sm:truncate text-white">
+        </p>
+
+        <p class="text-lg font-medium leading-4  text-black">
             {{$name}}
         </p>
-        <button class="border rounded-full w-full text-center text-white">
+
+        <a href="#" class="lg:hidden sm:flex  justify-center items-center bg-yellow-dark h-10 border-2  border-yellow-dark w-full  text-black focus:outline none">
             {{$price}}
-        </button>
+        </a>
     </div>
+    
+    <a href="#" class="hidden sm:flex justify-center items-center bg-yellow-dark h-10 border-2  border-yellow-dark w-full  text-black focus:outline none">
+            {{$price}}
+    </a>
+    
+
 </div>

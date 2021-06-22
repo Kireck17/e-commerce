@@ -3,6 +3,7 @@
 use App\Http\Livewire\Category\ShowCategory;
 use App\Http\Livewire\Search\ShowSearch;
 use App\Http\Livewire\Main\Showlobby;
+use App\Http\Livewire\Main\MensClothing;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,6 +19,12 @@ Route::prefix('search')->group(function(){
     Route::name('search.')->group(function(){
         Route::get('/search/show',ShowSearch::class)->name('show');
     });
+});
+
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    // Ruta para entrar al dashboard
+    Route::get('/dashboard',Showlobby::class);
 });
 
 //vista prototipo para oferta

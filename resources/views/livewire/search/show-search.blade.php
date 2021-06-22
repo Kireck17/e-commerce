@@ -28,7 +28,11 @@
                        Marca : {{$product->trademark()->first()->name}}
                     </x-slot>
                     <x-slot name="img">
-                        <img class="object-cover w-full h-full mt-2" src="{{$product->variation()->first()->file->url}}" alt="NIKE AIR">
+                        @if($product->variation()->first()->files()->count())
+                            <img class="object-contain h-48 w-full" src="{{$product->variation()->first()->files()->first()->url}}" alt="">
+                        @else
+                            <img class="object-contain h-48 w-full" src="https://www.bicifan.uy/wp-content/uploads/2016/09/producto-sin-imagen.png" alt="">
+                        @endif
                     </x-slot>
                     <x-slot name="price">
                         $ {{$product->variation()->first()->stock()->first()->price}} ({{$product->variation()->first()->stock()->first()->quantity}})

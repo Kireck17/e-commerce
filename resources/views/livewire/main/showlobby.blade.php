@@ -205,4 +205,31 @@
             </x-design.card-default>
         </div>
    </div>
+<<<<<<< HEAD
+=======
+   {{--Category--}}
+   <div class="container mx-auto bg-white py-4 px-4 my-4 border rounded-lg overflow-hidden shadow-xl">
+        <h4 class="text-black font-bold text-center text-4xl">
+            Categorías populares
+        </h4>
+        <section class="px-6 my-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-1">
+           @foreach($categories as $category)  
+                <div class="p-2 md:w-40">
+                    <div class="flex justify-around items-center px-2 py-3 bg-blue-500 text-turquoise-dark rounded-lg shadow-xs cursor-pointer hover:bg-gray-700 hover:text-gray-100">
+                        <svg class="h-6 fill-current hover:text-gray-100" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>Symfony icon</title>
+                        <path d="M19.197 1.608l.003-.006h-4.425L12 6.4v.002l-2.772-4.8H4.803v.005H0l12 20.786L24 1.608"/></svg>
+                        <p class="text-sm font-extrabold ml-2 ">
+                            {{$category->name}}
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+        </section>
+   </div>
+    <x-slot name="header">
+        Titulo de showlobby
+    </x-slot>
+    
+>>>>>>> bf6a9d44143711d55a06d522fce8c5018fc38220
 </div>
