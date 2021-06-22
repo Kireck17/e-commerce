@@ -1,9 +1,9 @@
 <div>
-   <x-banners.category  :url="$category->file()->first()->url" />
+   <x-banners.category  :url="$category->file()->first()->url" :description="$category->description" />
     
    <x-containers.secondary>
         <div class="md:grid md:grid-cols-4 md:gap-x-8 md:gap-y-10">
-            <span class="ml-6 bg-clip-text text-transparent bg-gray-900 font-bold  text-4xl font-extrabold">
+            <span class="ml-6 text-transparent font-bold text-black text-4xl font-extrabold">
                 {{$category->name}}
             </span>
             
@@ -43,6 +43,11 @@
                     <x-cards.main>
                         <x-slot name="image">
                           <img class="w-full h-full" src="{{$product->variation()->first()->file->url}}" >
+                          @if($product->variation()->first()->files()->count())
+                            <img class="h-full bg-white rounded-md shadow-md" src="{{$product->variation()->first()->files()->first()->url}}" alt="">
+                          @else
+                            <img src="https://www.bicifan.uy/wp-content/uploads/2016/09/producto-sin-imagen.png" alt="">
+                          @endif
                         </x-slot>
                         <x-slot name="trademark">
                             {{$product->trademark()->first()->name}}

@@ -48,7 +48,7 @@ class ShowQueries extends Command
      */
     public function handle()
     {
-        $categories=Category::all();
+        /*$categories=Category::all();
         echo "------------------Categories------------------------";
         echo "\n";
         foreach ($categories as $categorie) {
@@ -58,7 +58,7 @@ class ShowQueries extends Command
                 echo " | ".$file->id." | ".$file->url." | ";
                 echo "\n";
             }
-        }
+        }*/
 
       /*  $subcategories=SubCategory::all();
         echo "------------------SubCategories------------------------";
@@ -100,17 +100,39 @@ class ShowQueries extends Command
             
         }
         */
-        
-
-        $files=File::all();
+        /*$categories=Category::all();
+        echo "------------------Category------------------------";
+        echo "\n";
+        foreach ($categories as $category) {
+            echo " | ".$category->name." | ".$category->file()->url." | ";
+            echo "\n";
+        }
+        $variations=Variation::all();
+        echo "------------------Variations------------------------";
+        echo "\n";
+        foreach ($variations as $variation) {
+            echo " | ".$variation->product()->first()->name." | ".$variation->file()->first()->url." | ";
+            echo "\n";
+        }*/
+        /*$file=File::find(8);
+        echo "------------------Category fileable------------------------";
+        echo "\n";
+        echo $file->fileable;
+        echo "\n";
+        $file=File::find(9);
+        echo "------------------Variation fileable------------------------";
+        echo "\n";
+        echo $file->fileable;
+        echo "\n";*/
+        /*$files=File::all();
         echo "------------------file------------------------";
         echo "\n";
         foreach ($files as $file) {
             echo " | ".$file->id." | ".$file->url." | ";
             echo "\n";
-        }
+        }*/
 
-        $variations=Variation::all();
+        /*$variations=Variation::all();
         echo "------------------Variation Details------------------------";
         echo "\n";
         foreach ($variations as $variation) {
@@ -189,6 +211,25 @@ class ShowQueries extends Command
             echo "-------------------------------------------------------------------";
             echo "\n";
             echo "\n";
+        }*/
+        $category=Category::find(1);
+        foreach ($category->product()->get() as $product) {
+            echo $product->id;
+            echo "\n";
+            echo $product->name;
+            echo "\n";
+            echo "----------------Variaiones-----------------------";
+            echo "\n";
+            foreach ($product->variation()->get() as $key => $variation) {
+                echo "--------Variacion ".$variation->id." -------------";
+                echo "\n";
+                foreach ($variation->attribute_value()->get() as $key => $attribute_value) {
+                    echo $attribute_value->attribute()->first()->type.": ".$attribute_value->value;
+                    echo "\n";
+                }
+                echo "imagen: ".$variation->files;
+                echo "\n";
+            }
         }
     }
 }
