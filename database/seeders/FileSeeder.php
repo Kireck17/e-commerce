@@ -17,7 +17,7 @@ class FileSeeder extends Seeder
     public function run()
     {
         //APARTADO CATEGORIA
-        /*$file = new File();
+        $file = new File();
         $file-> fileable_id = 1;
         $file-> fileable_type="App\Models\Category";
         $file -> url = "https://gruponatic.pe/pub/media/wysiwyg/banner-web--mascota.png";
@@ -658,12 +658,11 @@ class FileSeeder extends Seeder
          $file-> fileable_id = 91;
          $file-> fileable_type="App\Models\Variation";
          $file -> url = "https://http2.mlstatic.com/D_NQ_NP_966821-MLM44484017553_012021-O.webp";
-         $file -> save();*/
+         $file -> save();
 
          /*$category=Category::find(1);
-         $category->file()->save(new File(['url' => 'https://gruponatic.pe/pub/media/wysiwyg/banner-web--mascota.png']));*/
-         $variation=Variation::find(1);
+         $category->file()->save(new File(['url' => 'https://gruponatic.pe/pub/media/wysiwyg/banner-web--mascota.png']));
          $variation->file()->save(new File(['url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqZ1myTZBrtGH6UTlETRE7x_DdRN1IY0k79w&usqp=CAU']));
-        
+        */
     }
 }

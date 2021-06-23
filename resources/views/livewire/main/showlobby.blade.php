@@ -115,7 +115,7 @@
    <div class="container mx-auto bg-white py-4 px-4 my-4 border rounded-lg overflow-hidden shadow-xl">
         <div>
             <span class="text-black font-bold text-center text-4xl">
-                Arítulos más comprados
+                Artículos Más Comprados
             </span>
             <a href="/best" class="text-blue-500 font-extrabold underline text-center text-base hover:text-yellow-500">
                 Ver mas

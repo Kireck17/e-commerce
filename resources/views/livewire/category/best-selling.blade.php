@@ -1,21 +1,20 @@
 <div>
 
     <x-containers.secondary>
-        <div class="flex relative text-center py-2 ">
-            <h1 class="text-3xl tracking-wider text-white text-sha uppercase font-black  p-4 self-center z-10 content-center absolute text-center w-full md:text-4xl"></h1>
-            <img class="w-full object-cover h-72 block mx-auto  sm:block sm:w-full" 
-            src="https://ubiq.co/database-blog/wp-content/uploads/2021/01/top-selling-products-mysql.jpg"
-            alt="Banner" width="1920" height="288" />
+        <div class="flex relative text-center py-2 h-60 sm:h-72">
+            <img class="my-1 w-full h-full block sm:block object-contain object-center shadow-md sm:shadow-xl" 
+            src="https://alidropship.es/wp-content/uploads/webp/2020/10/Premium-Products-banner-768x133_jpg.webp"
+            alt="Banner"/>
         </div>
+
     </x-containers.secondary>
 
     </br>
 
     <x-containers.secondary>
         <div class="space-y-10 my-6 md:space-y-0 md:grid md:grid-cols-4 md:gap-x-8 md:gap-y-10 ">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-turquoise-dark to-yellow-700 font-bold text-center text-5xl font-extrabold ">
-                Arítulos más comprados
-                    
+                <span class="text-black font-bold text-center text-4xl">
+                Artículos Mas Comprados
                 </span>
             
                 <a href="" class="cursor-not-allowed grid grid-cols-1 text-blue-500 font-bold  hover:text-yellow-500 ">

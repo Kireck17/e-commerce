@@ -1,23 +1,21 @@
 <div>
 
     <x-containers.secondary>
-        <div class="flex relative text-center py-2 ">
-            <h1 class="text-3xl tracking-wider text-white text-sha uppercase font-black  p-4 self-center z-10 content-center absolute text-center w-full md:text-4xl"></h1>
-            <img class="w-full object-cover h-72 block mx-auto  sm:block sm:w-full" 
-            src="https://tallerdeltotebag.es/wp-content/uploads/2019/10/que-son-las-ofertas-flash.jpg"
-            alt="Banner" width="1920" height="288" />
+        <div class="flex relative text-center py-2 h-60 sm:h-72">
+                <img class="my-1 w-full h-full block sm:block object-contain object-center shadow-md sm:shadow-xl" 
+                src="https://i0.wp.com/sendgift.com.sv/wp-content/uploads/2020/08/11.-banner-ofertas.png?fit=1173%2C232&ssl=1"
+                alt="Banner"/>
         </div>
     </x-containers.secondary>
-
+    
     </br>
 
     <x-containers.secondary>
         <div class="space-y-10 my-6 md:space-y-0 md:grid md:grid-cols-4 md:gap-x-8 md:gap-y-10 ">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-turquoise-dark to-red-500 font-bold text-center text-5xl font-extrabold ">
+                <span class="text-black font-bold text-center text-4xl">
                     Ofertas
-                    
                 </span>
-            
+                
                 <a href="" class="cursor-not-allowed grid grid-cols-1 text-yellow-500 font-bold  hover:text-blue-500 ">
                     !Encuentra precios increíbles cada día!
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -45,8 +45,11 @@
             <x-nav-links.normal href="/" :active="request()->routeIs('photo.edit')">
                 {{__('Contactanos')}}
             </x-nav-links.normal>
-            <x-nav-links.normal href="/" :active="request()->routeIs('photo.edit')">
-                <i class="fas fa-shopping-cart"></i>
+            
+            <x-nav-links.normal href="/ShoppingCart" >
+               <i class="fa fa-shopping-cart"></i>
+                
+										
             </x-nav-links.normal>
         </div>
         @auth
