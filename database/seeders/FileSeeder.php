@@ -17,7 +17,7 @@ class FileSeeder extends Seeder
     public function run()
     {
         //APARTADO CATEGORIA
-        /*$file = new File();
+        $file = new File();
         $file-> fileable_id = 1;
         $file-> fileable_type="App\Models\Category";
         $file -> url = "https://gruponatic.pe/pub/media/wysiwyg/banner-web--mascota.png";
@@ -28,43 +28,36 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Category";
         $file -> url = "https://zenstatic.blob.core.windows.net/blog/4c0q4xbj.pjy";
         $file -> save();
-
         $file = new File();
         $file-> fileable_id = 3;
         $file-> fileable_type="App\Models\Category";
         $file -> url = "https://tecnicos24-7.com/wp-content/uploads/2019/10/banner-3-1.jpg";
         $file -> save();
-
         $file = new File();
         $file-> fileable_id = 4;
         $file-> fileable_type="App\Models\Category";
         $file -> url = "https://i1.wp.com/www.fixealo.com/wp-content/uploads/2019/06/BANNER-PAGINA.jpg?ssl=1";
         $file -> save();
-
         $file = new File();
         $file-> fileable_id = 5;
         $file-> fileable_type="App\Models\Category";
         $file -> url = "http://ingernet.com.co/wp-content/uploads/2016/04/suministros-y-equipos.jpg";
         $file -> save();
-
         $file = new File();
         $file-> fileable_id = 6;
         $file-> fileable_type="App\Models\Category";
         $file -> url = "https://image.freepik.com/vector-gratis/banners-rebajas-moda-fotografia_52683-9828.jpg";
         $file -> save();
-
         $file = new File();
         $file-> fileable_id = 7;
         $file-> fileable_type="App\Models\Category";
         $file -> url = "https://www.confeccionesgarrido.com/wp-content/uploads/2016/12/banner-confecciones-garrido-primavera-verano-2017-hombre.jpg";
         $file -> save();
-
         $file = new File();
         $file-> fileable_id = 8;
         $file-> fileable_type="App\Models\Category";
         $file -> url = "https://irp-cdn.multiscreensite.com/ad618081/MOBILE/images/1d2e76bf-3427-4efb-b3d9-287427c3577b.jpg?1447848839118&v=7.3.45002";
         $file -> save();
-
 //APARTADO VARIACIONES 
 //1
         $file = new File();
@@ -120,7 +113,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_628780-MLM45560478361_042021-O.webp";
         $file -> save();
-
         //10
         $file = new File();
         $file-> fileable_id = 10;
@@ -139,14 +131,12 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_876632-MLM43370600377_092020-O.webp";
         $file -> save();
-
         //13
         $file = new File();
         $file-> fileable_id = 13;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_774846-MLM45644778711_042021-O.webp";
         $file -> save();
-
         //14
         $file = new File();
         $file-> fileable_id = 14;
@@ -178,7 +168,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_839842-CBT45397675103_032021-O.webp";
         $file -> save();
-
         //blanco
         //19
         $file = new File();
@@ -198,42 +187,36 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_794883-MLM44320778909_122020-O.webp";
         $file -> save();
-
         //22
         $file = new File();
         $file-> fileable_id = 22;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_880856-MLM46264998858_062021-O.webp";
         $file -> save();
-
         //23
         $file = new File();
         $file-> fileable_id = 23;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_741411-MLM42340485104_062020-O.webp";
         $file -> save();
-
         //24
         $file = new File();
         $file-> fileable_id = 24;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_888338-MLM32005403748_082019-O.webp";
         $file -> save();
-
         //25
         $file = new File();
         $file-> fileable_id = 25;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_852362-MLM43400803253_092020-O.webp";
         $file -> save();
-
         //26
         $file = new File();
         $file-> fileable_id = 26;
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_766154-MLA46168604011_052021-O.webp";
         $file -> save();
-
         //27
         $file = new File();
         $file-> fileable_id = 27;
@@ -252,7 +235,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_607475-MLM45133046439_032021-O.webp";
         $file -> save();
-
         //30
         $file = new File();
         $file-> fileable_id = 30;
@@ -271,8 +253,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_675080-MLM45133046576_032021-O.webp";
         $file -> save();
-
-
         //33
         $file = new File();
         $file-> fileable_id = 33;
@@ -291,7 +271,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_971901-MLM45133046514_032021-O.webp";
         $file -> save();
-
         //36
         $file = new File();
         $file-> fileable_id = 36;
@@ -310,7 +289,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_975511-MLM43365555495_092020-O.webp";
         $file -> save();
-
         //39
         $file = new File();
         $file-> fileable_id = 39;
@@ -329,7 +307,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_619158-MLM43365561469_092020-O.webp";
         $file -> save();
-
         //42
         $file = new File();
         $file-> fileable_id = 42;
@@ -367,7 +344,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_896586-MLM40592927498_012020-O.webp";
         $file -> save();
-
         //48
         $file = new File();
         $file-> fileable_id = 48;
@@ -386,8 +362,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_828862-MLM45294424655_032021-O.webp";
         $file -> save();
-
-
         //51
         $file = new File();
         $file-> fileable_id = 51;
@@ -406,8 +380,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_832162-MLM42091523426_062020-O.webp";
         $file -> save();
-
-
         //54
         $file = new File();
         $file-> fileable_id = 54;
@@ -426,8 +398,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_811186-MLM43571369397_092020-O.webp";
         $file -> save();
-
-
         //57
         $file = new File();
         $file-> fileable_id = 57;
@@ -446,8 +416,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_737512-MLM43275811357_082020-O.webp";
         $file -> save();
-
-
         //60
         $file = new File();
         $file-> fileable_id = 60;
@@ -466,9 +434,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_2X_694052-MLM44821950949_022021-F.webp";
         $file -> save();
-
-
-
         //63
         $file = new File();
         $file-> fileable_id = 63;
@@ -487,8 +452,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_936376-MLM45335612968_032021-O.webp";
         $file -> save();
-
-
         //66
         $file = new File();
         $file-> fileable_id = 66;
@@ -507,8 +470,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_938210-MLM42560881462_072020-O.webp";
         $file -> save();
-
-
         //69
         $file = new File();
         $file-> fileable_id = 69;
@@ -527,9 +488,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_659654-MLM45157424963_032021-O.webp";
         $file -> save();
-
-
-
         //72
         $file = new File();
         $file-> fileable_id = 72;
@@ -548,8 +506,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_832070-MLM46014290614_052021-O.webp";
         $file -> save();
-
-
         //75
         $file = new File();
         $file-> fileable_id = 75;
@@ -580,9 +536,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_931258-MLM45626934358_042021-O.webp";
         $file -> save();
-
-
-
         //80
         $file = new File();
         $file-> fileable_id = 80;
@@ -613,10 +566,6 @@ class FileSeeder extends Seeder
         $file-> fileable_type="App\Models\Variation";
         $file -> url = "https://http2.mlstatic.com/D_NQ_NP_706470-MLM41617742545_052020-O.webp";
         $file -> save();
-
-
-
-
          //85
          $file = new File();
          $file-> fileable_id = 85;
@@ -658,12 +607,12 @@ class FileSeeder extends Seeder
          $file-> fileable_id = 91;
          $file-> fileable_type="App\Models\Variation";
          $file -> url = "https://http2.mlstatic.com/D_NQ_NP_966821-MLM44484017553_012021-O.webp";
-         $file -> save();*/
+         $file -> save();
 
          /*$category=Category::find(1);
-         $category->file()->save(new File(['url' => 'https://gruponatic.pe/pub/media/wysiwyg/banner-web--mascota.png']));*/
+         $category->file()->save(new File(['url' => 'https://gruponatic.pe/pub/media/wysiwyg/banner-web--mascota.png']));
          $variation=Variation::find(1);
          $variation->file()->save(new File(['url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqZ1myTZBrtGH6UTlETRE7x_DdRN1IY0k79w&usqp=CAU']));
-        
+        */
     }
 }
