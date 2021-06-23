@@ -1,4 +1,5 @@
 <div>
+
    <x-banners.category  :url="$category->file()->first()->url" :description="$category->description" />
     
    <x-containers.secondary>
@@ -15,7 +16,6 @@
                         <p class="text-xs font-medium ml-2 ">
                           Compras Relampago
                         </p>
-
                         </div>
                     </div>
                 </div>

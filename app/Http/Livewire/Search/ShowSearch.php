@@ -4,9 +4,11 @@ namespace App\Http\Livewire\Search;
 
 use Livewire\Component;
 use App\Models\Product;
+use Livewire\WithPagination;
 
 class ShowSearch extends Component
 {
+    use WithPagination;
     public $search;
 
 
@@ -14,7 +16,7 @@ class ShowSearch extends Component
     {
         return view('livewire.search.show-search',
         [
-            'products' => Product::where('name','like',"%{$this->search}%")->get(),
+            'products' => Product::where('name','LIKE',"%{$this->search}%")->paginate(10),
         ])
         -> layout('layouts.app');
     }
