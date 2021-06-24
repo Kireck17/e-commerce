@@ -27,14 +27,6 @@
                             <a class="p-1 uppercase font-bold text-xs" href="{{ route('category.show',['category' => $category->id]) }}"> {{ __($category->name) }}</a>
                         @endforeach
                     </div>
-                    {{--<div class="block w-full h-32 border shadow-md space-y-2 overflow-x-auto bg-gray-50">
-                    @foreach(App\Models\Category::has('product')->get()->unique('name') as $category)
-
-                        <a href="{{ route('category.show',['category' => $category->id]) }}"> {{ __($category->name) }}</a>
-
-
-                    @endforeach
-                    </div>--}}
                 </div>
             </div>
 
@@ -45,11 +37,9 @@
             <x-nav-links.normal href="/" :active="request()->routeIs('photo.edit')">
                 {{__('Contactanos')}}
             </x-nav-links.normal>
-
-            <x-nav-links.normal class="rounded-full border-2" href="/" :active="request()->routeIs('photo.edit')">
-                <i class="fas fa-shopping-cart"></i>
+            <x-nav-links.normal href="/ShoppingCart" >
+               <i class="fa fa-shopping-cart"></i>
             </x-nav-links.normal>
-
         </div>
         @auth
             <div class="hidden sm:flex sm:items-center sm:mr-6">

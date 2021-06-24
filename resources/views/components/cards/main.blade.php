@@ -1,5 +1,5 @@
 @props(['link'])
-{{-- Emulando las tarjetas --}}
+{{--tarjetas Categoria--}}
 <div class="border-2 border-yellow-dark w-full h-56 sm:h-80 rounded-md shadow-md flex flex-row sm:flex-col bg-white transform hover:-translate-y-1 hover:scale-110 duration-300 ease-in-out">
 
     <div class="w-1/2 sm:w-full sm:h-1/2 py-2 flex justify-center">
@@ -20,7 +20,7 @@
             {{$name}}
         </p>
 
-        <a href="#" class="lg:hidden sm:flex  justify-center items-center bg-yellow-dark h-10 border-2  border-yellow-dark w-full  text-black focus:outline none">
+        <a href="#" class="text-center lg:hidden sm:flex justify-center items-center bg-yellow-dark h-10 border-2  border-yellow-dark w-full  text-black focus:outline none">
             {{$price}}
         </a>
     </div>
