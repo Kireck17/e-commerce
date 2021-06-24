@@ -7,10 +7,6 @@
                         <p class="mt-4 text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error et adipisci, dolor repellendus neque magnam tempora sequi deleniti cumque beatae nulla, fugiat maxime ratione debitis, ullam sint incidunt natus numquam.
                         Molestias praesentium sunt maiores eum ullam aliquid hic labore et atque unde voluptates incidunt nisi debitis quasi pariatur similique, tenetur asperiores dicta laboriosam officia assumenda quos consectetur aspernatur blanditiis. Blanditiis?
                         Maxime beatae, provident velit repudiandae, dolorem, tenetur earum natus vel cum laboriosam fugit tempore excepturi. Laboriosam quaerat incidunt praesentium! Quam ab praesentium deserunt nisi eveniet similique minima recusandae vel reprehenderit?</p>
-                        <div class="mt-6">
-                            <a href="#" class="block px-3 py-2 font-semibold text-center text-white transition-colors duration-200 transform bg-blue-500 rounded-md lg:inline hover:bg-blue-400">Al carrito</a>
-                            <a href="#" class="block px-3 py-2 font-semibold text-center text-white transition-colors duration-200 transform bg-blue-500 rounded-md lg:inline hover:bg-blue-400">Comprar</a>
-                        </div>
                     </div>
                 </div>
 
@@ -24,6 +20,10 @@
                 <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
                     <img class="object-cover w-full h-full max-w-2xl rounded-md" src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" alt="apple watch photo">
                 </div>
+            </div>
+            <div class="mt-6">
+                <a href="#" class="block px-3 py-2 font-semibold text-center text-white transition-colors duration-200 transform bg-blue-500 rounded-md lg:inline hover:bg-blue-400">Al carrito</a>
+                <a href="#" class="block px-3 py-2 font-semibold text-center text-white transition-colors duration-200 transform bg-blue-500 rounded-md lg:inline hover:bg-blue-400">Comprar</a>
             </div>
     </div>
 </div>
