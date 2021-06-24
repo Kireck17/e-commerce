@@ -24,7 +24,7 @@ class Showlobby extends Component
     {
         return view('livewire.main.showlobby',
         [
-            'products' => Product::where('name','LIKE',"%{$this->search}%")->paginate(4),
+            'products' => Product::where('name','LIKE',"%{$this->search}%")->paginate(5),
         ])
         -> layout('layouts.app');
     }

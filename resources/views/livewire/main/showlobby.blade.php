@@ -35,7 +35,7 @@
         </x-containers.secondary>
         {{-- Productos --}}
         <x-containers.secondary>
-            <div class="px-3 mx-2 md:px-0 py-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10">
+            <div class="px-0 sm:px-4 py-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4">
                 @forelse($products as $product)
                     <x-cards.three>
                         <x-slot name="image">
@@ -46,15 +46,13 @@
                             @endif
                         </x-slot>
                         <x-slot name="trademark">
-                            Categoria : {{$product->category->first()->name}}, {{$product->subcategory()->first()->name}}
-                        <br>
-                            Marca : {{$product->trademark()->first()->name}}
+                            {{$product->trademark()->first()->name}}
                         </x-slot>
                         <x-slot name="name">
                             {{$product->name}}
                         </x-slot>
                         <x-slot name="price">
-                            $ {{$product->variation()->first()->stock()->first()->price}} ({{$product->variation()->first()->stock()->first()->quantity}})
+                            $ {{$product->variation()->first()->stock()->first()->price}}
                         </x-slot>
                     </x-cards.three>
                 @empty
