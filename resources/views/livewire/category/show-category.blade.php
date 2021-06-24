@@ -3,7 +3,7 @@
    {{--Baner--}}
    <x-banners.category  :url="$category->file()->first()->url" :description="$category->description" />
    {{--Header--}}
-   <x-containers.secondary >
+   <x-containers.category >
             
             <section class="sm:flex sm:flex  justify-center items-center space-y-0 md:space-y-0 md:grid md:grid-cols-4 ">
                 
@@ -42,7 +42,7 @@
                 
             </section>
         
-    </x-containers.secondary>
+    </x-containers.category>
 
     
     
