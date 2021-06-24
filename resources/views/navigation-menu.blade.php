@@ -10,6 +10,9 @@
             <x-nav-links.normal href="{{route('lobby')}}" :active="request()->routeIs('lobby')">
                 {{__('Inicio')}}
             </x-nav-links.normal>
+            <x-nav-links.normal href="{{route('product.showproduct')}}" :active="request()->routeIs('product.showproduct')">
+                {{__('Product')}}
+            </x-nav-links.normal>
             <div x-data="{ open:false }">
                 <button @click="open = !open"
                         class="text-lg font-semibold text-turquoise-dark px-3 py-2 flex justify-center items-center focus:outline-none" >

@@ -4,6 +4,7 @@ use App\Http\Livewire\Category\ShowCategory;
 use App\Http\Livewire\Search\ShowSearch;
 use App\Http\Livewire\Main\Showlobby;
 use App\Http\Livewire\Main\MensClothing;
+use App\Http\Livewire\Product\Showproduct;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,6 +19,11 @@ Route::prefix('category')->group(function(){
 Route::prefix('search')->group(function(){
     Route::name('search.')->group(function(){
         Route::get('/search/show',ShowSearch::class)->name('show');
+    });
+});
+Route::prefix('product')->group(function(){
+    Route::name('product.')->group(function(){
+        Route::get('/product/showproduct',Showproduct::class)->name('showproduct');
     });
 });
 
