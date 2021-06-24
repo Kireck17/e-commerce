@@ -8,7 +8,7 @@
         </div>
     </x-containers.secondary>
     
-    </br>
+    
 
     <x-containers.secondary>
         <div class="space-y-10 my-6 md:space-y-0 md:grid md:grid-cols-4 md:gap-x-8 md:gap-y-10 ">

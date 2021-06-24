@@ -1,38 +1,4 @@
 
-<style>
-     	:root {
-   --bg-btn: #fed7d7;
-   --btn-color: #e53e3e;
-}
-
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-#checkbox:checked ~ .btn-change::before {
-   transition: 0.3s;
-   transform: translateX(23px);
-}
-
-.btn-change {
-   background-color: var(--bg-btn);
-}
-
-.btn-change::before {
-   content: '';
-   display: block;
-   width: 17px;
-   height: 17px;
-   border-radius: 50%;
-   background-color: var(--btn-color);
-   transition: 0.3s;
-   transform: translateX(0);
-}
-
-</style>
-
 <div>
     <!-- Titulo con boton de comprar-->
     <x-containers.secondary>
