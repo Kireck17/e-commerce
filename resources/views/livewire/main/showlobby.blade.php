@@ -57,7 +57,7 @@
                     </x-cards.three>
                 @empty
                     <div class="lg:col-span-5 sm:col-span-4 col-span-1">
-                        <span class="ml-6 text-transparent font-bold text-black text-4xl font-extrabold">
+                        <span class="ml-6 text-transparent  text-black text-4xl font-extrabold">
                             Sin resultados para la Busqueda "{{$this->search}}"
                         </span>
                     </div>
