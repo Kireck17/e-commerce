@@ -1,7 +1,7 @@
 {{--Componente Baner--}}
 @props(['url','description'])
 <div class="flex relative text-center py-2 h-60 sm:h-72 bg-white">
-      {{--Etiqueta Img--}}   
+      {{--Etiqueta Img--}}
 	  <img class="my-1 w-full h-full block sm:block object-contain object-center shadow-md sm:shadow-xl" src="{{$url}}" alt="Banner" />
 	  {{--Descripcion del baner--}}
 	  @if($description != "")

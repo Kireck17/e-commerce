@@ -611,7 +611,10 @@ class FileSeeder extends Seeder
 
          /*$category=Category::find(1);
          $category->file()->save(new File(['url' => 'https://gruponatic.pe/pub/media/wysiwyg/banner-web--mascota.png']));
+<<<<<<< HEAD
          $variation=Variation::find(1);
+=======
+>>>>>>> 8fc876938e706a6b89a74042fd7c7b42f0516acf
          $variation->file()->save(new File(['url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqZ1myTZBrtGH6UTlETRE7x_DdRN1IY0k79w&usqp=CAU']));
         */
     }

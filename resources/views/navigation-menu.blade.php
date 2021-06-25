@@ -1,4 +1,3 @@
-
 <nav x-data="{ open: false }" class="bg-white border-b border-turquoise-dark">
     {{-- Navegación normal --}}
     <div class="hidden lg:flex lg:justify-between lg:items-center lg:h-24">
@@ -11,10 +10,6 @@
             <x-nav-links.normal href="{{route('lobby')}}" :active="request()->routeIs('lobby')">
                 {{__('Inicio')}}
             </x-nav-links.normal>
-            <x-nav-links.normal href="{{route('lobby')}}" :active="request()->routeIs('lobby')">
-                {{__('Busqueda')}}
-            </x-nav-links.normal>
-            
             <div x-data="{ open:false }">
                 <button @click="open = !open"
                         class="text-lg font-semibold text-turquoise-dark px-3 py-2 flex justify-center items-center focus:outline-none" >
@@ -29,24 +24,18 @@
                             <a class="p-1 uppercase font-bold text-xs" href="{{ route('category.show',['category' => $category->id]) }}"> {{ __($category->name) }}</a>
                         @endforeach
                     </div>
-                    {{--<div class="block w-full h-32 border shadow-md space-y-2 overflow-x-auto bg-gray-50">
-                    @foreach(App\Models\Category::has('product')->get()->unique('name') as $category)
-
-                        <a href="{{ route('category.show',['category' => $category->id]) }}"> {{ __($category->name) }}</a>
-
-
-                    @endforeach
-                    </div>--}}
                 </div>
             </div>
+
             <x-nav-links.normal href="/" :active="request()->routeIs('prototipo.mark')">
                 {{__('Tutoriales')}}
             </x-nav-links.normal>
+
             <x-nav-links.normal href="/" :active="request()->routeIs('photo.edit')">
                 {{__('Contactanos')}}
             </x-nav-links.normal>
-            <x-nav-links.normal href="/" :active="request()->routeIs('photo.edit')">
-                <i class="fas fa-shopping-cart"></i>
+            <x-nav-links.normal href="/ShoppingCart" >
+               <i class="fa fa-shopping-cart"></i>
             </x-nav-links.normal>
         </div>
         @auth

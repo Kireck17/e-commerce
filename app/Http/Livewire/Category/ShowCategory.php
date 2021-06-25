@@ -9,6 +9,7 @@ use Livewire\WithPagination;
 class ShowCategory extends Component
 {
     use WithPagination;
+
     public $category;
     public $search;
     //Search aparece solo si se realiza una busqueda
@@ -26,7 +27,7 @@ class ShowCategory extends Component
             
             'category' => $this->category,
             //where para realizar la busqueda
-            'products' => $this->category->product()->where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->get(),
+            'products' => $this->category->product()->where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->paginate(5),
             
         ])->layout('layouts.app');
     }
