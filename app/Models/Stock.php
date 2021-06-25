@@ -29,5 +29,10 @@ class Stock extends Model
     {
         return $this->belongsTo(WareHouse::class);
     }
+
+    public function shopping_cart()
+    {
+        return $this->belongsTo(Shopping_Cart::class);
+    }
     
 }
