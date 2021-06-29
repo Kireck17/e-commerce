@@ -1,12 +1,12 @@
 <?php
 
 use App\Http\Livewire\Category\ShowCategory;
-use App\Http\Livewire\Search\ShowSearch;
 use App\Http\Livewire\Main\Showlobby;
-
-
-
+/*
+use App\Http\Livewire\Product\ShowSearch;
+*/
 use App\Http\Livewire\Main\MensClothing;
+use App\Http\Livewire\Product\Showproduct;
 use Illuminate\Support\Facades\Route;
 
 
@@ -19,13 +19,19 @@ Route::prefix('category')->group(function(){
     });
 });
 
-
+Route::prefix('product')->group(function(){
+    Route::name('product.')->group(function(){
+        Route::get('/{product}/showproduct',Showproduct::class)->name('showproduct');
+    });
+});
+/*
 Route::prefix('search')->group(function(){
     Route::name('search.')->group(function(){
         Route::get('/search/show',ShowSearch::class)->name('show');
+
     });
 });
-
+*/
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     // Ruta para entrar al dashboard
@@ -55,3 +61,4 @@ Route::get('/WayToPay', function () {
 Route::get('/pay', function () {
     return view('category.pay');
 })->name('pay');
+
