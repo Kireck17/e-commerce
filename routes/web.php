@@ -3,6 +3,9 @@
 use App\Http\Livewire\Category\ShowCategory;
 use App\Http\Livewire\Search\ShowSearch;
 use App\Http\Livewire\Main\Showlobby;
+
+
+
 use App\Http\Livewire\Main\MensClothing;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +18,8 @@ Route::prefix('category')->group(function(){
             ->name('show');
     });
 });
+
+
 Route::prefix('search')->group(function(){
     Route::name('search.')->group(function(){
         Route::get('/search/show',ShowSearch::class)->name('show');

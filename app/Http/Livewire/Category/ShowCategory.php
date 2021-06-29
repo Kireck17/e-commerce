@@ -12,6 +12,8 @@ class ShowCategory extends Component
 
     public $category;
     public $search;
+
+    
     //Search aparece solo si se realiza una busqueda
     protected $queryString=['search'=>['except'=>""]];
 
@@ -19,6 +21,7 @@ class ShowCategory extends Component
     {
         $this->category=$category;
         $this->search="";
+        
     }
 
     public function render()
