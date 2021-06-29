@@ -18,7 +18,8 @@ Route::prefix('category')->group(function(){
 
 Route::prefix('product')->group(function(){
     Route::name('product.')->group(function(){
-        Route::get('/product/showproduct',Showproduct::class)->name('showproduct');
+        Route::get('/{product}/showproduct',Showproduct::class
+        )->name('showproduct');
     });
 });
 

@@ -6,7 +6,7 @@
         {{--Header--}}
         <x-containers.secondary>
             <div class="flex flex-col sm:flex-row sm:justify-between items-center px-3 py-3">
-                <span class="font-bold text-black text-3xl font-extrabold">
+                <span class=" text-black text-3xl font-extrabold">
                     {{$category->name}}
                 </span>
                 <x-searchcategory.search  wire:model="search"/>
@@ -39,7 +39,7 @@
                     </x-cards.main>
                 @empty
                     <div class="lg:col-span-5 sm:col-span-4 col-span-1 text-center">
-                        <span class="ml-6 text-transparent font-bold text-gray-400 text-4xl font-extrabold">
+                        <span class="ml-6 text-transparent text-gray-400 text-4xl font-extrabold">
                             Sin resultados para la busqueda "{{$this->search}}"
                         </span>
                     </div>

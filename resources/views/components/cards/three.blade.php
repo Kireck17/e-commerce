@@ -1,4 +1,5 @@
 @props(['link'])
+
 {{--tarjetas Categoria--}}
 <div class="border-2 border-cian-dark w-full h-56 sm:h-80 rounded-md shadow-md flex flex-row sm:flex-col bg-white transform hover:-translate-y-1 hover:scale-110 duration-300 ease-in-out">
 
@@ -20,12 +21,12 @@
             {{$name}}
         </p>
 
-        <a href="#" class="text-center lg:hidden sm:flex justify-center items-center bg-cian-dark h-10 border-2  border-cian-dark w-full  text-white focus:outline none">
+        <a href="{{$link}}" class="text-center lg:hidden sm:flex justify-center items-center bg-cian-dark h-10 border-2  border-cian-dark w-full  text-white focus:outline none">
             {{$price}}
         </a>
     </div>
 
-    <a href="#" class="hidden sm:flex justify-center items-center bg-cian-dark h-10 border-2  border-cian-dark w-full  text-white focus:outline none">
+    <a href="{{$link}}" class="hidden sm:flex justify-center items-center bg-cian-dark h-10 border-2  border-cian-dark w-full  text-white focus:outline none">
             {{$price}}
     </a>
 </div>
