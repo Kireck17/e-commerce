@@ -3,7 +3,7 @@
     <x-containers.secondary>
         <div class="flex relative text-center py-2 h-60 sm:h-72">
             <img class="my-1 w-full h-full block sm:block object-contain object-center shadow-md sm:shadow-xl" 
-            src="https://alidropship.es/wp-content/uploads/webp/2020/10/Premium-Products-banner-768x133_jpg.webp"
+            src=""
             alt="Banner"/>
         </div>
 
