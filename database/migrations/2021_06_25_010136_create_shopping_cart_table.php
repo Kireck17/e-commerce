@@ -15,12 +15,12 @@ class CreateShoppingCartTable extends Migration
     {
         Schema::create('shopping_cart', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('stock_id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('cupon_id');
-            $table->foreign('product_id')
+            //$table->unsignedBigInteger('cupon_id');
+            $table->foreign('stock_id')
                 ->references('id')
-                ->on('products')
+                ->on('stocks')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->foreign('user_id')
@@ -28,12 +28,13 @@ class CreateShoppingCartTable extends Migration
                 ->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-            $table->foreign('cupon_id')
+           /* $table->foreign('cupon_id')
                 ->references('id')
                 ->on('cupon')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-            $table->double('price');
+                */
+            
             $table->integer('quantity');
             $table->timestamps();
         });

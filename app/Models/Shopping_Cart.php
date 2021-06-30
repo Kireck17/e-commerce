@@ -10,11 +10,16 @@ class Shopping_Cart extends Model
     use HasFactory;
     protected $table = 'shopping_cart';
 
-    protected $fillable=['product_id, user_id, cupon_id, price, quantity'];
+    protected $fillable=['stock_id, user_id,  quantity'];
 
    
-    public function cupon()
+    public function user()
     {
-        return $this->BelongsTo(Cupon::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function stock()
+    {
+        return $this->belongsTo(Stock::class);
     }
 }

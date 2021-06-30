@@ -59,6 +59,10 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 //modelos
+public function shopping_cart()
+    {
+        return $this->belongsTo(Shopping_Cart::class);
+    }
 
    
 }
