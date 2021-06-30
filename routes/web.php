@@ -4,6 +4,7 @@ use App\Http\Livewire\Category\ShowCategory;
 use App\Http\Livewire\Main\Showlobby;
 use App\Http\Livewire\Main\MensClothing;
 use App\Http\Livewire\Product\Showproduct;
+use App\Http\Livewire\Administrator\Create;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,6 +24,14 @@ Route::prefix('product')->group(function(){
     });
 });
 
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    Route::prefix('administrator')->group(function(){
+        Route::name('administrator.')->group(function(){
+            Route::get('/create',Create::class
+            )->name('create');
+        });
+    });
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     // Ruta para entrar al dashboard
