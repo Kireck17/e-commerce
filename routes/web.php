@@ -4,10 +4,16 @@ use App\Http\Livewire\Category\ShowCategory;
 use App\Http\Livewire\Search\ShowSearch;
 use App\Http\Livewire\Main\Showlobby;
 use App\Http\Livewire\Main\MensClothing;
+use App\Http\Livewire\Admin\Prueba;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', Showlobby::class)->name('lobby');
+
+
+//vista admin
+Route::get('/nav',Prueba::class)->name('nav');
+
 
 Route::prefix('category')->group(function(){
     Route::name('category.')->group(function (){
@@ -26,6 +32,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     // Ruta para entrar al dashboard
     Route::get('/dashboard',Showlobby::class);
 });
+
+
 
 //vista prototipo para oferta
 Route::get('/oferts', function () {
