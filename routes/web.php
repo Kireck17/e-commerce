@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Showlobby::class)->name('lobby');
 
+
 Route::prefix('category')->group(function(){
     Route::name('category.')->group(function (){
         Route::get('/{category}/show',ShowCategory::class)
@@ -24,6 +25,9 @@ Route::prefix('product')->group(function(){
         Route::get('/{product}/showproduct',Showproduct::class)->name('showproduct');
     });
 });
+
+
+
 /*
 Route::prefix('search')->group(function(){
     Route::name('search.')->group(function(){
@@ -33,15 +37,15 @@ Route::prefix('search')->group(function(){
 });
 */
 
+
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     // Ruta para entrar al dashboard
     Route::get('/dashboard',Showlobby::class);
 });
 
 //vista prototipo para oferta
-Route::get('/oferts', function () {
-    return view('category.oferts');
-})->name('oferts');
+
 
 //vista prototipo para articulos mas vendidos
 Route::get('/best', function () {
