@@ -12,12 +12,28 @@ class Showproduct extends Component
     use WithPagination;
 
     public $product;
-
+    public $quantity;
 
     public function mount(Product $product)
     {
         $this->product = $product;
+        $this->quantity = 1;
     }
+
+    public function add(){
+        
+        
+        $this->quantity++;
+        
+        
+    } 
+
+    public function remove(){
+        if($this->quantity>1){
+
+            $this->quantity--;
+        }
+    } 
 
 
     public function render()

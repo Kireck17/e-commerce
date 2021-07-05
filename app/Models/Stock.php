@@ -10,7 +10,10 @@ class Stock extends Model
     use HasFactory;
     protected $table = 'stocks';
 
-    protected $fillable=['stockable_id','stockable_type','provider_id','warehouse_id','quantity','price'];
+    protected $fillable=[
+        //'stockable_id',
+        //'stockable_type',
+        'provider_id','warehouse_id','quantity','price'];
     
 
     public function stockable()

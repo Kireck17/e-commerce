@@ -1,5 +1,6 @@
 {{--Vista de categoria--}}
 <div>
+
    {{--Baner--}}
    <x-banners.category  :url="$category->file()->first()->url" :description="$category->description" />
     <x-containers.main>

@@ -47,7 +47,18 @@ class ShowQueries extends Command
      * @return int
      */
     public function handle()
-    {
+    {   
+        $variations = Variation::all();
+        foreach($variations as $variation){
+            echo " | ".$variation->id." | ";
+            foreach($variation->attribute_value()->get() as $attribute){
+                  echo " | ".$attribute->value." | ";
+            }
+            echo "\n";
+        }
+        
+
+
         /*$categories=Category::all();
         echo "------------------Categories------------------------";
         echo "\n";
@@ -211,7 +222,7 @@ class ShowQueries extends Command
             echo "-------------------------------------------------------------------";
             echo "\n";
             echo "\n";
-        }*/
+        }
         $category=Category::find(1);
         foreach ($category->product()->get() as $product) {
             echo $product->id;
@@ -230,6 +241,6 @@ class ShowQueries extends Command
                 echo "imagen: ".$variation->files;
                 echo "\n";
             }
-        }
+        }*/
     }
 }

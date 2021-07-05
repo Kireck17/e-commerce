@@ -16,18 +16,29 @@
                         <h2 class="text-3xl font-medium tracking-wide text-gray-800 dark:text-white lg:text-3xl">{{__($product->name)}}</h2>
                         <h1 class="text-3xl font-medium tracking-wide text-gray-800 dark:text-white lg:text-4xl">${{__($product->variation()->first()->stock()->first()->price)}}</h1>
                         <p class="mt-4 text-gray-600 dark:text-gray-300">{{__($product->description)}}</p>
+                        <!--Variations-->
+                        <div>
+                          <x-component.select>
+                             @foreach($product->variation()->get() as $variation)
+                              <option value="">
+                                {{$variation->attribute_value()->first()->attribute()->first()->type}}:&nbsp;
+                                {{$variation->attribute_value()->first()->value}}
+                              </option>
+                             @endforeach
+                          </x-component.select>
+                        </div>
                         <!-- quantity -->
                         <div class="inline-block space-x-3 py-2">
                             <span class="mt-4 text-gray-600 dark:text-gray-300">
                                 {{__('Cantidad')}} :
                             </span>
-                            <x-buttons.cian>
+                            <x-buttons.cian wire:click="remove">
                                 <i class="fas fa-minus"></i>
                             </x-buttons.cian>
                             <span class="p-2">
-                                1
+                               {{$this->quantity}}
                             </span>
-                            <x-buttons.cian>
+                            <x-buttons.cian wire:click="add">
                                 <i class="fas fa-plus"></i>
                             </x-buttons.cian>
                             <span class="mt-4 text-gray-600 dark:text-gray-300 ">
