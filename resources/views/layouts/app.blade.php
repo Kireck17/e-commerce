@@ -22,10 +22,8 @@
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
-
         <div class="min-h-screen bg-gray-200">
             @livewire('navigation-menu')
-
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white shadow">
@@ -34,7 +32,6 @@
                     </div>
                 </header>
             @endif
-
             <!-- Page Content -->
             <main>
                 {{ $slot }}
@@ -42,9 +39,7 @@
             <!-- Page Fooder -->
             <x-fooder/>
         </div>
-
         @stack('modals')
-
         @livewireScripts
     </body>
 </html>

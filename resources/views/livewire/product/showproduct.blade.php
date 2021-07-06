@@ -25,6 +25,7 @@
                               </option>
                              @endforeach
                           </x-component.select>
+                          {{$this->variation}}
                         </div>
                         <!-- quantity -->
                         <div class="inline-block space-x-3 py-2">

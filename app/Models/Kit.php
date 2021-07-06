@@ -11,7 +11,7 @@ class Kit extends Model
 
     protected $table = 'kits';
 
-   // protected $fillable=['name'];
+    protected $fillable=['name'];
 
    //alcanze con el modelo Kid_Detail
     public function kitdetail()
