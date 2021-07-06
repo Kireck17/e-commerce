@@ -8,12 +8,15 @@ use App\Models\Trademark;
 use App\Models\Category;
 use App\Models\SubCategory;
 use App\Traits\InteractsWithBanner;
+use App\Models\AttributeValue;
+use App\Models\Attribute;
 
 class Productos extends Component
 {
     use InteractsWithBanner;
 
     public $product;
+    public $attribute_value;
 
 
     protected $rules = [
@@ -22,6 +25,7 @@ class Productos extends Component
         'product.description' => "required",
         'product.category_id' => "required",
         'product.subcategory_id' => "required",
+        'product.trademark_id' => "required",
         'product.trademark_id' => "required",
     ];
 
@@ -51,6 +55,7 @@ class Productos extends Component
             'trademarks' => Trademark::all(),
             'categories' => Category::all(),
             'subcategories' => SubCategory::all(),
+            'atrivute_values' => Attribute::all(),
         ])->layout("layouts.admin");
     }
 }

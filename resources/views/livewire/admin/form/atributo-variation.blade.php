@@ -2,9 +2,9 @@
     <x-containers.secondary>
         <x-containers.form>
             <x-slot name="title">
-                {{ __('Variaciones') }}
+                {{ __('Atributo de Variaciones') }}
             </x-slot>
-            @if($products->count() && $variations->count())
+            @if($attribute_values->count() && $variations->count())
                 <x-slot name="upload">
                     <x-buttons.cian>
                         {{__('Carga masiva . . .')}}
@@ -16,37 +16,33 @@
                             {{ __('Variación') }}
                         </x-slot>
                         <x-slot name="input">
-                            <x-component.select wire:model="variation.variation" class="w-full">
+                            <x-component.select wire:model="atribute_variation.variation" class="w-full">
                                 <x-slot name="default">
                                     {{__('--Selecciona--')}}  
                                 </x-slot>
                                 @foreach($variations as $variation)
                                     <option value="{{$variation->id}}">
-                                        @foreach($variation->attribute_value()->get() as $attribute_value)
-                                            @foreach($attribute_value->attribute()->get() as $attribute)
-                                                {{$attribute->type}}|{{$attribute_value->value}}
-                                            @endforeach
-                                        @endforeach
+                                       {{$variation->id}}
                                     </option>
                                 @endforeach
                             </x-component.select>
-                            <x-jet-input-error for="variation.variation"/>
+                            <x-jet-input-error for="atribute_variation.variation"/>
                         </x-slot>
                     </x-containers.formbody>
                     <x-containers.formbody>
                         <x-slot name="label">
-                            {{ __('Producto') }}
+                            {{ __('Valor del Atributo') }}
                         </x-slot>
                         <x-slot name="input">
-                            <x-component.select wire:model="variation.product" class="w-full">
+                            <x-component.select wire:model="atribute_variation.attribute" class="w-full">
                                 <x-slot name="default">
                                     {{__('--Selecciona--')}}  
                                 </x-slot>
-                                @foreach($products as $product)
-                                    <option value="{{$product->id}}">{{$product->name}}</option>
+                                @foreach($attribute_values as $values)
+                                    <option value="{{$values->id}}">{{$values->value}}</option>
                                 @endforeach
                             </x-component.select>
-                            <x-jet-input-error for="variation.product"/>
+                            <x-jet-input-error for="atribute_variation.attribute"/>
                         </x-slot>
                     </x-containers.formbody>     
                 </x-slot>
@@ -62,7 +58,7 @@
                     No hay Variaciones registrados
                 </span>
             @endif
-            @if($products->count() == 0)
+            @if($attribute_values->count() == 0)
                 <span class="text-gray-300 font-bold text-center text-4xl">
                     No hay Productos registrados 
                 </span>
