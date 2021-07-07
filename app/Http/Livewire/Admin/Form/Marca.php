@@ -31,6 +31,7 @@ class Marca extends Component
       $trademarks->save();
       $this->trademark = [];
       $this->banner('Marca(s) guardada correctamente');
+      $this->emit('productReload');
     }   
 
     public function render()

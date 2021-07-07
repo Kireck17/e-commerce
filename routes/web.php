@@ -25,7 +25,13 @@ Route::prefix('category')->group(function(){
             ->name('show');
     });
 });
-
+/*Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    Route::prefix('administration')->group(function(){
+        Route::name('administration.')->group(function(){
+            Route::get('trademarks/create',Createtrademark::class)->name('trademarks');
+        });
+    });
+});*/
 Route::prefix('product')->group(function(){
     Route::name('product.')->group(function(){
         Route::get('/{product}/showproduct',Showproduct::class)->name('showproduct');

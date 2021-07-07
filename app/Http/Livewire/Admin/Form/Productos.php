@@ -10,6 +10,7 @@ use App\Models\SubCategory;
 use App\Traits\InteractsWithBanner;
 use App\Models\AttributeValue;
 use App\Models\Attribute;
+use App\Models\Variation;
 
 class Productos extends Component
 {
@@ -17,6 +18,7 @@ class Productos extends Component
 
     public $product;
     public $attribute_value;
+    public $attributes;
 
 
     protected $rules = [
@@ -27,6 +29,8 @@ class Productos extends Component
         'product.subcategory_id' => "required",
         'product.trademark_id' => "required",
         'product.trademark_id' => "required",
+        'attributes.*.type' => 'required',
+        'attributes.*.value' => 'required'
     ];
 
     protected $validationAttributes = [
@@ -36,18 +40,48 @@ class Productos extends Component
         'product.category_id' => "Categoria",
         'product.subcategory_id' => "Sub categoria",
         'product.trademark_id' => "Marca",
+        'attributes.*.type' => 'Característica',
+        'attributes.*.value' => 'Valor'
     ];
 
-    public function Mount(){
-       $this->product =[];
-    }
+    protected $listeners=['productReload' => 'render'];
 
+    public function mount(){
+       $this->product=[];
+       $this->attributes=[];
+    }
+    public function add_attribute()
+    {
+        $this->attributes[]="";
+    }
+    public function get_attribute($index)
+    {
+       unset($this->attributes[$index]);
+    }
     public function saveproduct(){
-      $this->validate();
-      $products=new Product($this->product);
-      $products->save();
-      $this->product=[];
-      $this->banner('Producto(s) guardado(s) correctamente');
+        $this->validate();
+        if(count($this->attributes)){
+            $products=new Product($this->product);
+            $products->save();
+            $variation=$products->variation()->save(new Variation());
+            foreach ($this->attributes as $attribute) {
+                $atributo=Attribute::where('type',$attribute['type'])->get();
+                if ($atributo->count() == 0) {
+                    $atributo=new Attribute($attribute);
+                    $atributo->save();
+                }else{
+                    $atributo=$atributo->first();
+                }
+                $valor=new AttributeValue($attribute);
+                $valor->attribute_id=$atributo->id;
+                $variation->attribute_value()->save($valor);
+            }
+            $this->product=[];
+            $this->attributes=[];
+            $this->banner('Producto(s) guardado(s) correctamente');
+        }else{
+            $this->banner('Este producto no se le han agregado características','danger');
+        }
     }
     public function render()
     {

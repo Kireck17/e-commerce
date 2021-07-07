@@ -49,10 +49,9 @@ class CreateShoppingCartTable extends Migration
     {
 
         Schema::table('shopping_cart', function (Blueprint $table) {
-            $table->dropForeign(['products_id']);
-            $table->dropForeign(['users_id']);
-            $table->dropForeign(['cupon_id']);
-           
+            $table->dropForeign(['stock_id']);
+            $table->dropForeign(['user_id']);
+            //$table->dropForeign(['cupon_id']);
         });
 
 
