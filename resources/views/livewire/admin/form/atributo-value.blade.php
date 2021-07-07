@@ -16,14 +16,12 @@
                                 {{ __('Atributo') }}
                             </x-slot>
                             <x-slot name="input">
-                                <x-component.select wire:model="attribute_value.attribute_id" class="w-full">
-                                    <x-slot name="default">
-                                        {{__('--Selecciona--')}}  
-                                    </x-slot>
+                                <input list="color-list" type="text" wire:model="attribute_value.attribute_id">
+                                <datalist id="color-list">
                                     @foreach($atrivute_values as $type)
                                         <option value="{{$type->id}}">{{$type->type}}</option>  
                                     @endforeach
-                                </x-component.select>
+                                </datalist>
                                 <x-jet-input-error for="attribute_value.attribute_id"/>
                             </x-slot>
                     </x-containers.formbody>
