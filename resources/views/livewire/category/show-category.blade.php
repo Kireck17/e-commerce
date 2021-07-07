@@ -1,5 +1,6 @@
 {{--Vista de categoria--}}
 <div>
+
    {{--Baner--}}
    <x-banners.category  :url="$category->file()->first()->url" :description="$category->description" />
     <x-containers.main>
@@ -19,7 +20,7 @@
             <div class="py-8 px-4 grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5 gap-6">
                 {{--View de los  Productos dependiendo la categoria--}}
                 @forelse($products as $product)
-                    <x-cards.main>
+                    <x-cards.main :link="route('product.showproduct',['product' => $product->id])">
                         <x-slot name="image">
                             @if($product->variation()->first()->files()->count())
                                 <img class="h-full bg-white rounded-md shadow-md" src="{{$product->variation()->first()->files()->first()->url}}" alt="">
@@ -51,5 +52,10 @@
         </x-containers.secondary>
     </x-containers.main>
 </div>
+
+
+
+
+
 
 

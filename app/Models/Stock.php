@@ -11,13 +11,9 @@ class Stock extends Model
     protected $table = 'stocks';
 
     protected $fillable=[
-        'stockable_id',
-        'stockable_type',
-        'provider_id',
-        'warehouse_id',
-        'quantity',
-        'price'
-    ];
+        //'stockable_id',
+        //'stockable_type',
+        'provider_id','warehouse_id','quantity','price'];
     
 
     public function stockable()

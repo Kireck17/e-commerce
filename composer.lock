@@ -1166,14 +1166,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/a18266c612e0e6aba5e0174b3c873d2d217dccfb",
                 "reference": "a18266c612e0e6aba5e0174b3c873d2d217dccfb",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 82d3ee4979e4c27870a8ac366f8bd19c2c7b9c3e
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1181,19 +1173,6 @@
                         "preferred": true
                     }
                 ]
-<<<<<<< HEAD
-=======
-                "shasum": ""
->>>>>>> 9e7275b55fe12dce55e3efe37f271770046b2e87
-=======
->>>>>>> 82d3ee4979e4c27870a8ac366f8bd19c2c7b9c3e
-=======
->>>>>>> f7b25160d401467b81f00adec599c75f5ac32f03
-                "shasum": ""
->>>>>>> 4dec10491e388e1d7c73022a9307f3ecb150bbf6
-=======
-                "shasum": ""
->>>>>>> 733765970954d2cea7f6bf422376c3a4105392b2
             },
             "require": {
                 "doctrine/inflector": "^1.4|^2.0",
@@ -1802,16 +1781,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.4.4",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "33101c83b75728651b9e668a4559f97def7c9138"
+                "reference": "a4ffb135693e7982e5b982ca203f5dc7a7ae1126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/33101c83b75728651b9e668a4559f97def7c9138",
-                "reference": "33101c83b75728651b9e668a4559f97def7c9138",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/a4ffb135693e7982e5b982ca203f5dc7a7ae1126",
+                "reference": "a4ffb135693e7982e5b982ca203f5dc7a7ae1126",
                 "shasum": ""
             },
             "require": {
@@ -1862,7 +1841,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v2.4.4"
+                "source": "https://github.com/livewire/livewire/tree/v2.5.1"
             },
             "funding": [
                 {
@@ -1870,7 +1849,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-28T15:31:15+00:00"
+            "time": "2021-06-15T13:24:48+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
