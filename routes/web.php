@@ -9,10 +9,12 @@ use App\Http\Livewire\Main\MensClothing;
 use App\Http\Livewire\Product\Showproduct;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
+use Illuminate\Support\Facades\Route;
+//Use de admin apartado de ver
 use App\Http\Livewire\Admin\show\ShowTrademark;
 use App\Http\Livewire\Admin\show\CategoryShow;
-use Illuminate\Support\Facades\Route;
-
+use App\Http\Livewire\Admin\show\ShowSubCategory;
+use App\Http\Livewire\Admin\show\ShowOrigin;
 
 Route::get('/', Showlobby::class)->name('lobby');
 
@@ -51,6 +53,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
             Route::get('/showcategory',CategoryShow::class
             )->name('showcategory');
+
+            Route::get('/showsubcategory',ShowSubCategory::class
+            )->name('showsubcategory');
+
+            Route::get('/showorigin',ShowOrigin::class
+            )->name('showorigin');
         });
     });
 });

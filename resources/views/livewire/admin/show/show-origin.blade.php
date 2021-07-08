@@ -1,4 +1,4 @@
-{{-- Admin, Tabla de Categorias--}}
+{{-- Admin, Tabla de Origins--}}
 <div>
     <div class="overflow-x-auto">
         <div class="pr-5 pl-5 w-full bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
@@ -15,7 +15,7 @@
                     <thead>
                         <tr class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
                             <th class="py-3 px-6 text-center">
-                                Categorias
+                                Pais de Origen
                             </th>
                             <th class="py-3 px-6 text-center">
                                 Opciones
@@ -26,13 +26,13 @@
 
                     {{--Inicio del cuerpo de la tabla--}}
                     <tbody class="text-gray-800 text-sm font-light">
-                        @forelse($category  as $cate) 
+                        @forelse($origin  as $subca) 
                             <tr class="border-b border-gray-200 hover:bg-gray-100">
                                 <td class="py-3 px-6 text-center whitespace-nowrap">
                                     <div class="flex item-center justify-center">
                                         
                                         <span class="font-medium">
-                                            {{$cate->name}}
+                                            {{$subca->country}}
                                         </span>
                                     </div>
                                 </td>
@@ -63,9 +63,11 @@
                 
                 {{--Paginacion--}}
                 <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
-                    {{$category->links()}}
+                    {{$origin->links()}}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
