@@ -23,7 +23,7 @@
                     <x-cards.main>
                         <x-slot name="image">
                             @if($product->variation()->first()->files()->count())
-                                <img class="h-full bg-white rounded-md shadow-md" src="{{$product->variation()->first()->files()->first()->url}}" alt="">
+                                <img class="h-full w-full bg-white rounded-md shadow-md" src="{{$product->variation()->first()->files()->first()->url}}" alt="">
                             @else
                                 <img src="https://www.bicifan.uy/wp-content/uploads/2016/09/producto-sin-imagen.png" alt="">
                             @endif
