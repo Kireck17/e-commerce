@@ -14,6 +14,7 @@ class StockSeeder extends Seeder
      */
     public function run()
     {
+
         $stock = new Stock();
         $stock-> stockable_id = 1;
         $stock-> stockable_type="App\Models\Variation";
@@ -839,5 +840,55 @@ class StockSeeder extends Seeder
         $stock -> quantity = 16;
         $stock -> price = 2000;
         $stock -> save();
+
+        $stock = new Stock();
+        $stock-> stockable_id = 303;
+        $stock-> stockable_type="App\Models\Kit";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 1;
+        $stock -> quantity = 16;
+        $stock -> price = 2000;
+        $stock -> save();
+        $stock = new Stock();
+        $stock-> stockable_id = 304;
+        $stock-> stockable_type="App\Models\Kit";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 1;
+        $stock -> quantity = 16;
+        $stock -> price = 2000;
+        $stock -> save();
+        $stock = new Stock();
+        $stock-> stockable_id = 305;
+        $stock-> stockable_type="App\Models\Kit";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 1;
+        $stock -> quantity = 16;
+        $stock -> price = 2000;
+        $stock -> save();
+        $stock = new Stock();
+        $stock-> stockable_id = 306;
+        $stock-> stockable_type="App\Models\Kit";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 1;
+        $stock -> quantity = 16;
+        $stock -> price = 2000;
+        $stock -> save();
+        $stock = new Stock();
+        $stock-> stockable_id = 307;
+        $stock-> stockable_type="App\Models\Kit";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 1;
+        $stock -> quantity = 16;
+        $stock -> price = 2000;
+        $stock -> save();
+        $stock = new Stock();
+        $stock-> stockable_id = 308;
+        $stock-> stockable_type="App\Models\Kit";
+        $stock->provider_id = 7;
+        $stock -> warehouse_id = 1;
+        $stock -> quantity = 16;
+        $stock -> price = 2000;
+        $stock -> save();
+
     }
 }

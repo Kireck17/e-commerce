@@ -27,7 +27,7 @@
             <section class="space-y-0 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-3 md:gap-y-10 ">
                 
                 <div class="p-2 md:w-24 ">
-                    <div class="flex justify-around items-center px-2 py-3 bg-gray-200 rounded-lg shadow-xs cursor-wait bg-red-900 hover:bg-yellow-600 hover:text-black text-white">
+                    <div class="flex justify-around items-center px-2 py-3  rounded-lg shadow-xs cursor-wait bg-red-900 hover:bg-yellow-600 hover:text-black text-white">
                         <div>
                         <p class="text-xs font-medium ml-2 ">
                           Ofertas Relampago
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="p-2 md:w-24">
-                    <div class="flex justify-around items-center px-2 py-3 bg-gray-200 rounded-lg shadow-xs cursor-wait bg-red-900 hover:bg-yellow-600 hover:text-black text-white">
+                    <div class="flex justify-around items-center px-2 py-3  rounded-lg shadow-xs cursor-wait bg-red-900 hover:bg-yellow-600 hover:text-black text-white">
                         <div>
                         <p class="text-xs font-medium ml-2 ">
                           Menos de 500

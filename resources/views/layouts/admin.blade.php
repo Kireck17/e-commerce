@@ -23,16 +23,17 @@
     <body class="font-sans antialiased ">
         
 
-        <div class="flex flex-col sm:flex-row min-h-screen">
-            <div class="sm:w-3/12  bg-red-600">
+        <div class="flex flex-col sm:flex-row min-h-screen h-full">
+            <div class="sm:w-3/12 h-auto bg-white">
               
                 @livewire('nav.navigation')
               
               
             </div>
 
-            <div class="sm:w-9/12 bg-blue-900 py-3  sm:py-0 ">
+            <div class="sm:w-9/12 bg-gray-400 py-3  sm:py-0 ">
                 <div class="hidden bg-white py-2 h-16 sm:flex flex-row-reverse items-center px-6">
+            
                         <x-Drop.dropdown>
                           <x-slot name="trigger">
                             <h4 class="cursor-pointer px-2 font-semibold text-lg text-gray-700 capitalize font-poppins tracking-wide hover:bg-gray-200 rounded-md">
@@ -94,6 +95,7 @@
                 @endif
                 <!-- Page Content-->
                 <main>
+                    <x-banners.toast />
                     {{ $slot }}
                 </main>
             </div>
