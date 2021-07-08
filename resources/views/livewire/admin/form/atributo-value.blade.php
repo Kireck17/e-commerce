@@ -44,15 +44,7 @@
                     </x-buttons.cian>
                 </x-slot>
                 
-                <x-jet-dialog-modal wire:model="is_show">
-                <x-slot name="title">
-                Editar atrributoAutor
-                </x-slot>
-                <x-slot name="content">
                 
-                </x-slot>
-            
-                </x-jet-dialog-modal>
             @endif
             @if($atrivute_values->count() == 0)
                 <span class="text-gray-300 font-bold text-center text-4xl">

@@ -9,6 +9,7 @@ use App\Http\Livewire\Main\MensClothing;
 use App\Http\Livewire\Product\Showproduct;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
+use App\Http\Livewire\Admin\show\ShowTrademark;
 use Illuminate\Support\Facades\Route;
 
 
@@ -43,6 +44,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
         Route::name('admin.')->group(function(){
             Route::get('/create',Create::class
             )->name('create');
+
+            Route::get('/showtrademark',ShowTrademark::class
+            )->name('showtrademark');
         });
     });
 });

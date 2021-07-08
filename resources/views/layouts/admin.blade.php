@@ -23,19 +23,20 @@
     <body class="font-sans antialiased ">
         
 
-        <div class="flex flex-col sm:flex-row min-h-screen">
-            <div class="sm:w-3/12  bg-white">
+        <div class="flex flex-col sm:flex-row min-h-screen h-full">
+            <div class="sm:w-3/12 h-auto bg-white">
               
                 @livewire('nav.navigation')
               
               
             </div>
 
-            <div class="sm:w-9/12 bg-gray-300 py-3  sm:py-0">
-                <div class="bg-white py-2 h-16 flex flex-row-reverse items-center px-6">
+            <div class="sm:w-9/12 bg-gray-400 py-3  sm:py-0 ">
+                <div class="hidden bg-white py-2 h-16 sm:flex flex-row-reverse items-center px-6">
+            
                         <x-Drop.dropdown>
                           <x-slot name="trigger">
-                            <h4 class="cursor-pointer px-2 font-semibold text-lg text-gray-700 capitalize font-poppins tracking-wide">
+                            <h4 class="cursor-pointer px-2 font-semibold text-lg text-gray-700 capitalize font-poppins tracking-wide hover:bg-gray-200 rounded-md">
                              <i class="fa fa-cog mr-2" aria-hidden="true"></i>
                              Opciones
                             </h4>
@@ -69,7 +70,7 @@
                         <x-Drop.dropdown>
 
                          <x-slot name="trigger">
-                         <h4 class="cursor-pointer px-2 font-semibold text-lg text-gray-700 capitalize font-poppins tracking-wide">
+                         <h4 class="cursor-pointer px-2 font-semibold text-lg text-gray-700 capitalize font-poppins tracking-wide hover:bg-gray-200 rounded-md">
                           <i class="fa fa-bell mr-2" aria-hidden="true"></i>
                              Notificaciones
                             </h4>

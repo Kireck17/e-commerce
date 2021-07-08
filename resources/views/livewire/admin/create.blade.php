@@ -45,6 +45,7 @@
                 <div x-show="active ===  11"> 
                     <livewire:admin.form.variaciones/>
                 </div>
+                
             </div>
         </x-containers.secondary>
     </x-containers.main>
