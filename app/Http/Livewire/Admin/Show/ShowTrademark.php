@@ -5,21 +5,22 @@ namespace App\Http\Livewire\Admin\Show;
 use Livewire\Component;
 
 use App\Models\Trademark;
-
+use Livewire\WithPagination;
 class ShowTrademark extends Component
 {
-    public $trademarks;
+    use WithPagination;
+    
     public $search;
-    public function mount(Trademark $trademarks)
+    public function mount()
     {
-        $this->trademarks=$trademarks;
-        
+        $this->search="";
     }
     
     public function render()
     {
+        //Si no se pone el metodo paginate es necesario que lleve get()
         return view('livewire.admin.show.show-trademark',[
-            'trademarks'=> Trademark::where('name','LIKE',"%{$this->search}%")
+            'trademarks'=> Trademark::where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->paginate(10),
         ])
         ->layout("layouts.admin");
     }
