@@ -12,8 +12,14 @@ class Category extends Model
 
     protected $fillable=['name'];
 
-    public function product($value='')
+    public function file()
     {
-        // code...
+        return $this->morphOne(File::class, 'fileable');
+
+    }
+
+    public function product()
+    {
+        return $this->hasMany(Product::class);
     }
 }

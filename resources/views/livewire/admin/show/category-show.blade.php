@@ -3,6 +3,8 @@
     <div class="overflow-x-auto">
         <div class="pr-5 pl-5 w-full bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
             <div class="w-full bg-white shadow-md rounded my-6">
+            <h1 class="font-serif text-black text-2xl">Categorias</h1>
+            
                 {{--Apartado de busqueda--}}
                 <div class="flex justify-end w-full">
                     <x-searchadmin.search  wire:model="search"/>
@@ -42,7 +44,8 @@
                                         <div class="w-4 mr-2 transform hover:text-blue-500 hover:scale-110">
                                           <i class="fas fa-edit"></i>
                                         </div>
-                                        <div class="w-4 mr-2 transform hover:text-red-500 hover:scale-110">
+                                        <div class="w-4 mr-2 transform hover:text-red-500 hover:scale-110"
+                                        wire:click="remove_category({{$mark->id}})">
                                           <i class="fas fa-trash-alt"></i>
                                         </div>
                                     </div>
