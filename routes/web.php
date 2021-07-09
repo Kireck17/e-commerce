@@ -10,6 +10,10 @@ use App\Http\Livewire\Product\Showproduct;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
 use App\Http\Livewire\Admin\show\ShowTrademark;
+use App\Http\Livewire\Admin\show\CategoryShow;
+use App\Http\Livewire\Admin\show\WarehouseShow;
+use App\Http\Livewire\Admin\show\StockShow;
+use App\Http\Livewire\Admin\show\ProviderShow;
 use Illuminate\Support\Facades\Route;
 
 
@@ -47,6 +51,18 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
             Route::get('/showtrademark',ShowTrademark::class
             )->name('showtrademark');
+
+            Route::get('/showcategory',CategoryShow::class
+            )->name('showcategory');
+
+            Route::get('/showarehouse',WarehouseShow::class
+            )->name('showwarehouse');
+
+            Route::get('/showprovider',ProviderShow::class
+            )->name('showprovider');
+
+            Route::get('/showstock',StockShow::class
+            )->name('showstock');
         });
     });
 });
@@ -56,7 +72,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 Route::prefix('search')->group(function(){
     Route::name('search.')->group(function(){
         Route::get('/search/show',ShowSearch::class)->name('show');
-
     });
 });
 */
@@ -91,4 +106,3 @@ Route::get('/WayToPay', function () {
 Route::get('/pay', function () {
     return view('category.pay');
 })->name('pay');
-

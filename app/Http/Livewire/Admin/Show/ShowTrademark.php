@@ -3,59 +3,39 @@
 namespace App\Http\Livewire\Admin\Show;
 
 use Livewire\Component;
-use Livewire\WithPagination;
 use App\Models\Trademark;
+use Livewire\WithPagination;
+use App\Traits\InteractsWithBanner;
 
 class ShowTrademark extends Component
 {
+    use InteractsWithBanner;
     use WithPagination;
-    public $trademark;
     public $search;
-    public $porpagina=2;
-    
+    public $mark;
 
-    protected $rules=[
-        'trademark.name'=> "required|max:200",
-    ];
-
-    protected $validationAttributes=[
-        '$trademark.name'=> "Nombre Marca Requerido",
-    ];
-
-    public function save_changes()
+    public function mount()
     {
-        $this->trademark->save();
-        $this->is_show=false;
+        $this->search="";
     }
-
     
-    public function edit_trademark($id)
-    {
-        $this->is_show=true;
-        $this->trademark=Trademark::find($id);
-    }
-
-
+    //ELIMINAR UN TRADEMARK 
     public function remove_trademark($id)
     {
-        $this->trademark=Trademark::find($id);
-        $this->trademark->delete();
+       
+        $this->mark=Trademark::find($id);
+        $this->mark->delete();
+        $this->banner('Trademark Eliminado correctamente');
+        $this->emit('TrademarkReload');
+
     }
 
-    public function mount(Trademark $trademark)
-    {
-        $this->trademark=$trademark;
-        $this->search="";
-        $this->is_show=false;
-    }
-    
     public function render()
     {
+        //Si no se pone el metodo paginate es necesario que lleve get()
         return view('livewire.admin.show.show-trademark',[
-            
-            'trademark' => $this->trademark,
-            
+            'trademarks'=> Trademark::where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->paginate(10),
         ])
         ->layout("layouts.admin");
-    }  
+    }
 }

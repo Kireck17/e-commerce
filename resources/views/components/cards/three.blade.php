@@ -22,11 +22,11 @@
         </p>
 
         <a href="{{$link}}" class="sm:hidden flex text-center justify-center items-center bg-cian-dark h-10 border-2  border-cian-dark w-full  text-white focus:outline none">
-            {{$price}}
+           {{$price}}
         </a>
     </div>
 
     <a href="{{$link}}" class="hidden sm:flex justify-center items-center bg-cian-dark h-10 border-2  border-cian-dark w-full  text-white focus:outline none">
-            {{$price}}
+        {{$price}}
     </a>
 </div>
