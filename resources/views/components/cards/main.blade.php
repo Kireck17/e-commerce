@@ -20,7 +20,8 @@
             {{$name}}
         </p>
 
-        <a href="{{$link}}" class="text-center lg:hidden sm:flex justify-center items-center bg-yellow-dark h-10 border-2  border-yellow-dark w-full  text-black focus:outline none">
+        
+        <a href="{{$link}}" class="sm:hidden flex text-center justify-center items-center bg-yellow-dark h-10 border-2  border-yellow-dark w-full  text-black focus:outline none">
             {{$price}}
         </a>
     </div>

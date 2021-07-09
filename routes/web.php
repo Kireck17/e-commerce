@@ -46,29 +46,28 @@ Route::prefix('product')->group(function(){
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::prefix('admin')->group(function(){
         Route::name('admin.')->group(function(){
-            Route::get('/create',Create::class)->name('create');
+            Route::get('/create',Create::class
+            )->name('create');
 
-            /*Route::get('/showtrademark',ShowTrademark::class)->name('showtrademark');
+            Route::get('/showtrademark',ShowTrademark::class
+            )->name('showtrademark');
 
-            Route::get('/showcategory',CategoryShow::class)->name('showcategory');
+            Route::get('/showcategory',CategoryShow::class
+            )->name('showcategory');
 
-            Route::get('/showsubcategory',ShowSubCategory::class)->name('showsubcategory');
+            Route::get('/showsubcategory',ShowSubCategory::class
+            )->name('showsubcategory');
 
-            Route::get('/showorigin',ShowOrigin::class)->name('showorigin');
-
-            Route::get('/showproduct',ShowProducto::class)->name('showproduct');*/
+            Route::get('/showorigin',ShowOrigin::class
+            )->name('showorigin');
         });
     });
 });
-
-
-/*
-Route::prefix('search')->group(function(){
+/*Route::prefix('search')->group(function(){
     Route::name('search.')->group(function(){
         Route::get('/search/show',ShowSearch::class)->name('show');
     });
-});
-*/
+});*/
 
 
 

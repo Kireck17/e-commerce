@@ -36,6 +36,7 @@
                 <div x-show="active ===  8"> 
                     <livewire:admin.form.kits/>
                 </div>
+                
             </div>
         </x-containers.secondary>
     </x-containers.main>
