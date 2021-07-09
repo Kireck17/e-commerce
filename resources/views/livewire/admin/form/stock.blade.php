@@ -13,24 +13,32 @@
                 <x-slot name="content">
                     <x-containers.formbody :bg="true">
                         <x-slot name="label">
-                            {{ __('Variation') }}
+                            {{ __('Producto') }}
+                        </x-slot>
+                        <x-slot name="input">
+                            <x-component.dropdown-input :datos="$products" :columna="'name'" wire:model="product">
+                                <x-component.input type="text" x-model="search" wire:model="product" class="w-full"/>
+                                <x-jet-input-error for="product"/>
+                            </x-component.dropdown-input>
+                        </x-slot>
+                    </x-containers.formbody>
+                    
+                    <x-containers.formbody>
+                        <x-slot name="label">
+                            {{ __('Variación') }}
                         </x-slot>
                         <x-slot name="input">
                             <x-component.select wire:model="stock.variation" class="w-full">
                                 <x-slot name="default">
                                     {{__('--Selecciona--')}}  
                                 </x-slot>
-                                @foreach($variations as $variation)
-                                    <option value="{{$variation->id}}">
-                                        @foreach($variation->attribute_value()->get() as $attribute_value)
-                                            @foreach($attribute_value->attribute()->get() as $attribute)
-                                                {{$attribute->type}}|{{$attribute_value->value}}
-                                            @endforeach
-                                        @endforeach
-                                    </option>
+                                {{--
+                                @foreach($product_variation as $value)
+                                    <option value="{{$value->id}}">{{$value->value}}</option>
                                 @endforeach
+                                --}}
                             </x-component.select>
-                            <x-jet-input-error for="stock.variation"/>
+                            <x-jet-input-error for="'stock.variation'"/>
                         </x-slot>
                     </x-containers.formbody>
                     <x-containers.formbody>
