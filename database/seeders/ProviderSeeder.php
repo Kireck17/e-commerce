@@ -82,42 +82,5 @@ class ProviderSeeder extends Seeder
         $provider -> save();
         $provider -> variation()->attach(15);
 
-        //5
-        $provider = new Provider();
-        $provider -> origin_id = 1;
-        $provider -> name = 'Fashion Mexico';
-        $provider -> save();
-        $provider -> variation()->attach(16);
-        $provider -> variation()->attach(17);
-        $provider -> variation()->attach(18);
-        $provider -> variation()->attach(19);
-        $provider -> variation()->attach(20);
-        $provider -> variation()->attach(21);
-        $provider -> variation()->attach(22);
-        $provider -> variation()->attach(23);
-
-        //6 seccion hombres
-        $provider = new Provider();
-        $provider -> origin_id = 3;
-        $provider -> name = 'Fashion Mens';
-        $provider -> save();
-        $provider -> variation()->attach(24);
-        $provider -> variation()->attach(25);
-        $provider -> variation()->attach(26);
-        $provider -> variation()->attach(27);
-        $provider -> variation()->attach(28);
-
-        //7 seccion automotriz
-        $provider = new Provider();
-        $provider -> origin_id = 4;
-        $provider -> name = 'Pro Auto';
-        $provider -> save();
-        $provider -> variation()->attach(29);
-        $provider -> variation()->attach(30);
-        $provider -> variation()->attach(31);
-        $provider -> variation()->attach(32);
-        $provider -> variation()->attach(33);
-        
-
     }
 }

@@ -10,10 +10,7 @@ class Stock extends Model
     use HasFactory;
     protected $table = 'stocks';
 
-    protected $fillable=[
-        //'stockable_id',
-        //'stockable_type',
-        'provider_id','warehouse_id','quantity','price'];
+    protected $fillable=['stockable_id','stockable_type','provider_id','warehouse_id','quantity','price'];
     
 
     public function stockable()
@@ -31,11 +28,6 @@ class Stock extends Model
     public function warehouse()
     {
         return $this->belongsTo(WareHouse::class);
-    }
-
-    public function shopping_cart()
-    {
-        return $this->belongsTo(Shopping_Cart::class);
     }
     
 }

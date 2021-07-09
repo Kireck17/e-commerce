@@ -8,15 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Variation extends Model
 {
     use HasFactory;
-
     protected $table = 'variations';
-
-
-    //alcanze con el modelo File
-    public function files()
-    {
-        return $this->morphMany(File::class, 'fileable');
-    }
 
     public function attribute_value()
     {
@@ -46,6 +38,5 @@ class Variation extends Model
     {
         return $this->morphOne(Stock::class, 'stockable');
     }
-    
-    
+
 }

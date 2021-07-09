@@ -59,28 +59,31 @@ class Productos extends Component
        unset($this->attributes[$index]);
     }
     public function saveproduct(){
-        $this->validate();
-        if(count($this->attributes)){
-            $products=new Product($this->product);
-            $products->save();
-            $variation=$products->variation()->save(new Variation());
-            foreach ($this->attributes as $attribute) {
-                $atributo=Attribute::where('type',$attribute['type'])->get();
-                if ($atributo->count() == 0) {
-                    $atributo=new Attribute($attribute);
-                    $atributo->save();
-                }else{
-                    $atributo=$atributo->first();
+        if ($this->validate()) {
+            if(count($this->attributes)){
+                $products=new Product($this->product);
+                $products->save();
+                $variation=$products->variation()->save(new Variation());
+                foreach ($this->attributes as $attribute) {
+                    $atributo=Attribute::where('type',$attribute['type'])->get();
+                    if ($atributo->count() == 0) {
+                        $atributo=new Attribute($attribute);
+                        $atributo->save();
+                    }else{
+                        $atributo=$atributo->first();
+                    }
+                    $valor=new AttributeValue($attribute);
+                    $valor->attribute_id=$atributo->id;
+                    $variation->attribute_value()->save($valor);
                 }
-                $valor=new AttributeValue($attribute);
-                $valor->attribute_id=$atributo->id;
-                $variation->attribute_value()->save($valor);
+                $this->product=[];
+                $this->attributes=[];
+                $this->banner('Producto(s) guardado(s) correctamente');
+            }else{
+                $this->banner('Este producto no se le han agregado características','danger');
             }
-            $this->product=[];
-            $this->attributes=[];
-            $this->banner('Producto(s) guardado(s) correctamente');
         }else{
-            $this->banner('Este producto no se le han agregado características','danger');
+            $this->banner('Llena los datos por favor','danger');
         }
     }
     public function render()

@@ -10,7 +10,12 @@ use App\Http\Livewire\Product\Showproduct;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
 use Illuminate\Support\Facades\Route;
-
+//Use de admin apartado de ver
+use App\Http\Livewire\Admin\show\ShowTrademark;
+use App\Http\Livewire\Admin\show\CategoryShow;
+use App\Http\Livewire\Admin\show\ShowSubCategory;
+use App\Http\Livewire\Admin\show\ShowOrigin;
+use App\Http\Livewire\Admin\show\ShowProduct as ShowProducto;
 
 Route::get('/', Showlobby::class)->name('lobby');
 
@@ -41,8 +46,17 @@ Route::prefix('product')->group(function(){
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::prefix('admin')->group(function(){
         Route::name('admin.')->group(function(){
-            Route::get('/create',Create::class
-            )->name('create');
+            Route::get('/create',Create::class)->name('create');
+
+            /*Route::get('/showtrademark',ShowTrademark::class)->name('showtrademark');
+
+            Route::get('/showcategory',CategoryShow::class)->name('showcategory');
+
+            Route::get('/showsubcategory',ShowSubCategory::class)->name('showsubcategory');
+
+            Route::get('/showorigin',ShowOrigin::class)->name('showorigin');
+
+            Route::get('/showproduct',ShowProducto::class)->name('showproduct');*/
         });
     });
 });
@@ -52,7 +66,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 Route::prefix('search')->group(function(){
     Route::name('search.')->group(function(){
         Route::get('/search/show',ShowSearch::class)->name('show');
-
     });
 });
 */
@@ -87,4 +100,3 @@ Route::get('/WayToPay', function () {
 Route::get('/pay', function () {
     return view('category.pay');
 })->name('pay');
-

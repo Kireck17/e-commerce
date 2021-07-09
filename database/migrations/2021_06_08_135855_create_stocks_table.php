@@ -19,7 +19,7 @@ class CreateStocksTable extends Migration
             //$table->unsignedBigInteger('kit_id')->nullable();
             $table->bigInteger('stockable_id');
             $table->string('stockable_type');
-            //$table->unsignedBigInteger('provider_id')->nullable();
+            $table->unsignedBigInteger('provider_id')->nullable();
             $table->unsignedBigInteger('warehouse_id');
             $table->integer('quantity');
             $table->decimal('price');
@@ -29,11 +29,11 @@ class CreateStocksTable extends Migration
                   ->on('kits')
                   ->onUpdate('cascade')
                   ->onDelete('set null');*/
-            /*$table->foreign('provider_id')
+            $table->foreign('provider_id')
                   ->references('id')
                   ->on('providers')
                   ->onUpdate('cascade')
-                  ->onDelete('set null');*/
+                  ->onDelete('set null');
             $table->foreign('warehouse_id')
                   ->references('id')
                   ->on('warehouses')
@@ -51,7 +51,7 @@ class CreateStocksTable extends Migration
     {
         Schema::table('stocks', function (Blueprint $table) {
             //$table->dropForeign(['kit_id']);
-            //$table->dropForeign(['provider_id']);
+            $table->dropForeign(['provider_id']);
             $table->dropForeign(['warehouse_id']);
         });
 
