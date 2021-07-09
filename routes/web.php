@@ -10,7 +10,12 @@ use App\Http\Livewire\Product\Showproduct;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
 use Illuminate\Support\Facades\Route;
-
+//Use de admin apartado de ver
+use App\Http\Livewire\Admin\show\ShowTrademark;
+use App\Http\Livewire\Admin\show\CategoryShow;
+use App\Http\Livewire\Admin\show\ShowSubCategory;
+use App\Http\Livewire\Admin\show\ShowOrigin;
+use App\Http\Livewire\Admin\show\ShowProduct as ShowProducto;
 
 Route::get('/', Showlobby::class)->name('lobby');
 
@@ -43,6 +48,21 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
         Route::name('admin.')->group(function(){
             Route::get('/create',Create::class
             )->name('create');
+
+            Route::get('/showtrademark',ShowTrademark::class
+            )->name('showtrademark');
+
+            Route::get('/showcategory',CategoryShow::class
+            )->name('showcategory');
+
+            Route::get('/showsubcategory',ShowSubCategory::class
+            )->name('showsubcategory');
+
+            Route::get('/showorigin',ShowOrigin::class
+            )->name('showorigin');
+
+            Route::get('/showproduct',ShowProducto::class
+            )->name('showproduct');
         });
     });
 });

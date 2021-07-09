@@ -1,7 +1,7 @@
 <div>
     <x-containers.main>
         <x-containers.secondary>
-        <div x-data="{ tab:['marcas','categorias','subcategorias','origen','almacenes','productos','proveedores','existencias'], active:0 }">
+            <div x-data="{ tab:['marcas','categorias','subcategorias','origen','almacenes','productos','proveedores','existencias'], active:0 }">
                 <div class=" flex flex-wrap space-y-2">
                     <template x-for="(tb, key) in tab">
                         <div class="border border-turquoise-dark text-turquoise-dark uppercase text-xs cursor-pointer px-3 py-1 rounded-b-md w-1/4">
