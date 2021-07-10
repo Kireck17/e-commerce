@@ -15,6 +15,7 @@ use App\Http\Livewire\Admin\show\CategoryShow;
 use App\Http\Livewire\Admin\show\WarehouseShow;
 use App\Http\Livewire\Admin\show\StockShow;
 use App\Http\Livewire\Admin\show\ProviderShow;
+use App\Http\Livewire\Admin\show\ShowProducts;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Showlobby::class)->name('lobby');
@@ -62,6 +63,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
             Route::get('/showstock',StockShow::class
             )->name('showstock');
+
+            Route::get('/showproduct',ShowProducts::class
+            )->name('showproduct');
         });
     });
 });
