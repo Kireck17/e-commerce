@@ -17,6 +17,8 @@ use App\Http\Livewire\Admin\show\StockShow;
 use App\Http\Livewire\Admin\show\ProviderShow;
 use App\Http\Livewire\Admin\show\ShowProducts;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Admin\show\ShowSubCategory;
+use App\Http\Livewire\Admin\show\ShowOrigin;
 
 Route::get('/', Showlobby::class)->name('lobby');
 
@@ -63,6 +65,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
             Route::get('/showstock',StockShow::class
             )->name('showstock');
+
+            Route::get('/showorigin',ShowOrigin::class
+            )->name('showorigin');
 
             Route::get('/showproduct',ShowProducts::class
             )->name('showproduct');
