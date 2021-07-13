@@ -40,7 +40,7 @@ class Existencias extends Component
        $this->stock = [];
        $this->product="";
     }
-    //where('name','LIKE','%'.$this->product.'%')->get()  Product::find($this->product)
+
     public function saveStock(){
         $this->validate();
         $variation = Variation::find($this->stock['variation']);

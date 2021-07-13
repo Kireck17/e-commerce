@@ -1,98 +1,73 @@
 <div>
-    {{-- Admin, Table the Products --}}
-    <div class="overflow-x-auto">
-        <div
-            class="pr-5 pl-5 w-full flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
-            <div class="w-full bg-white shadow-md rounded my-6">
-                <h1 class="font-serif text-black text-2xl">Productos</h1>
-                {{-- Apartado de busqueda --}}
-                <div class="flex justify-end w-full">
-                    <x-searchadmin.search wire:model="search" />
+
+    <x-containers.show>
+        <x-slot name="title">
+            Productos
+        </x-slot>
+        <x-slot name="search">
+            <x-searchadmin.search wire:model="search"/> 
+            <x-adminver.select wire:model="porpagina"/>
+        </x-slot>
+        <x-slot name="thead">
+           <tr>
+               <x-containers.campotb>
+                    Producto
+               </x-containers.campotb>
+               <x-containers.campotb>
+                    Codigo de barras
+               </x-containers.campotb>
+               <x-containers.campotb>
+                    Más
+               </x-containers.campotb>
+               <x-containers.campotb>
+                    Opciones
+               </x-containerscampotb>
+           </tr>
+        </x-slot>
+        <x-slot name="tbody">
+            @forelse($products  as $product)
+                <x-containers.renglontbody>
+                    <x-containers.campostbody>
+                        <span class="font-medium">{{ $product->name }}</span>
+                    </x-containers.campostbody>
+                    <x-containers.campostbody>
+                        <span class="font-medium">{{ $product->barcode }}</span>
+                    </x-containers.campostbody>
+                    <x-containers.campostbody>
+                        <div class="text-indigo-500 w-4 mr-2 transform hover:text-indigo-900 hover:scale-110"
+                            wire:click="description({{$product->id}})">
+                            <i class="fas fa-scroll"></i>
+                        </div>
+                        <div class="text-purple-500 w-4 mr-2 transform hover:text-purple-900 hover:scale-110"
+                            wire:click="plus({{$product->id}})">
+                            <i class="far fa-eye"></i>                                          
+                        </div>
+                    </x-containers.campostbody>
+                    <x-containers.campostbody>
+                        <div class="text-blue-500 w-4 mr-2 transform hover:text-blue-900 hover:scale-110">  
+                            <a href="{{route('admin.updateproduct',['product_id' => $product->id])}}">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                        </div>
+                        <div class="text-red-500 w-4 mr-2 transform hover:text-red-900 hover:scale-110"
+                            wire:click="remove_product({{ $product->id }})">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                    </x-containers.campostbody>
+                </x-containers.renglontbody>
+            @empty
+                <div class="lg:col-span-5 sm:col-span-4 col-span-1 text-center">
+                    <span class="ml-6 text-transparent text-gray-400 text-4xl font-extrabold">
+                        Sin resultados para la busqueda "{{ $this->search }}"
+                    </span>
                 </div>
-                {{-- Fin de la busqueda --}}
-
-                {{-- Inicio de la tabla --}}
-                <table class="min-w-max w-full table-auto">
-                    {{-- Encabezado de la tabla --}}
-                    <thead class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
-                        <tr>
-                            <th class="py-3 px-6 text-center">
-                                Producto
-                            </th>
-                            <th class="py-3 px-6 text-center">
-                                Codigo de barras
-                            </th>
-                            <th class="py-3 px-6 text-center">
-                                Más
-                            </th>
-                            <th class="py-3 px-6 text-center">
-                                Opciones
-                            </th>
-                        </tr>
-                    </thead>
-                    {{-- Fin del encabezado --}}
-
-                    {{-- Inicio del cuerpo de la tabla --}}
-                    <tbody class="text-gray-800 text-sm font-light">
-                        @forelse($products  as $product)
-                            <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                <td class="py-3 px-6 text-left whitespace-nowrap">
-                                    <div class="flex items-center justify-start">
-                                        <span class="font-medium">{{ $product->name }}</span>
-                                    </div>
-                                </td>
-                                <td class="py-3 px-6 text-center whitespace-nowrap">
-                                    <div class="flex item-center justify-center">
-                                        <span class="font-medium">{{ $product->barcode }}</span>
-                                    </div>
-                                </td>
-                                <td class="py-3 px-6 text-center">
-                                    <div class="flex item-center justify-center">
-                                        <div class="w-4 mr-2 transform hover:text-indigo-400 hover:scale-110"
-                                            wire:click="description({{$product->id}})">
-                                            <i class="fas fa-scroll"></i>
-                                        </div>
-                                        <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110"
-                                            wire:click="plus({{$product->id}})">
-                                            <i class="far fa-eye"></i>                                          
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="py-3 px-6 text-center">
-                                    <div class="flex item-center justify-center">
-                                        <div class="w-4 mr-2 transform hover:text-blue-500 hover:scale-110">  
-                                            <a href="{{route('admin.updateproduct',['product' => $product->id])}}">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-                                        </div>
-                                        <div class="w-4 mr-2 transform hover:text-red-500 hover:scale-110"
-                                            wire:click="remove_product({{ $product->id }})">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </div>
-                                    </div>
-                                </td>
-
-                            </tr>
-                        @empty
-                            <div class="lg:col-span-5 sm:col-span-4 col-span-1 text-center">
-                                <span class="ml-6 text-transparent text-gray-400 text-4xl font-extrabold">
-                                    Sin resultados para la busqueda "{{ $this->search }}"
-                                </span>
-                            </div>
-                        @endforelse
-                    </tbody>
-                    {{-- Fin del cuerpo de la tabla --}}
-                </table>
-                {{-- Fin de la tabla --}}
-
-                {{-- Paginacion --}}
-                <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
-                    {{ $products->links() }}
-                </div>
-            </div>
-
-        </div>
-    </div>
+            @endforelse
+        </x-slot>
+        <x-slot name="paginate">
+            {{ $products->links() }}
+        </x-slot>
+    </x-containers.show>
+    
     <!-- Modal Description -->
     <x-jet-dialog-modal wire:model="description_show">
         <x-slot name="title">
@@ -101,9 +76,9 @@
             </span>
         </x-slot>
         <x-slot name="content">
-            <p wire:model="product.description">
-
-            </p>
+            <x-component.inputarea wire:model="product.description"
+            class="h-screen border-none" disabled>
+            </x-component.inputarea>
         </x-slot>
         <x-slot name="footer">
             <x-buttons.red wire:click="cancel(1)">

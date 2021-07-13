@@ -17,6 +17,7 @@ class ShowProducts extends Component
     public $plus_show;
     public $product;
     public $variation;
+    public $porpagina=5;
 
     protected $rules = [
         'product.description' => "required",
@@ -65,7 +66,7 @@ class ShowProducts extends Component
     public function render()
     {
         return view('livewire.admin.show.show-products', [
-            'products' => Product::where('name', 'LIKE', "%{$this->search}%")->orderBy('name', 'ASC')->paginate(10),
+            'products' => Product::where('name', 'LIKE', "%{$this->search}%")->orderBy('name', 'ASC')->paginate($this->porpagina),
             'variaciones' => Variation::whereHas('product',function(Builder $query){
                 $query->where('id',$this->variation);
             })->get(),
