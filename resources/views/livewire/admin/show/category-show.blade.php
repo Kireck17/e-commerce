@@ -45,7 +45,7 @@
                                           <i class="fas fa-edit"></i>
                                         </div>
                                         <div class="w-4 mr-2 transform hover:text-red-500 hover:scale-110"
-                                        wire:click="remove_category({{$mark->id}})">
+                                        wire:click="remove_category({{$cate->id}})">
                                           <i class="fas fa-trash-alt"></i>
                                         </div>
                                     </div>
