@@ -18,6 +18,7 @@ use App\Http\Livewire\Admin\show\ProviderShow;
 use App\Http\Livewire\Admin\show\ShowProducts;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\show\ShowSubCategory;
+use App\Http\Livewire\Admin\show\UpdateProduct;
 use App\Http\Livewire\Admin\show\ShowOrigin;
 
 Route::get('/', Showlobby::class)->name('lobby');
@@ -71,6 +72,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
             Route::get('/showproduct',ShowProducts::class
             )->name('showproduct');
+
+            Route::get('/{product}/updateproduct',UpdateProduct::class)->name('updateproduct');
         });
     });
 });

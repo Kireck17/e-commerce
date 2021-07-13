@@ -14,8 +14,8 @@
                 {{--Inicio de la tabla--}}
                 <table class="min-w-max w-full table-auto">
                     {{--Encabezado de la tabla--}}
-                    <thead>
-                        <tr class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
+                    <thead class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
+                        <tr>
                             <th class="py-3 px-6 text-center">
                                 Marca
                             </th>

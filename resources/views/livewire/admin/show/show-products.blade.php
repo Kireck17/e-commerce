@@ -5,7 +5,6 @@
             class="pr-5 pl-5 w-full flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
             <div class="w-full bg-white shadow-md rounded my-6">
                 <h1 class="font-serif text-black text-2xl">Productos</h1>
-
                 {{-- Apartado de busqueda --}}
                 <div class="flex justify-end w-full">
                     <x-searchadmin.search wire:model="search" />
@@ -15,8 +14,8 @@
                 {{-- Inicio de la tabla --}}
                 <table class="min-w-max w-full table-auto">
                     {{-- Encabezado de la tabla --}}
-                    <thead>
-                        <tr class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
+                    <thead class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
+                        <tr>
                             <th class="py-3 px-6 text-center">
                                 Producto
                             </th>
@@ -37,8 +36,8 @@
                     <tbody class="text-gray-800 text-sm font-light">
                         @forelse($products  as $product)
                             <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                <td class="py-3 px-6 text-center whitespace-nowrap">
-                                    <div class="flex item-center justify-center">
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center justify-start">
                                         <span class="font-medium">{{ $product->name }}</span>
                                     </div>
                                 </td>
@@ -61,8 +60,10 @@
                                 </td>
                                 <td class="py-3 px-6 text-center">
                                     <div class="flex item-center justify-center">
-                                        <div class="w-4 mr-2 transform hover:text-blue-500 hover:scale-110">
-                                            <i class="fas fa-edit"></i>
+                                        <div class="w-4 mr-2 transform hover:text-blue-500 hover:scale-110">  
+                                            <a href="{{route('admin.updateproduct',['product' => $product->id])}}">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
                                         </div>
                                         <div class="w-4 mr-2 transform hover:text-red-500 hover:scale-110"
                                             wire:click="remove_product({{ $product->id }})">
@@ -100,9 +101,9 @@
             </span>
         </x-slot>
         <x-slot name="content">
-            <x-component.inputarea wire:model="product.description"
-            class="h-screen border-none" disabled>
-            </x-component.inputarea>
+            <p wire:model="product.description">
+
+            </p>
         </x-slot>
         <x-slot name="footer">
             <x-buttons.red wire:click="cancel(1)">
