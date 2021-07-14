@@ -14,11 +14,6 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 73ca84758fec059dcf49b47a161dacc248209e3b
         @livewireStyles
 
         <!-- Scripts -->

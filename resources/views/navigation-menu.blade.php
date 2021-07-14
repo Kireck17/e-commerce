@@ -179,11 +179,6 @@
             <x-nav-links.responsive href="">
                 {{ __('Tablero') }}
             </x-nav-links.responsive>
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> 73ca84758fec059dcf49b47a161dacc248209e3b
         </div>
         @auth
             <!-- Responsive Settings Options -->
