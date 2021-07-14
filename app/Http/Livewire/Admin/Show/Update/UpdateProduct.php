@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Admin\Show;
+namespace App\Http\Livewire\Admin\Show\Update;
 
 use Livewire\Component;
 use App\Models\Product;
@@ -18,6 +18,7 @@ class UpdateProduct extends Component
 
     public $product;
     public $variations;
+    public $apartados;
 
     protected $rules = [
         'product.name' => "required",
@@ -32,6 +33,7 @@ class UpdateProduct extends Component
     {
         $this->product = $product_id;
         $this->variations = $this->product->variation()->get();
+        $this->apartados=['Editor','Caracteristicas','Fotografia'];
     }
 
     public function cancel()
@@ -45,7 +47,7 @@ class UpdateProduct extends Component
     }
     public function render()
     {
-        return view('livewire.admin.show.update-product',[
+        return view('livewire.admin.show.update.update-product',[
             'product' => $this->product,
             'trademarks' => Trademark::all(),
             'categories' => Category::all(),
