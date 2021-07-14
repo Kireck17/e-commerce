@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Category\ShowCategory;
 use App\Http\Livewire\Main\Showlobby;
+use Illuminate\Support\Facades\Route;
 /*
 use App\Http\Livewire\Product\ShowSearch;
 */
@@ -10,12 +11,17 @@ use App\Http\Livewire\Product\Showproduct;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
 //Use de admin apartado de ver
-use App\Http\Livewire\Admin\show\ShowTrademark;
-use App\Http\Livewire\Admin\show\CategoryShow;
 use App\Http\Livewire\Admin\show\WarehouseShow;
 use App\Http\Livewire\Admin\show\StockShow;
 use App\Http\Livewire\Admin\show\ProviderShow;
-use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Admin\show\ShowProducts;
+use App\Http\Livewire\Admin\show\ShowSubCategory;
+use App\Http\Livewire\Admin\show\UpdateProduct;
+
+use App\Http\Livewire\Admin\show\ShowTrademark;
+use App\Http\Livewire\Admin\show\CategoryShow;
+
+use App\Http\Livewire\Admin\show\ShowOrigin;
 
 Route::get('/', Showlobby::class)->name('lobby');
 
@@ -54,6 +60,19 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
             Route::get('/showcategory',CategoryShow::class
             )->name('showcategory');
+
+            Route::get('/showsubcategory',ShowSubCategory::class
+            )->name('showsubcategory');
+
+            Route::get('/showorigin',ShowOrigin::class
+            )->name('showorigin');
+
+            Route::get('/showtrademark',ShowTrademark::class
+            )->name('showtrademark');
+
+            Route::get('/showcategory',CategoryShow::class
+            )->name('showcategory');
+
             Route::get('/showarehouse',WarehouseShow::class
             )->name('showwarehouse');
 
@@ -62,6 +81,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
             Route::get('/showstock',StockShow::class
             )->name('showstock');
+
+            Route::get('/showorigin',ShowOrigin::class
+            )->name('showorigin');
+
+            Route::get('/showproduct',ShowProducts::class
+            )->name('showproduct');
+
+            Route::get('/{product_id}/updateproduct',UpdateProduct::class)->name('updateproduct');
         });
     });
 });
