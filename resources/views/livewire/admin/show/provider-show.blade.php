@@ -1,7 +1,7 @@
 {{-- Admin, Tabla de Provedor--}}
 <div>
     <div class="overflow-x-auto">
-        <div class="pr-5 pl-5 w-full bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
+        <div class="pr-5 pl-5 w-full  flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
             <div class="w-full bg-white shadow-md rounded my-6">
             <h1 class="font-serif text-black text-2xl">Provedor</h1>
 

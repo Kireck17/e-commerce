@@ -108,7 +108,7 @@
                             {{$product->name}}
                         </x-slot>
                         <x-slot name="price">
-                            $ {{$product->variation()->first()->stock()->first()->price}}
+                            $ 000
                         </x-slot>
                     </x-cards.three>
                 @endforeach
