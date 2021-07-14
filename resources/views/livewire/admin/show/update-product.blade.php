@@ -93,7 +93,14 @@
                     </x-slot>
                 </x-containers.formbody>
                 {{--Componente para editar variaciones--}}
-                <livewire:admin.show.update.variations :variations="$this->variation" />
+                <h2 class="text-center text-lg font-sans font-bold">
+                    Variaciones
+                </h2>
+                <div class="space-y-3 divide-y divide-gray-300">
+                    @foreach($this->variations as  $variation)
+                        <livewire:admin.show.update.variations :variation="$variation" :wire:key="$variation->id"/>
+                    @endforeach
+                </div>
             </x-slot>
             {{--Footer--}}
             <x-slot name="save">
@@ -101,7 +108,7 @@
                     <x-buttons.cian wire:click="cancel()" class="bg-red-500">
                         {{__('Cancelar')}}
                     </x-buttons.cian>
-                    <x-buttons.cian wire:click="" class="bg-blue-500">
+                    <x-buttons.cian wire:click="save()" class="bg-blue-500">
                         {{__('Guardar')}}
                     </x-buttons.cian>
                 </div>
