@@ -6,7 +6,6 @@
             Marcas
         </x-slot>
         {{--Fin del Titulo--}}
-
         {{--Inicio de busqueda--}}
         <x-slot name="Search">
             <x-searchadmin.search wire:model="search"/> 

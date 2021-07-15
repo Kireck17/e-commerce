@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Variations extends Component
 {
-
+    
     public $attribute_values;
     public $attributes;
 

@@ -18,7 +18,9 @@ class UpdateProduct extends Component
 
     public $product;
     public $variations;
+    public $files;
     public $apartados;
+    
 
     protected $rules = [
         'product.name' => "required",
@@ -28,11 +30,11 @@ class UpdateProduct extends Component
         'product.category_id' => "required",
         'product.subcategory_id' => "required",
     ];
-
     public function mount(Product $product_id)
     {
         $this->product = $product_id;
         $this->variations = $this->product->variation()->get();
+        $this->files = $this->product->variation()->first()->files()->get();
         $this->apartados=['Editor','Caracteristicas','Fotografia'];
     }
 
@@ -52,9 +54,6 @@ class UpdateProduct extends Component
             'trademarks' => Trademark::all(),
             'categories' => Category::all(),
             'subcategories' => SubCategory::all(),
-            'variations' => Variation::all(),
-            'attributes' => Attribute::all(),
-            'attributevalues' => AttributeValue::all(),
             ])
         ->layout("layouts.admin");
     }

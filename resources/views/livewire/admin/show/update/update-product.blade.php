@@ -1,16 +1,24 @@
 <div>
     <x-containers.main>
         <x-containers.secondary>
+            {{--Container father--}}
             <div x-data="{ tab:@entangle('apartados'), active:0 }">
                 <div class=" flex flex-wrap space-y-2">
                     <template x-for="(tb, key) in tab">
-                        <div class="border border-turquoise-dark text-turquoise-dark uppercase text-xs cursor-pointer px-3 py-1 rounded-b-md w-1/4">
+                        {{--Navigation menu title--}}
+                        <div class="uppercase text-xs cursor-pointer px-3 py-1 w-1/4 font-bold"
+                        :class="{
+                            'border-b-2 border-turquoise-dark text-turquoise-dark': active === key,
+                            'border-b-2 border-gray-400 text-gray-400': active != key,
+                        }">
                             <span x-text="tb" @click="active = key"></span>
                         </div>
+                        {{--END Navigation menu title--}}
                     </template>
                 </div>
-                
+                {{--Containers forms--}}
                 <div x-show="active ===  0">
+                    {{--Form Product--}}
                     <x-containers.secondary>
                         {{--Start of the Form--}}
                         <x-containers.form>
@@ -20,15 +28,6 @@
                             </x-slot>
                             {{--Form--}}
                             <x-slot name="content">
-                                {{--Photo--}}
-                                <x-containers.formbody :bg="true">
-                                    <x-slot name="label">
-                                        <img src="" alt="producto">
-                                    </x-slot>
-                                    <x-slot name="input">
-                                        <x-component.input class="w-full"/>
-                                    </x-slot>
-                                </x-containers.formbody>
                                 {{--Name--}}
                                 <x-containers.formbody>
                                     <x-slot name="label">
@@ -121,44 +120,60 @@
                     </x-containers.secondary>
                 </div>
                 <div x-show="active === 1">
-                    {{--Start of the Form--}}
-                    <x-containers.form>
-                        {{--Header--}}
-                        <x-slot name="title">
-                            {{ __('Caracteristicas') }}
-                        </x-slot>
-                        {{--Form--}}
-                        <x-slot name="content">
-                            {{--Variation--}}
-                            <x-containers.formbody>
-                                <x-slot name="label">
-                                    {{ __('Variación') }}
-                                </x-slot>
-                                <x-slot name="input">
+                    {{--Form Variation--}}
+                    <x-containers.secondary>
+                        <x-containers.form>
+                            {{--Header--}}
+                            <x-slot name="title">
+                                {{ __('Característica') }}
+                            </x-slot>
+                            {{--Form--}}
+                            <x-slot name="content">
+                                <div class="divide-y">
                                     @foreach($this->variations as  $variation)
                                         <livewire:admin.show.update.variations :variation="$variation" :wire:key="$variation->id"/>
                                     @endforeach
-                                </x-slot>
-                            </x-containers.formbody>
-                        </x-slot>
-                        {{--Footer--}}
-                        <x-slot name="save">
-                            <div class="justify-between">
-                                <x-buttons.cian wire:click="cancel()" class="bg-red-500">
-                                    {{__('Cancelar')}}
-                                </x-buttons.cian>
-                                <x-buttons.cian wire:click="save()" class="bg-blue-500">
-                                    {{__('Guardar')}}
-                                </x-buttons.cian>
-                            </div>
-                        </x-slot>
-                    </x-containers.form>
-                    {{--End of the Form--}}
+                                </div>    
+                            </x-slot>
+                            {{--Footer--}}
+                            <x-slot name="save">
+                                <div class="justify-between">
+                                    <x-buttons.red wire:click="cancel()">
+                                        {{__('Cancelar')}}
+                                    </x-buttons.red>
+                                </div>
+                            </x-slot>
+                        </x-containers.form>
+                    </x-containers.secondary>
                 </div>
-                <div x-show="active === 2"> 
-                    
+                <div x-show="active === 2">
+                    {{--Form Image--}}
+                    <x-containers.secondary>
+                        <x-containers.form>
+                             {{--Header--}}
+                            <x-slot name="title">
+                                {{ __('Imagenes del producto') }}
+                            </x-slot>
+                            {{--Form--}}
+                            <x-slot name="content">
+                                @foreach($this->variations as  $variation)
+                                    <livewire:admin.show.update.images :variation="$variation" :wire:key="$variation->id"/>
+                                @endforeach
+                            </x-slot>
+                            {{--Footer--}}
+                            <x-slot name="save">
+                                <div class="justify-between">
+                                    <x-buttons.red wire:click="cancel()">
+                                        {{__('Cancelar')}}
+                                    </x-buttons.red>
+                                </div>
+                            </x-slot>
+                        </x-containers.form>
+                    </x-containers.secondary>
                 </div>
+                {{--END Containers forms--}}
             </div>
+            {{--END Container father--}}
         </x-containers.secondary>
     </x-containers.main>
     

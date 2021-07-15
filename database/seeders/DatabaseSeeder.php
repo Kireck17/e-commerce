@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             //KitDetailSeeder::class,
             ProviderSeeder::class,
             StockSeeder::class,
+            FileSeeder::class,
         ]);
     }
 }
