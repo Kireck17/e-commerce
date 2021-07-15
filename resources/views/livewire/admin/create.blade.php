@@ -9,6 +9,7 @@
                         </div>
                     </template>
                 </div>
+                
                 <div x-show="active ===  0">
                     <livewire:admin.form.marca/>
                 </div>
