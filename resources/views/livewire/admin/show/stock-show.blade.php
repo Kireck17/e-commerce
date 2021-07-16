@@ -16,7 +16,6 @@
 
         {{--Inicio enbacezado de la tabla--}}
         <x-slot name="Header">
-            
             <th class="py-3 px-6 text-center">
                 Provedor
             </th>
@@ -74,7 +73,8 @@
                                 <i class="fas fa-trash-alt"></i>
                             </div>
                         </div>
-                    </td>                 
+                    </td>
+                                     
                 </tr>
             @empty
                 <div class="lg:col-span-5 sm:col-span-4 col-span-1 text-center">
