@@ -28,7 +28,7 @@
             </div>
 
             <x-nav-links.normal href="{{route('tutorials')}}" :active="request()->routeIs('tutorials')" >
-            <
+            
                 {{__('Tutoriales')}}
             </x-nav-links.normal>
 

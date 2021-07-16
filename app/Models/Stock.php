@@ -29,5 +29,23 @@ class Stock extends Model
     {
         return $this->belongsTo(WareHouse::class);
     }
+
+    //alcanze con el modelo WereHouse
+    public function origin()
+    {
+        return $this->belongsTo(Origin::class);
+    }
+
+    //alcanze con el modelo variation
+    public function variation()
+    {
+        return $this->belongsTo(Variation::class);
+    }
+
+    //alcanze con el modelo variation
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
     
 }

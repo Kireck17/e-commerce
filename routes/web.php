@@ -10,6 +10,7 @@ use App\Http\Livewire\Main\MensClothing;
 use App\Http\Livewire\Product\Showproduct;
 use App\Http\Livewire\Tutorials\ViewTutorial;
 use App\Http\Livewire\Tutorials\ViewContent;
+use App\Http\Livewire\Tutorials\Content;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
 //Use de admin apartado de ver
@@ -119,6 +120,8 @@ Route::get('/ShoppingCart', function () {
 Route::get('/tutorials', ViewTutorial::class)->name('tutorials');
 //ruta vista
 Route::get('/info', ViewContent::class)->name('info');
+//ruta vista
+Route::get('/content', Content::class)->name('content');
 
 //vista prototipo para metodo de pago
 Route::get('/WayToPay', function () {

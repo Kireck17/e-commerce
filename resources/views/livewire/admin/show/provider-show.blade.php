@@ -54,7 +54,7 @@
                             <livewire:admin.edit.provider :providder="$pro" :wire:key="$key"/>
 
                             <div class="text-red-500 w-4 mr-2 transform hover:text-red-900 hover:scale-110"
-                            wire:click="remove_wahouse({{$pro->id}})">
+                            wire:click="remove_provider({{$pro->id}})">
                                 <i class="fas fa-trash-alt"></i>
                             </div>
                         </div>
