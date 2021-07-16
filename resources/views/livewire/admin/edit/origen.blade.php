@@ -1,12 +1,12 @@
 <div>
     <div class="text-blue-500 hover:text-blue-700 w-4 mr-2 transform hover:scale-110"
-        wire:click="edit_componente()">
+    wire:click="edit_componente()">
         <i class="fas fa-edit"></i>
     </div>
-{{--Ventana Modal de marca--}}
+{{--Ventana Modal Origen--}}
     <x-jet-dialog-modal wire:model="is_show">
 		<x-slot name="title">  
-         Editar Marca
+         Editar Origen
         </x-slot>
 
 		<x-slot name="content">
@@ -16,13 +16,13 @@
 
                     <dt class="text-sm font-medium text-gray-500">
                         <x-adminver.label for="nombre">
-                            Nombre de la marca:
+                            Nombre del pais:
                         </x-adminver.label>
                     </dt>
 
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                        <x-adminver.input type="text" id="nombre" wire:model="trademark.name"/>
-                        <x-jet-input-error for="trademark.name"/>
+                        <x-adminver.input type="text" id="nombre" wire:model="origenn.country"/>
+                        <x-jet-input-error for="origenn.country"/>
                     </dd>
 
                 </div>
