@@ -45,4 +45,8 @@ class Product extends Model
             return $this->belongsTo(Variation::class);
         */
     }
+    public function stock()
+    {
+        return $this->belongsTo(Stock::class);
+    }
 }

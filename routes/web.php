@@ -8,6 +8,9 @@ use App\Http\Livewire\Product\ShowSearch;
 */
 use App\Http\Livewire\Main\MensClothing;
 use App\Http\Livewire\Product\Showproduct;
+use App\Http\Livewire\Tutorials\ViewTutorial;
+use App\Http\Livewire\Tutorials\ViewContent;
+use App\Http\Livewire\Tutorials\Content;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
 //Use de admin apartado de ver
@@ -92,6 +95,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
         });
     });
 });
+
+
 /*Route::prefix('search')->group(function(){
     Route::name('search.')->group(function(){
         Route::get('/search/show',ShowSearch::class)->name('show');
@@ -119,6 +124,15 @@ Route::get('/best', function () {
 Route::get('/ShoppingCart', function () {
     return view('category.shopping-cart');
 })->name('ShoppingCart');
+
+
+
+//ruta tutoriales
+Route::get('/tutorials', ViewTutorial::class)->name('tutorials');
+//ruta vista
+Route::get('/info', ViewContent::class)->name('info');
+//ruta vista
+Route::get('/content', Content::class)->name('content');
 
 //vista prototipo para metodo de pago
 Route::get('/WayToPay', function () {

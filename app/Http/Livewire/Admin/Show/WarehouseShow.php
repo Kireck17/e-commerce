@@ -13,39 +13,20 @@ class WarehouseShow extends Component
     use WithPagination;
     public $search;
     public $wareho;
+    public $porpagina=5;
 
-    //
-    protected $rules=[
-        'wareho.name'=> "required|max:200",
-    ];
 
-    //
-    protected $validationAttributes=[
-        'wareho.name'=> "Nombre",
-    ];
+    //recargar a la hora de actualizar
+    protected $listeners=['recargar'=>'render'];
 
     public function mount()
     {
         $this->search="";
     }
 
-    //EDITAR
-    public function edit_wahouse($id)
+    public function updateSearch()
     {
-        $this->is_show=true;
-        $this->wareho=WareHouse::find($id);
-        $this->banner('WareHouse Editado correctamente');
-        $this->emit('WareHouseReload');
-
-    }
-
-    //GUARDAR
-    public function save_changes()
-    {
-        $this->wareho->save();
-        $this->banner('WareHouse Actualizado correctamente!!');
-        $this->emit('WareHouseReload');
-        $this->is_show=false;
+        $this->resetPage();
     }
 
     //ELIMINAR UN WAREHOUSE
@@ -62,7 +43,7 @@ class WarehouseShow extends Component
     public function render()
     {
         return view('livewire.admin.show.warehouse-show',[
-            'warehouse'=> WareHouse::where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->paginate(10),
+            'warehouse'=> WareHouse::where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->paginate($this->porpagina),
         ])->layout("layouts.admin");
     }
 }

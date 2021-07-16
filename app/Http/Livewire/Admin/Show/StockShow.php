@@ -6,6 +6,8 @@ use Livewire\Component;
 use App\Models\Stock;
 use App\Models\Provider;
 use App\Models\WareHouse;
+use App\Models\Product;
+use App\Models\Variation;
 use App\Traits\InteractsWithBanner;
 
 
@@ -17,51 +19,21 @@ class StockShow extends Component
     public $stocck;
     public $pro;
     public $ware;
+    public $produ;
+    public $vari;
+    public $porpagina=5;
 
-    //
-    protected $rules=[
-        'stocck.stockable_type'=> "required|max:200",
-        'stocck.provider_id'=> "required",
-        'stocck.warehouse_id'=> "required",
-        'stocck.quantity'=> "required",
-        'stocck.price'=> "required",
-    ];
-
-    //
-    protected $validationAttributes=[
-        'stocck.stockable_type'=> "Stockable_type",
-        'stocck.provider_id'=> "Proveedor",
-        'stocck.warehouse_id'=> "Origen",
-        'stocck.quantity'=> "Cantidad",
-        'stocck.price'=> "Precio",
-    ];
+    
+    //recargar a la hora de actualizar
+    protected $listeners=['recargar'=>'render'];
 
     public function mount()
     {
         $this->search="";
         $this->pro=Provider::all();
         $this->ware=WareHouse::all();
-    }
-
-    //EDITAR
-    public function edit_stock($id)
-    {
-        $this->is_show=true;
-        $this->stocck=Stock::find($id);
-        $this->pro=Provider::all();
-        $this->ware=WareHouse::all();
-        $this->banner('Stock Editado correctamente');
-        $this->emit('StockReload');
-
-    }
-
-    //GUARDAR
-    public function save_changes()
-    {
-        $this->stocck->save();
-        $this->banner('Stock Actualizado correctamente!!');
-        $this->emit('StockReload');
-        $this->is_show=false;
+        $this->produ=Product::all();
+        $this->vari=Variation::all();
     }
 
     //ELIMINAR UN STOCK
@@ -80,7 +52,7 @@ class StockShow extends Component
         return view('livewire.admin.show.stock-show',[
             'stocks'=> Stock::where('price','LIKE',"%{$this->search}%")
             ->orderBy('price','ASC')
-            ->paginate(10),
+            ->paginate($this->porpagina),
         ])
         ->layout("layouts.admin");
     }

@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -10,38 +9,45 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+        
         @livewireStyles
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <x-jet-banner />
-        <div class="min-h-screen bg-gray-200">
-            @livewire('navigation-menu')
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl py-4 px-3 sm:px-6">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-            <!-- Page Fooder -->
-            <x-fooder/>
+    <body class="font-sans antialiased ">
+        
+
+        <div class="flex flex-col sm:flex-row min-h-screen h-full">
+            <div class="sm:w-3/12 h-auto bg-white">
+              
+                @include('nav.nav-tutorials')
+              
+              
+            </div>
+                <!-- Page Heading -->
+                @if (isset($header))
+                    <header class="bg-white shadow">
+                        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
+                    </header>
+                @endif
+                <!-- Page Content-->
+                <main>
+                    <x-banners.toast />
+                    @include('nav.content')
+                </main>
+            </div>
         </div>
+
         @stack('modals')
+
         @livewireScripts
     </body>
 </html>
