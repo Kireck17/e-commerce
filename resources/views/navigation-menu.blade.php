@@ -180,7 +180,6 @@
             <x-nav-links.responsive href="">
                 {{ __('Tablero') }}
             </x-nav-links.responsive>
-            
         </div>
         @auth
             <!-- Responsive Settings Options -->

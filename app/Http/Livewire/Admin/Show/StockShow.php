@@ -8,6 +8,7 @@ use App\Models\Provider;
 use App\Models\WareHouse;
 use App\Models\Product;
 use App\Models\Variation;
+use Illuminate\Database\Eloquent\Builder;
 use App\Traits\InteractsWithBanner;
 
 
@@ -50,9 +51,20 @@ class StockShow extends Component
     public function render()
     {
         return view('livewire.admin.show.stock-show',[
-            'stocks'=> Stock::where('price','LIKE',"%{$this->search}%")
-            ->orderBy('price','ASC')
-            ->paginate($this->porpagina),
+            'stocks'=> Stock::whereHasMorph(
+                'stockable',
+                Variation::class,
+                function (Builder $variation) {
+                    return $variation->whereHas('product',function(Builder $product){
+                        return $product->where('name','LIKE',"%{$this->search}%")->orderBy('name','DESC');
+                    });
+                }
+                )->orWhere(function(Builder $stock){
+                    return $stock->whereHas('warehouse',function(Builder $warehouse){
+                        return $warehouse->where('name','LIKE',"%{$this->search}%");
+                    });
+                })
+                ->paginate($this->porpagina),
         ])
         ->layout("layouts.admin");
     }

@@ -135,8 +135,7 @@
                 <span class="text-gray-300 font-bold text-center text-4xl">
                     No hay Marcas registradas 
                 </span>
-            @endif
-            
+            @endif        
             @if($categories->count() == 0)
                 <span class="text-gray-300 font-bold text-center text-4xl">
                     No hay Categorías registradas 

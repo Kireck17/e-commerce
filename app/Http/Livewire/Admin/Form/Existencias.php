@@ -10,6 +10,7 @@ use App\Models\Kit;
 use App\Models\Variation;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Builder;
+use App\Models\AttributeValue;
 use App\Traits\InteractsWithBanner;
 
 
@@ -24,7 +25,8 @@ class Existencias extends Component
         'stock.warehouse_id' => 'required',
         'stock.quantity' => 'required',
         'stock.price' => 'required',
-        'stock.variation' => 'required'
+        'stock.variation' => 'required',
+        'product' => 'required'
     ];
 
     protected $validationAttributes =[

@@ -3,42 +3,41 @@
 namespace App\Http\Livewire\Admin\Edit;
 
 use Livewire\Component;
-use App\Models\Trademark as Marca;
+use App\Models\Origin as Origenn;
 use App\Traits\InteractsWithBanner;
 
-class Trademark extends Component
+class Origen extends Component
 {
     use InteractsWithBanner;
     public $is_show;
-    public $trademark;
+    public $origenn;
     
 
-    public function mount(Marca $trademark)
+    public function mount(Origenn $origenn)
     {
         $this->is_show=false;
-        $this->trademark=$trademark;
+        $this->origenn=$origenn;
         $this->emit('recargar');
     }
 
     protected $rules = [
-        'trademark.name' => "required|max:200|unique:trademarks,name",
+        'origenn.country' => "required|max:200|unique:origins,country",
     ];
 
     protected $validationAttributes = [
-        'trademark.name' => "Nombre",
+        'origenn.country' => "Nombre",
     ];
 
     public function edit_componente()
 	{
 		$this->is_show=true;
-        
 	}
     public function save_changes()
 	{
         $this->validate();
-		$this->trademark->save();
+		$this->origenn->save();
         $this->is_show=false;
-		$this->banner('Marca Editada correctamente');
+		$this->banner('Pais Editado correctamente');
 		$this->emit('recargar');
 	}
 
@@ -46,9 +45,8 @@ class Trademark extends Component
 	{
 		$this->is_show=false;
 	}
-
     public function render()
     {
-        return view('livewire.admin.edit.trademark');
+        return view('livewire.admin.edit.origen');
     }
 }
