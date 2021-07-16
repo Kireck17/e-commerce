@@ -3,42 +3,41 @@
 namespace App\Http\Livewire\Admin\Edit;
 
 use Livewire\Component;
-use App\Models\Trademark as Marca;
+use App\Models\SubCategory as SubCategoria;
 use App\Traits\InteractsWithBanner;
 
-class Trademark extends Component
+class SubCategory extends Component
 {
     use InteractsWithBanner;
     public $is_show;
-    public $trademark;
+    public $subcategory;
     
 
-    public function mount(Marca $trademark)
+    public function mount(SubCategoria $subcategory)
     {
         $this->is_show=false;
-        $this->trademark=$trademark;
+        $this->subcategory=$subcategory;
         $this->emit('recargar');
     }
 
     protected $rules = [
-        'trademark.name' => "required|max:200|unique:trademarks,name",
+        'subcategory.name' => "required|max:200|unique:subcategories,name",
     ];
 
     protected $validationAttributes = [
-        'trademark.name' => "Nombre",
+        'subcategory.name' => "Nombre",
     ];
 
     public function edit_componente()
 	{
 		$this->is_show=true;
-        
 	}
     public function save_changes()
 	{
         $this->validate();
-		$this->trademark->save();
+		$this->subcategory->save();
         $this->is_show=false;
-		$this->banner('Marca Editada correctamente');
+		$this->banner('SubCategoria Editada correctamente');
 		$this->emit('recargar');
 	}
 
@@ -46,9 +45,8 @@ class Trademark extends Component
 	{
 		$this->is_show=false;
 	}
-
     public function render()
     {
-        return view('livewire.admin.edit.trademark');
+        return view('livewire.admin.edit.sub-category');
     }
 }

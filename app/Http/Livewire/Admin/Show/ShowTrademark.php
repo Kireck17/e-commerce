@@ -19,22 +19,24 @@ class ShowTrademark extends Component
 
     public function mount()
     {
-        
         $this->search="";
     }
-    
+    public function updatedSearch()
+    {
+        $this->resetPage();
+    }
+    public function updatedPorpagina()
+    {
+        $this->resetPage();
+    }
     
     //ELIMINAR UN TRADEMARK 
-    public function remove_trademark($id)
+    public function remove($id)
     {
-       
         $this->mark=Trademark::find($id);
         $this->mark->delete();
         $this->banner('Trademark Eliminado correctamente');
-        $this->emit('TrademarkReload');
-
     }
-   
 
     public function render()
     {
