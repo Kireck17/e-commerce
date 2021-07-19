@@ -16,7 +16,7 @@
                 {{--Inicio de la tabla--}}
                 <table class="min-w-max w-full table-auto">
                     {{--Encabezado de la tabla--}}
-                    <thead class="bg-cian-dark text-white uppercase text-sm leading-normal">
+                    <thead class="text-base bg-cian-dark text-white uppercase text-sm leading-normal">
                         <tr>
                           {{$Header}}
                         </tr>
@@ -24,13 +24,10 @@
                     {{--Fin del encabezado--}}
 
                     {{--Inicio del cuerpo de la tabla--}}
-                    <tbody class="text-gray-800 text-sm font-light border-b border-gray-200 hover:bg-gray-100">
+                    <tbody class="text-gray-800 text-sm font-light border-b border-gray-200">
                          
                             <tr>
-                                
-                               {{$Content}}
-                               
-                                
+                                {{$Content}}
                             </tr>
                         
                             

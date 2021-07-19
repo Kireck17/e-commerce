@@ -35,6 +35,7 @@ class Trademark extends Component
 	}
     public function save_changes()
 	{
+        $this->validate();
 		$this->trademark->save();
         $this->is_show=false;
 		$this->banner('Marca Editada correctamente');

@@ -97,8 +97,10 @@
                 @endif
                 <!-- Page Content-->
                 <main>
-                    <x-banners.toast />
-                    {{ $slot }}
+                    <x-containers.main>
+                        <x-banners.toast />
+                        {{ $slot }}
+                    </x-containers.main>
                 </main>
             </div>
         </div>

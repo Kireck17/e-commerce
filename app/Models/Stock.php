@@ -18,16 +18,9 @@ class Stock extends Model
         return $this->morphTo();
     }
 
-    //alcanze con el modelo Provider
-    public function provider()
-    {
-        return $this->belongsTo(Provider::class);
-    }
-
     //alcanze con el modelo WereHouse
     public function warehouse()
     {
         return $this->belongsTo(WareHouse::class);
     }
-    
 }

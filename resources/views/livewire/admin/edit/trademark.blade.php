@@ -1,9 +1,9 @@
 <div>
-    <div class="text-blue-500 w-4 mr-2 transform hover:text-blue-900 hover:scale-110"
+    <div class="text-blue-500 hover:text-blue-700 w-4 mr-2 transform hover:scale-110"
         wire:click="edit_componente()">
         <i class="fas fa-edit"></i>
     </div>
-{{--Ventana Modal--}}
+{{--Ventana Modal de marca--}}
     <x-jet-dialog-modal wire:model="is_show">
 		<x-slot name="title">  
          Editar Marca
