@@ -33,7 +33,12 @@ class ProviderShow extends Component
         $this->va=Variation::all();
     }
 
-    public function updateSearch()
+    public function updatedSearch()
+    {
+        $this->resetPage();
+    }
+    
+    public function updatedPorpagina()
     {
         $this->resetPage();
     }

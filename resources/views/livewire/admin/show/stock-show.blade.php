@@ -56,11 +56,13 @@
                             </x-cards.content-labels>
                         </x-slot>
                         <x-slot name="buttons">
-                            {{--llamado del componente de editar stock--}}
-                            <livewire:admin.edit.stock :stock="$sto" :wire:key="$key"/>
-                            <div class="text-red-500 w-4 mr-2 transform hover:text-red-900 hover:scale-110"
-                            wire:click="remove_stock({{$sto->id}})">
-                                <i class="fas fa-trash-alt"></i>
+                            <div class="flex item-center justify-center cursor-pointer">
+                                {{--llamado del componente de editar stock--}}
+                                <livewire:admin.edit.stock :stock="$sto" :wire:key="$sto->id" />
+                                <div class="text-red-500 w-4 mr-2 transform hover:text-red-900 hover:scale-110 cursor-pointer"
+                                wire:click="remove_stock({{$sto->id}})">
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
                             </div>
                         </x-slot>
                     </x-cards.content>

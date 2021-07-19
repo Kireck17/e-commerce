@@ -37,6 +37,15 @@ class StockShow extends Component
         $this->vari=Variation::all();
     }
 
+    public function updatedSearch()
+    {
+        $this->resetPage();
+    }
+    public function updatedPorpagina()
+    {
+        $this->resetPage();
+    }
+
     //ELIMINAR UN STOCK
     public function remove_stock($id)
     {

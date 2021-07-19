@@ -24,7 +24,12 @@ class WarehouseShow extends Component
         $this->search="";
     }
 
-    public function updateSearch()
+    public function updatedSearch()
+    {
+        $this->resetPage();
+    }
+    
+    public function updatedPorpagina()
     {
         $this->resetPage();
     }
