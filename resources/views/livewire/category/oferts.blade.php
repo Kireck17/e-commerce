@@ -56,8 +56,8 @@
     
 
     <x-containers.secondary>
-    <div class="px-3 md:px-0 py-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10">
-            <x-design.card-offer :link="'#'"> 
+    <div class="py-8 px-4 grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5 gap-6">
+            <x-cards.card-offer :link="'#'"> 
                 <x-slot name="image">
                     imagen
                 </x-slot>
@@ -70,8 +70,8 @@
                 <x-slot name="price">
                     $98.00
                 </x-slot>
-            </x-design.card-offer>
-            <x-design.card-offer :link="'#'"> 
+            </x-cards.card-offer>
+            <x-cards.card-offer :link="'#'"> 
                 <x-slot name="image">
                     imagen
                 </x-slot>
@@ -84,8 +84,8 @@
                 <x-slot name="price">
                     $98.00
                 </x-slot>
-            </x-design.card-offer>
-            <x-design.card-offer :link="'#'"> 
+            </x-cards.card-offer>
+            <x-cards.card-offer :link="'#'"> 
                 <x-slot name="image">
                     imagen
                 </x-slot>
@@ -98,8 +98,8 @@
                 <x-slot name="price">
                     $98.00
                 </x-slot>
-            </x-design.card-offer>
-            <x-design.card-offer :link="'#'"> 
+            </x-cards.card-offer>
+            <x-cards.card-offer :link="'#'"> 
                 <x-slot name="image">
                     imagen
                 </x-slot>
@@ -112,8 +112,8 @@
                 <x-slot name="price">
                     $98.00
                 </x-slot>
-            </x-design.card-offer>
-            <x-design.card-offer :link="'#'"> 
+            </x-cards.card-offer>
+            <x-cards.card-offer :link="'#'"> 
                 <x-slot name="image">
                     imagen
                 </x-slot>
@@ -126,8 +126,8 @@
                 <x-slot name="price">
                     $98.00
                 </x-slot>
-            </x-design.card-offer>
-            <x-design.card-offer :link="'#'"> 
+            </x-cards.card-offer>
+            <x-cards.card-offer :link="'#'"> 
                 <x-slot name="image">
                     imagen
                 </x-slot>
@@ -140,8 +140,8 @@
                 <x-slot name="price">
                     $98.00
                 </x-slot>
-            </x-design.card-offer>
-            <x-design.card-offer :link="'#'"> 
+            </x-cards.card-offer>
+            <x-cards.card-offer :link="'#'"> 
                 <x-slot name="image">
                     imagen
                 </x-slot>
@@ -154,8 +154,8 @@
                 <x-slot name="price">
                     $98.00
                 </x-slot>
-            </x-design.card-offer>
-            <x-design.card-offer :link="'#'"> 
+            </x-cards.card-offer>
+            <x-cards.card-offer :link="'#'"> 
                 <x-slot name="image">
                     imagen
                 </x-slot>
@@ -168,7 +168,35 @@
                 <x-slot name="price">
                     $98.00
                 </x-slot>
-            </x-design.card-offer>
+            </x-cards.card-offer>
+            <x-cards.card-offer :link="'#'"> 
+                <x-slot name="image">
+                    imagen
+                </x-slot>
+                <x-slot name="trademark">
+                    Sax Shields
+                </x-slot>
+                <x-slot name="name">
+                    Kit de Snaker Shields 2 Pares (4 piezas) Escoge tus colores
+                </x-slot>
+                <x-slot name="price">
+                    $98.00
+                </x-slot>
+            </x-cards.card-offer>
+            <x-cards.card-offer :link="'#'"> 
+                <x-slot name="image">
+                    imagen
+                </x-slot>
+                <x-slot name="trademark">
+                    Sax Shields
+                </x-slot>
+                <x-slot name="name">
+                    Kit de Snaker Shields 2 Pares (4 piezas) Escoge tus colores
+                </x-slot>
+                <x-slot name="price">
+                    $98.00
+                </x-slot>
+            </x-cards.card-offer>
         </div>
     </x-containers.secondary>
     

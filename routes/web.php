@@ -113,7 +113,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
 
 //vista prototipo para oferta
-
+Route::get('/oferts', function () {
+    return view('category.oferts');
+})->name('oferts');
 
 //vista prototipo para articulos mas vendidos
 Route::get('/best', function () {
@@ -134,11 +136,3 @@ Route::get('/info', ViewContent::class)->name('info');
 //ruta vista
 Route::get('/content', Content::class)->name('content');
 
-//vista prototipo para metodo de pago
-Route::get('/WayToPay', function () {
-    return view('category.way-to-pay');
-})->name('WayToPay');
-//siguiente vista 2 para pago
-Route::get('/pay', function () {
-    return view('category.pay');
-})->name('pay');
