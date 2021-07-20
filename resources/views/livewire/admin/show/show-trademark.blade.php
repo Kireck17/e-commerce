@@ -1,19 +1,5 @@
 {{-- Admin, Tabla de marcas--}}
 <div>
-<<<<<<< HEAD
-    <x-adminver.table>
-       {{--Titulo--}}
-       <x-slot name="Title">
-            Marcas
-        </x-slot>
-        {{--Fin del Titulo--}}
-        {{--Inicio de busqueda--}}
-        <x-slot name="Search">
-            <x-searchadmin.search wire:model="search"/> 
-            <x-adminver.select wire:model="porpagina"/>
-        </x-slot>
-        {{--Fin de busqueda--}}
-=======
     <x-containers.secondary>
         <x-containers.presentation>
             <x-slot name="title">
@@ -58,7 +44,6 @@
                                     <div class="flex item-center justify-center">
                                         {{--llamado del componente de editar marca--}}
                                         <livewire:admin.edit.trademark :trademark="$mark" :wire:key="$mark->id"/>
->>>>>>> 064aa1f1086097074983fb586b74ffe053ad8e42
 
                                         <div class="text-red-500 hover:text-red-700 w-4 mr-2 transform hover:scale-110"
                                         wire:click="remove({{$mark->id}})">

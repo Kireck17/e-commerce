@@ -20,6 +20,8 @@ class UpdateProduct extends Component
     public $variations;
     public $files;
     public $apartados;
+
+    protected $listeners=['variationsReload' => 'render'];
     
 
     protected $rules = [
@@ -45,6 +47,7 @@ class UpdateProduct extends Component
     public function save()
     {
         $this->emit('save_variations');
+        $this->emit('save_add_attribute');
         $this->banner('Se actualizó el producto correctamente');
     }
     public function render()

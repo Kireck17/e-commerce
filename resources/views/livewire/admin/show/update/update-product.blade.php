@@ -107,17 +107,17 @@
                             {{--Footer--}}
                             <x-slot name="save">
                                 <div class="justify-between">
-                                    <x-buttons.cian wire:click="cancel()" class="bg-red-500">
-                                        {{__('Cancelar')}}
-                                    </x-buttons.cian>
                                     <x-buttons.cian wire:click="save()" class="bg-blue-500">
                                         {{__('Guardar')}}
                                     </x-buttons.cian>
+                                    <x-buttons.red wire:click="cancel()">
+                                        <i class="far fa-window-close"></i>
+                                    </x-buttons.red>
                                 </div>
                             </x-slot>
                         </x-containers.form>
-                        {{--End of the Form--}}
                     </x-containers.secondary>
+                    {{--End of the Form--}}
                 </div>
                 <div x-show="active === 1">
                     {{--Form Variation--}}
@@ -125,7 +125,7 @@
                         <x-containers.form>
                             {{--Header--}}
                             <x-slot name="title">
-                                {{ __('Característica') }}
+                                {{ __('Características') }}
                             </x-slot>
                             {{--Form--}}
                             <x-slot name="content">
@@ -133,18 +133,22 @@
                                     @foreach($this->variations as  $variation)
                                         <livewire:admin.show.update.variations :variation="$variation" :wire:key="$variation->id"/>
                                     @endforeach
+                                    <div class="mt-4">
+                                        <livewire:admin.show.update.variationsadd :product="$product"/>
+                                    </div>
                                 </div>    
                             </x-slot>
                             {{--Footer--}}
                             <x-slot name="save">
                                 <div class="justify-between">
                                     <x-buttons.red wire:click="cancel()">
-                                        {{__('Cancelar')}}
+                                        <i class="far fa-window-close"></i>
                                     </x-buttons.red>
                                 </div>
                             </x-slot>
                         </x-containers.form>
                     </x-containers.secondary>
+                    {{--End of the Form--}}
                 </div>
                 <div x-show="active === 2">
                     {{--Form Image--}}
@@ -164,12 +168,13 @@
                             <x-slot name="save">
                                 <div class="justify-between">
                                     <x-buttons.red wire:click="cancel()">
-                                        {{__('Cancelar')}}
+                                        <i class="far fa-window-close"></i>
                                     </x-buttons.red>
                                 </div>
                             </x-slot>
                         </x-containers.form>
                     </x-containers.secondary>
+                    {{--End of the Form--}}
                 </div>
                 {{--END Containers forms--}}
             </div>
