@@ -30,7 +30,7 @@ class ShowCategory extends Component
             
             'category' => $this->category,
             //where para realizar la busqueda
-            'products' => $this->category->product()->where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->paginate(5),
+            'products' => $this->category->product()->where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->paginate(15),
             
         ])->layout('layouts.app');
     }

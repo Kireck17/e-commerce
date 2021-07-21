@@ -8,8 +8,8 @@
                         :class="{
                             'border-b-2 border-turquoise-dark text-turquoise-dark': active === key,
                             'border-b-2 border-gray-400 text-gray-400': active != key,
-                        }">
-                            <span x-text="tb" @click="active = key"></span>
+                        }" @click="active = key">
+                            <span x-text="tb"></span>
                         </div>
                     </template>
                 </div>

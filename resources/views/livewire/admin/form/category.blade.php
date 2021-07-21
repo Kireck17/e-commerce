@@ -5,7 +5,7 @@
                 {{ __('Categorias') }}
             </x-slot>
             <x-slot name="upload">
-                <livewire:admin.upload.categories/>
+                {{--<livewire:admin.upload.categories/>--}}
             </x-slot>
             <x-slot name="content">
                 <x-containers.formbody :bg="true">
