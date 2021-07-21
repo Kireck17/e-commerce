@@ -5,9 +5,7 @@
                 {{ __('Almacenes') }}
             </x-slot>
             <x-slot name="upload">
-                <x-buttons.cian>
-                    {{__('Carga masiva . . .')}}
-                </x-buttons.cian>
+                <livewire:admin.upload.warehouses/>
             </x-slot>
             <x-slot name="content">
                 <x-containers.formbody :bg="true">
