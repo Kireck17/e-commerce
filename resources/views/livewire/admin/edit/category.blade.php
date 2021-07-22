@@ -12,15 +12,15 @@
 		<x-slot name="content">
             
             <dl>
-                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <div class="items-center bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
 
-                    <dt class="text-sm font-medium text-gray-500">
+                    <dt class="font-medium text-gray-500">
                         <x-adminver.label for="nombre">
                             Nombre de la categoria:
                         </x-adminver.label>
                     </dt>
 
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    <dd class="mt-1 text-base text-gray-900 sm:mt-0 sm:col-span-2">
                         <x-adminver.input type="text" id="nombre" wire:model="category.name"/>
                         <x-jet-input-error for="category.name"/>
                     </dd>
@@ -28,9 +28,9 @@
                 </div>
             </dl>
             <dl>
-                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <div class="items-center bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
 
-                    <dt class="text-sm font-medium text-gray-500">
+                    <dt class="font-medium text-gray-800">
                         <x-adminver.label for="nombre">
                             Nombre de la descripcion:
                         </x-adminver.label>
@@ -48,7 +48,7 @@
 		</x-slot>
 
         <x-slot name="footer">
-            <x-buttons.red wire:click="cancelar()">
+            <x-buttons.red @Click="show = !show">
                 {{__('Cancelar')}}
             </x-buttons.red>
             <x-buttons.cian wire:click="save_changes()">

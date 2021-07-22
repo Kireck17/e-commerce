@@ -17,6 +17,7 @@ class ShowTrademark extends Component
     
     protected $listeners=['recargar'=>'render'];
 
+
     public function mount()
     {
         $this->search="";
@@ -29,13 +30,12 @@ class ShowTrademark extends Component
     {
         $this->resetPage();
     }
-    
-    //ELIMINAR UN TRADEMARK 
     public function remove($id)
     {
+       
         $this->mark=Trademark::find($id);
         $this->mark->delete();
-        $this->banner('Trademark Eliminado correctamente');
+        $this->banner('Marca Eliminado correctamente');
     }
 
     public function render()

@@ -1,3 +1,3 @@
-<label {{$attributes->merge(['class'=> "block text-sm font-medium text-gray-700"])}}>
+<label {{$attributes->merge(['class'=> "block text-base font-medium text-gray-900"])}}>
 	{{$slot}}
 </label>

@@ -13,6 +13,8 @@ use App\Http\Livewire\Tutorials\ViewContent;
 use App\Http\Livewire\Tutorials\Content;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
+//use de admin inicio
+use App\Http\Livewire\Admin\show\Welcome;
 //Use de admin apartado de ver
 use App\Http\Livewire\Admin\show\WarehouseShow;
 use App\Http\Livewire\Admin\show\StockShow;
@@ -55,6 +57,9 @@ Route::prefix('product')->group(function(){
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::prefix('admin')->group(function(){
         Route::name('admin.')->group(function(){
+            Route::get('/welcome',Welcome::class
+            )->name('welcome');
+
             Route::get('/create',Create::class
             )->name('create');
 
