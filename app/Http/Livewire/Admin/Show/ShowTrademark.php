@@ -9,8 +9,8 @@ use App\Traits\InteractsWithBanner;
 
 class ShowTrademark extends Component
 {
-    use InteractsWithBanner;
-    use WithPagination;
+    use WithPagination,InteractsWithBanner;
+
     public $search;
     public $mark;
     public $porpagina=5;
@@ -30,11 +30,6 @@ class ShowTrademark extends Component
     {
         $this->resetPage();
     }
-    public function prueba()
-    {
-        $this->banner('prueba');
-    }
-
     public function render()
     {
         //Si no se pone el metodo paginate es necesario que lleve get()

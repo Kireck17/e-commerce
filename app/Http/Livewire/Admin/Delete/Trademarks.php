@@ -9,6 +9,7 @@ use App\Traits\InteractsWithBanner;
 class Trademarks extends Component
 {
     use InteractsWithBanner;
+
     public $is_show;
     public $trademark;
 
@@ -16,16 +17,15 @@ class Trademarks extends Component
     {
         $this->is_show=false;
         $this->trademark=$trademark;
-        
     }
     
     public function remove()
     {
-        
+        $name=$this->trademark->name;
         $this->trademark->delete();
         $this->is_show=false;
-        $this->banner('Trademark Eliminado correctamente');
         $this->emit('recargar');
+        $this->banner($name.' eliminado correctamente');
     }
    
 
