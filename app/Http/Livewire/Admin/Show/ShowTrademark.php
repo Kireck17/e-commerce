@@ -30,12 +30,9 @@ class ShowTrademark extends Component
     {
         $this->resetPage();
     }
-    public function remove($id)
+    public function prueba()
     {
-       
-        $this->mark=Trademark::find($id);
-        $this->mark->delete();
-        $this->banner('Marca Eliminado correctamente');
+        $this->banner('prueba');
     }
 
     public function render()

@@ -16,7 +16,7 @@ class Trademarks extends Component
     {
         $this->is_show=false;
         $this->trademark=$trademark;
-        $this->emit('recargar');
+        
     }
     
     public function remove()

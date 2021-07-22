@@ -11,9 +11,9 @@
 
 		<x-slot name="content">
             <div class="flex items-center justify-center content-center">
-                <img class="h-16" src="{{ asset('storage/logos/2.png') }}" alt="">
+                <i class="fas fa-exclamation-triangle text-7xl text-yellow-500"></i>
             </div>
-            <div class="items-center justify-center">
+            <div class="flex flex-col items-center justify-center">
                 
                 
                 <h1 class="p-4 text-lg font-bold">
@@ -21,19 +21,22 @@
                 </h1>
                 
                 
-                <x-buttons.red wire:click="remove()">
-                        {{__('Si, Eliminar')}}
-                </x-buttons.red>
-                <x-buttons.cian @Click="show = !show">
-                    <i class ="far fa-save mr-3"></i>
-                        {{__('Cancelar')}}
-                </x-buttons.cian>
+                
             </div>
             
 
 		</x-slot>
 
         <x-slot name="footer">
+            <div class="flex items-center justify-center">
+                <x-buttons.turquoise wire:click="remove()">
+                    {{__('Eliminar')}}
+                </x-buttons.turquoise>
+                <x-buttons.red @Click="show = !show">
+                        
+                    {{__('Cancelar')}}
+                </x-buttons.red>
+            </div>
             
 	    </x-slot>
 	    

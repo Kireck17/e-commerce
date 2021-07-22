@@ -95,7 +95,7 @@ class Stocks extends Component
                 $stock= new Stock();
                 $provider = Provider::where('name',$row[2])->get();
                 $warehouse = WareHouse::where('name',$row[3])->get();
-                $variation = Variation::where('id',$row[1])->get();
+                $variation = Variation::find($row[1]);
 
                 if($provider->count())
                 {
@@ -117,23 +117,21 @@ class Stocks extends Component
                     $warehouse->name=ucwords($row[3]);
                     $warehouse->save();
                 }
-                if($variation->count())
+                
+                if($variation != null)
                 {
-                    $variation= $variation->first();
-                }
-                else
-                {
-                    $variation= new Variation();
-                    $variation->save();
+                    $stock->provider_id= $provider->id;
+                    $stock->warehouse_id= $warehouse->id;
+                    $stock->quantity= $row[4];
+                    $stock->price= $row[5];
+                    $variation->stock()->save($stock);
                 }
 
-                $stock->provider_id= $provider;
-                $stock->warehouse_id= $warehouse;
-                $stock->quantity= $row[4];
-                $stock->price= $row[5];
-                $variationable= Variation::find($variation);
-                $variationable->stock()->save($stock);
-
+                
+                
+                
+                
+                
 
             }
         }

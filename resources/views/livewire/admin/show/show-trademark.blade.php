@@ -45,10 +45,7 @@
                                         {{--llamado del componente de editar marca--}}
                                         <livewire:admin.edit.trademark :trademark="$mark" :wire:key="$mark->id"/>
 
-                                        <div class="text-red-500 hover:text-red-700 w-4 mr-2 transform hover:text-red-500 hover:scale-110"
-                                        wire:click="remove({{$mark->id}})">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </div>
+                                        <livewire:admin.delete.trademarks :trademark="$mark" :wire:key="$mark->id"/>
                                     </div>
                                 </td>
                             </tr>
