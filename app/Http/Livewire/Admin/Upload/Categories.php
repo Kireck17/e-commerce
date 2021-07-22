@@ -47,7 +47,7 @@ class Categories extends Component
 
     public function download_template()
     {
-        return Storage::disk('public')->download('templates/plantilla-marcas.csv');
+        return Storage::disk('public')->download('templates/plantilla-categoria.csv');
     }
 
     public function save_trademarks()
@@ -76,24 +76,26 @@ class Categories extends Component
 
             foreach ($contents as $row)
             {
-                $trademark=Trademark::where('name',$row[0])->get();
-
-                if($trademark->count())
+                $category=Category::where('name',$row[0])->get();
+                
+                if($category->count())
                 {
-                    $trademark=$trademark->first();
+                    $category=$category->first();
                 }
                 else
                 {
-                    $trademark=new Trademark();
-                    $trademark->name=ucwords($row[0]);
-                    $trademark->save();
+                    $category=new Category();
+                    $category->name=ucwords($row[0]);
                 }
-
-                
+                if(isset($row[1]))
+                {
+                    $category->description=$row[1];
+                }
+                $category->save();
             }
         }
         Storage::disk('public')->delete($save);
-        $this->banner('Marcas cargados correctamente');
+        $this->banner('Categoría cargados correctamente');
     }
 
 
