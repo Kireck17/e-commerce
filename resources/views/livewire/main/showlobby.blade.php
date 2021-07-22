@@ -235,7 +235,4 @@
             </div>
         </x-containers.secondary>
     </x-containers.main>
-    <div class="flex justify-center py-6">
-        <i class="fas fa-file-csv text-6xl cursor-pointer" wire:click="download_csv()"></i>
-    </div>
 </div>

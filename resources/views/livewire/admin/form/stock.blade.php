@@ -6,9 +6,7 @@
             </x-slot>
             @if($warehouses->count() && $variations->count())
                 <x-slot name="upload">
-                    <x-buttons.cian>
-                        {{__('Carga masiva . . .')}}
-                    </x-buttons.cian>
+                    <livewire:admin.upload.stocks/>
                 </x-slot>
                 <x-slot name="content">
                     <x-containers.formbody :bg="true">
