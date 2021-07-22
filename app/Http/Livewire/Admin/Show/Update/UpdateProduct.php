@@ -21,7 +21,7 @@ class UpdateProduct extends Component
     public $files;
     public $apartados;
 
-    protected $listeners=['variationsReload' => 'render'];
+    protected $listeners=['variationsReload'];
     
 
     protected $rules = [
@@ -36,18 +36,30 @@ class UpdateProduct extends Component
     {
         $this->product = $product_id;
         $this->variations = $this->product->variation()->get();
-        $this->files = $this->product->variation()->first()->files()->get();
+        //$this->files = $this->product->variation()->first()->files()->get();
         $this->apartados=['Editor','Caracteristicas','Fotografia'];
     }
-
+    public function variationsReload()
+    {
+        $this->variations = $this->product->variation()->get();
+    }
+    public function add_variation()
+    {
+        $this->product->variation()->save(new Variation());
+        $this->variations = $this->product->variation()->get();
+    }
+    public function remove_variation($variation_id)
+    {
+        Variation::find($variation_id)->delete();
+        $this->variations = $this->product->variation()->get();
+        $this->banner('Variación eliminada correctamente','warning');
+    }
     public function cancel()
     {
         return redirect()->route('admin.showproduct');
     }
     public function save()
     {
-        $this->emit('save_variations');
-        $this->emit('save_add_attribute');
         $this->banner('Se actualizó el producto correctamente');
     }
     public function render()

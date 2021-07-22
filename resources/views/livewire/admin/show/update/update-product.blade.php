@@ -129,13 +129,25 @@
                             </x-slot>
                             {{--Form--}}
                             <x-slot name="content">
-                                <div class="divide-y">
-                                    @foreach($this->variations as  $variation)
-                                        <livewire:admin.show.update.variations :variation="$variation" :wire:key="$variation->id"/>
+                                <div class="fixed bottom-0 right-0">
+                                    <x-buttons.turquoise class="my-3 mx-2" wire:click="add_variation()">
+                                        {{__('Agregar variacion')}}
+                                    </x-buttons.turquoise>
+                                </div>
+                                <div class="space-y-4">
+                                    @foreach($this->variations as $key => $variation)
+                                        <div class="bg-gray-200 py-3 px-2">
+                                            <div class="flex justify-between items-center border-b border-white">
+                                                <h2 class="mt-3 text-sm uppercase font-bold leading-4 tracking-widest">
+                                                    {{__('Variación')." ".$variation->id}}
+                                                </h2>
+                                                <x-buttons.red class="my-3 mx-2" wire:click="remove_variation({{$variation->id}})">
+                                                {{__('Quitar variacion')}}
+                                                </x-buttons.red>
+                                            </div>
+                                            <livewire:admin.show.update.variations :variation="$variation" :wire:key="$variation->id"/>
+                                        </div>
                                     @endforeach
-                                    <div class="mt-4">
-                                        <livewire:admin.show.update.variationsadd :product="$product"/>
-                                    </div>
                                 </div>    
                             </x-slot>
                             {{--Footer--}}
@@ -160,9 +172,9 @@
                             </x-slot>
                             {{--Form--}}
                             <x-slot name="content">
-                                @foreach($this->variations as  $variation)
+                                {{--@foreach($this->variations as  $variation)
                                     <livewire:admin.show.update.images :variation="$variation" :wire:key="$variation->id"/>
-                                @endforeach
+                                @endforeach--}}
                             </x-slot>
                             {{--Footer--}}
                             <x-slot name="save">

@@ -2,7 +2,11 @@
 <div>
 
    {{--Baner--}}
-   <x-banners.category  :url="$category->file()->first()->url" :description="$category->description" />
+    @if(isset($category->file()->first()->url))
+        <x-banners.category  :url="$category->file()->first()->url" :description="$category->description" />
+    @else
+        <x-banners.category :description="$category->description" />
+    @endif
     <x-containers.main>
         {{--Header--}}
         <x-containers.secondary>
@@ -35,7 +39,11 @@
                             {{$product->name}}
                         </x-slot>
                         <x-slot name="price">
-                            ${{$product->variation()->first()->stock()->first()->price}}
+                            @if(isset($product->variation()->first()->stock()->first()->price))
+                                ${{$product->variation()->first()->stock()->first()->price}}
+                            @else
+                                {{__('Proximamente')}}
+                            @endif
                         </x-slot>
                     </x-cards.main>
                 @empty
