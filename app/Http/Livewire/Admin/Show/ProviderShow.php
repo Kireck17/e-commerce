@@ -44,16 +44,7 @@ class ProviderShow extends Component
     }
 
 
-    //ELIMINAR UN PROVIDER
-    public function remove_provider($id)
-    {
-       
-        $this->provi=Provider::find($id);
-        $this->provi->delete();
-        $this->banner('Provider Eliminado correctamente');
-        $this->emit('StockReload');
 
-    }
 
     public function render()
     {

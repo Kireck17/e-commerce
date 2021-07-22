@@ -33,8 +33,7 @@
                         </th>
                     </x-slot>
                     <x-slot name="Content">
-        
-                    @forelse($provider  as $key => $pro) 
+                        @forelse($provider  as $key => $pro) 
                         <tr class="border-b border-gray-200 hover:bg-gray-100">
                                                 
                             <td class="py-3 px-6 text-center whitespace-nowrap">
@@ -64,22 +63,18 @@
                             <td class="py-3 px-6 text-center">
                                 <div class="flex item-center justify-center">
                                     {{--llamado del componente de editar proveedor--}}
-                                    <livewire:admin.edit.provider :providder="$pro" :wire:key="$key"/>
-
-                                                <div class="text-red-500 w-4 mr-2 transform hover:text-red-900 hover:scale-110 cursor-pointer"
-                                                wire:click="remove_provider({{$pro->id}})">
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </div>
-                                            </div>
-                                        </td>                 
-                                    </tr>
-                                @empty
-                                    <div class="lg:col-span-5 sm:col-span-4 col-span-1 text-center">
-                                        <span class="ml-6 text-transparent text-gray-400 text-4xl font-extrabold">
-                                            Sin resultados para la busqueda "{{$this->search}}"
-                                        </span>
-                                    </div>
-                                @endforelse
+                                    <livewire:admin.edit.provider :providder="$pro" :wire:key="'edit-'.$pro->id"/>
+                                    <livewire:admin.delete.provider :providder="$pro" :wire:key="'delete-'.$pro->id"/>
+                                </div>
+                            </td>
+                        </tr>
+                    @empty
+                        <div class="lg:col-span-5 sm:col-span-4 col-span-1 text-center">
+                            <span class="ml-6 text-transparent text-gray-400 text-4xl font-extrabold">
+                                Sin resultados para la busqueda "{{$this->search}}"
+                            </span>
+                        </div>
+                    @endforelse
                     </x-slot>
                 </x-tables.main>
             </x-slot>
