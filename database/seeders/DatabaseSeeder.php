@@ -27,7 +27,8 @@ class DatabaseSeeder extends Seeder
             ProviderSeeder::class, // FORMULARIO
             //KitSeeder::class,
             //KitDetailSeeder::class,
-            StockSeeder::class, // FORMULARIO
+            ProviderSeeder::class,
+            StockSeeder::class,
             FileSeeder::class,
         ]);
     }

@@ -19,7 +19,7 @@ use App\Http\Livewire\Admin\show\StockShow;
 use App\Http\Livewire\Admin\show\ProviderShow;
 use App\Http\Livewire\Admin\show\ShowProducts;
 use App\Http\Livewire\Admin\show\ShowSubCategory;
-use App\Http\Livewire\Admin\show\UpdateProduct;
+use App\Http\Livewire\Admin\show\update\UpdateProduct;
 
 use App\Http\Livewire\Admin\show\ShowTrademark;
 use App\Http\Livewire\Admin\show\CategoryShow;

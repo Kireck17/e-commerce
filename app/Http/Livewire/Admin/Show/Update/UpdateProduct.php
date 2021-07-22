@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Admin\Show;
+namespace App\Http\Livewire\Admin\Show\Update;
 
 use Livewire\Component;
 use App\Models\Product;
@@ -18,6 +18,11 @@ class UpdateProduct extends Component
 
     public $product;
     public $variations;
+    public $files;
+    public $apartados;
+
+    protected $listeners=['variationsReload'];
+    
 
     protected $rules = [
         'product.name' => "required",
@@ -27,32 +32,43 @@ class UpdateProduct extends Component
         'product.category_id' => "required",
         'product.subcategory_id' => "required",
     ];
-
     public function mount(Product $product_id)
     {
         $this->product = $product_id;
         $this->variations = $this->product->variation()->get();
+        //$this->files = $this->product->variation()->first()->files()->get();
+        $this->apartados=['Editor','Caracteristicas','Fotografia'];
     }
-
+    public function variationsReload()
+    {
+        $this->variations = $this->product->variation()->get();
+    }
+    public function add_variation()
+    {
+        $this->product->variation()->save(new Variation());
+        $this->variations = $this->product->variation()->get();
+    }
+    public function remove_variation($variation_id)
+    {
+        Variation::find($variation_id)->delete();
+        $this->variations = $this->product->variation()->get();
+        $this->banner('Variación eliminada correctamente','warning');
+    }
     public function cancel()
     {
         return redirect()->route('admin.showproduct');
     }
     public function save()
     {
-        $this->emit('save_variations');
         $this->banner('Se actualizó el producto correctamente');
     }
     public function render()
     {
-        return view('livewire.admin.show.update-product',[
+        return view('livewire.admin.show.update.update-product',[
             'product' => $this->product,
             'trademarks' => Trademark::all(),
             'categories' => Category::all(),
             'subcategories' => SubCategory::all(),
-            'variations' => Variation::all(),
-            'attributes' => Attribute::all(),
-            'attributevalues' => AttributeValue::all(),
             ])
         ->layout("layouts.admin");
     }
