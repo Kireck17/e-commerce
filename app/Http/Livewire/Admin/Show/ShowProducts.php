@@ -14,7 +14,7 @@ class ShowProducts extends Component
 
     public $search;
     public $description_show;
-    public $plus_show;
+    public $caracteristics;
     public $product;
     public $variation;
     public $porpagina=5;
@@ -28,7 +28,7 @@ class ShowProducts extends Component
     {
         $this->search = "";
         $this->description_show = false;
-        $this->plus_show = false;
+        $this->caracteristics = false;
         $this->product = [];
     }
 
@@ -38,10 +38,10 @@ class ShowProducts extends Component
         $this->description_show = true;
         $this->product = Product::find($id);
     }
-    public function plus($name)
+    public function variation($name)
     {
 
-        $this->plus_show = true;
+        $this->caracteristics = true;
         $this->variation = $name;
     }
     public function cancel($active = 0)
@@ -49,7 +49,7 @@ class ShowProducts extends Component
         if ($active != 0) {
             $this->description_show = false;
         } else {
-            $this->plus_show = false;
+            $this->caracteristics = false;
         }
     }
 
