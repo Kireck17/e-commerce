@@ -131,6 +131,7 @@ class Stocks extends Component
                 $stock->warehouse_id= $warehouse;
                 $stock->quantity= $row[4];
                 $stock->price= $row[5];
+                
                 $variationable= Variation::find($variation);
                 $variationable->stock()->save($stock);
 
