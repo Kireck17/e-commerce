@@ -34,17 +34,7 @@ class WarehouseShow extends Component
         $this->resetPage();
     }
 
-    //ELIMINAR UN WAREHOUSE
-    public function remove_wahouse($id)
-    {
-       
-        $this->wareho=WareHouse::find($id);
-        $this->wareho->delete();
-        $this->banner('WareHouse Eliminado correctamente');
-        $this->emit('WareHouseReload');
-
-    }
-
+    
     public function render()
     {
         return view('livewire.admin.show.warehouse-show',[

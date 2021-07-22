@@ -5,9 +5,7 @@
                 {{ __('Origen') }}
             </x-slot>
             <x-slot name="upload">
-                <x-buttons.cian>
-                    {{__('Carga masiva . . .')}}
-                </x-buttons.cian>
+                <livewire:admin.upload.origins/>
             </x-slot>
             <x-slot name="content">
                 <x-containers.formbody :bg="true">

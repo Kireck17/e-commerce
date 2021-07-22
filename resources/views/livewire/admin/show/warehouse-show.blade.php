@@ -42,12 +42,8 @@
                             <td class="py-3 px-6 text-center">
                                 <div class="flex item-center justify-center cursor-pointer">
                                     {{--llamado del componente de editar almacen--}}
-                                    <livewire:admin.edit.ware-house :waarehouse="$ware" :wire:key="$ware->id"/>
-
-                                    <div class="text-red-500 w-4 mr-2 transform hover:text-red-900 hover:scale-110 cursor-pointer"
-                                    wire:click="remove_wahouse({{$ware->id}})">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </div>
+                                    <livewire:admin.edit.ware-house :waarehouse="$ware" :wire:key="'edit-'.$ware->id"/>
+                                    <livewire:admin.delete.warehouse :waarehouse="$ware" :wire:key="'delete-'.$ware->id"/>
                                 </div>
                             </td>                 
                         </tr>

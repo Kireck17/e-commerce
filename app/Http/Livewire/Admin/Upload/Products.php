@@ -138,6 +138,7 @@ class Products extends Component
         Storage::disk('public')->delete($save);
         $this->banner('Productos cargados correctamente');
     }
+    
     public function render()
     {
         return view('livewire.admin.upload.products');
