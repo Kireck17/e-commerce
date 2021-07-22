@@ -87,10 +87,8 @@ class Trademarks extends Component
                 {
                     $trademark=new Trademark();
                     $trademark->name=ucwords($row[0]);
-                    $trademark->save();
                 }
-
-                
+                $trademark->save();
             }
         }
         Storage::disk('public')->delete($save);
