@@ -29,4 +29,9 @@ class Stock extends Model
     {
         return $this->belongsTo(WareHouse::class);
     }
+
+    public function provider()
+    {
+        return $this->belongsTo(Provider::class);
+    }
 }
