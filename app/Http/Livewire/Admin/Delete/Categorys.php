@@ -3,26 +3,28 @@
 namespace App\Http\Livewire\Admin\Delete;
 
 use Livewire\Component;
-use App\Models\Trademark as Marca;
+
+use App\Models\Category as Categoria;
 use App\Traits\InteractsWithBanner;
 
-class Trademarks extends Component
+class Categorys extends Component
 {
     use InteractsWithBanner;
 
     public $is_show;
-    public $trademark;
+    public $category;
 
-    public function mount(Marca $trademark)
+    public function mount(Categoria $category)
     {
         $this->is_show=false;
-        $this->trademark=$trademark;
+        $this->category=$category;
+        
     }
     
     public function remove()
     {
-        $name=$this->trademark->name;
-        $this->trademark->delete();
+        $name=$this->category->name;
+        $this->category->delete();
         $this->is_show=false;
         $this->emit('recargar');
         $this->banner($name.' eliminado correctamente');
@@ -36,6 +38,6 @@ class Trademarks extends Component
 	}
     public function render()
     {
-        return view('livewire.admin.delete.trademarks');
+        return view('livewire.admin.delete.categorys');
     }
 }

@@ -44,11 +44,8 @@
                                     <div class="flex item-center justify-center">
                                                     
                                     {{--llamado del componente de editar Origen--}}
-                                        <livewire:admin.edit.origen :origenn="$ori" :wire:key="$ori->id"/>
-                                        <div class="text-red-500 hover:text-red-700 w-4 mr-2 transform hover:text-red-500 hover:scale-110"
-                                        wire:click="remove({{$ori->id}})">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </div>
+                                        <livewire:admin.edit.origen :origenn="$ori" :wire:key="'edit-'.$ori->id"/>
+                                        <livewire:admin.delete.origins :origenn="$ori" :wire:key="'delete-'.$ori->id"/>
                                     </div>
                                 </td>
                                             

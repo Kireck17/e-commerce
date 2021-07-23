@@ -31,15 +31,7 @@ class CategoryShow extends Component
         $this->resetPage();
     }
 
-    //ELIMINAR UN CATEGORY
-    public function remove($id)
-    {
-       
-        $this->catt=Category::find($id);
-        $this->catt->delete();
-        $this->banner('Category Eliminado correctamente');
-    }
-    
+   
 
     public function render()
     {

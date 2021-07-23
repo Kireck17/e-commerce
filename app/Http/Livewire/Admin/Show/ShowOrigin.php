@@ -30,12 +30,7 @@ class ShowOrigin extends Component
     {
         $this->resetPage();
     }
-    public function remove($id)
-    {
-        $this->ori=Origin::find($id);
-        $this->ori->delete();
-        $this->banner('Pais Eliminado correctamente');
-    }
+    
 
     public function render()
     {

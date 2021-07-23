@@ -13,7 +13,7 @@
             </div>
             <div class="flex flex-col items-center justify-center">
                 <h1 class="p-4 text-lg font-bold">
-                    ¿DESEA ELIMINAR LA  MARCA {{$this->trademark->name}}?
+                    ¿DESEA ELIMINAR LA SUBCATEGORIA {{$this->subcategory->name}}?
                 </h1>
             </div>
 		</x-slot>

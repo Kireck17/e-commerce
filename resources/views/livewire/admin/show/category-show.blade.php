@@ -71,10 +71,10 @@
                                     <div class="flex item-center justify-center">
                                                     
                                     {{--llamado del componente de editar marca--}}
-                                        <livewire:admin.edit.category :category="$cate" :wire:key="$cate->id"/>
-                                        <div class="text-red-500 hover:text-red-700 w-4 mr-2 transform hover:text-red-500 hover:scale-110"
-                                        wire:click="remove({{$cate->id}})">
-                                            <i class="fas fa-trash-alt"></i>
+                                        <livewire:admin.edit.category :category="$cate" :wire:key="'edit-'.$cate->id"/>
+                                        
+
+                                        <livewire:admin.delete.categorys :category="$cate" :wire:key="'delete-'.$cate->id"/>
                                         </div>
                                     </div>
                                 </td>
