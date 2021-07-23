@@ -32,7 +32,6 @@
                     <x-slot name="Content">
                         @forelse($trademarks  as $key => $mark )
                             <tr class="text-base border-b border-gray-200 hover:bg-gray-200">
-
                                 <td class="py-3 px-6 text-center whitespace-nowrap">
                                     <div class="flex item-center justify-center">
                                         <span class="font-medium">
@@ -41,14 +40,13 @@
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">
-                                    <div class="flex item-center justify-center">
+                                    <div class="flex justify-center item-center space-x-3">
                                         {{--llamado del componente de editar marca--}}
-                                        <livewire:admin.edit.trademark :trademark="$mark" :wire:key="$mark->id"/>
+                                        <livewire:admin.edit.trademark :trademark="$mark" :wire:key="'edit-'.$mark->id"/>
 
-                                        <div class="text-red-500 hover:text-red-700 w-4 mr-2 transform hover:scale-110"
-                                        wire:click="remove({{$mark->id}})">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </div>
+                                        <livewire:admin.delete.trademarks :trademark="$mark" :wire:key="'delete-'.$mark->id"/>
+                                        
+                                        
                                     </div>
                                 </td>
                             </tr>

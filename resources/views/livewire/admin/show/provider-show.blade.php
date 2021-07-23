@@ -41,13 +41,23 @@
                             </span>
                         </div>
                     </td>
-                    <td class="py-3 px-6 text-center whitespace-nowrap">
-                        <div class="flex item-center justify-center">
-                            <span class="font-medium">
-                            {{{$pro->origin()->first()->country}}}
-                            </span>
-                        </div>
-                    </td>
+                    @if(isset($pro->origin()->first()->country))
+                        <td class="py-3 px-6 text-center whitespace-nowrap">
+                            <div class="flex item-center justify-center">
+                                <span class="font-medium">
+                                {{{$pro->origin()->first()->country}}}
+                                </span>
+                            </div>
+                        </td>
+                    @else
+                        <td class="py-3 px-6 text-center whitespace-nowrap">
+                            <div class="flex item-center justify-center">
+                                <span class="font-medium">
+                                Sin pais de origen
+                                </span>
+                            </div>
+                        </td>
+                    @endif
                     <td class="py-3 px-6 text-center">
                         <div class="flex item-center justify-center">
                             {{--llamado del componente de editar proveedor--}}

@@ -9,13 +9,14 @@ use App\Traits\InteractsWithBanner;
 
 class ShowTrademark extends Component
 {
-    use InteractsWithBanner;
-    use WithPagination;
+    use WithPagination,InteractsWithBanner;
+
     public $search;
     public $mark;
     public $porpagina=5;
     
     protected $listeners=['recargar'=>'render'];
+
 
     public function mount()
     {
@@ -29,15 +30,6 @@ class ShowTrademark extends Component
     {
         $this->resetPage();
     }
-    
-    //ELIMINAR UN TRADEMARK 
-    public function remove($id)
-    {
-        $this->mark=Trademark::find($id);
-        $this->mark->delete();
-        $this->banner('Trademark Eliminado correctamente');
-    }
-
     public function render()
     {
         //Si no se pone el metodo paginate es necesario que lleve get()

@@ -73,10 +73,7 @@
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                         </div>
-                                        <div class="text-red-500 w-4 mr-2 transform hover:text-red-900 hover:scale-110"
-                                            wire:click="remove_product({{ $product->id }})">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </div>
+                                        <livewire:admin.delete.products :product="$product" :wire:key="'delete-'.$product->id"/>
                                     </div>
                                 </td>
                             </tr>

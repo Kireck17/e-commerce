@@ -2,35 +2,45 @@
     <div class="h-full hidden sm:flex ">
         <div class="h-full w-full bg-white p-3 shadow-lg">
             <div class="px-3 flex justify-center items-center ">
-                <a href="">
+                <a href="{{ route('admin.welcome') }}">
                     <img class="h-16 w-auto" src="{{ asset('storage/logos/originalsaxcar.png') }}" alt="">
                 </a>
             </div>
             <ul class="space-y-2 text-sm mt-5">
 
-                <li>
-                    <a href="{{ route('admin.create') }}" :active="request()->routeIs('admin.create')"
-                        class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200  focus:shadow-outline">
-                        <span class="text-gray-600">
-                            <i class="fas fa-laptop-house fa-lg"></i>
-                        </span>
-                        <span>Inicio</span>
-                    </a>
-                </li>
+                
+                <x-nav-links.admin href="{{ route('admin.welcome') }}" 
+                :active="request()->routeIs('admin.welcome')">
+                    <span class="text-gray-600">
+                        <i class="fas fa-laptop-house fa-lg"></i>
+                    </span>
+                    <span>
+                        Inicio
+                    </span>
+                </x-nav-links.admin>
+                <x-nav-links.admin href="{{ route('admin.create') }}" 
+                :active="request()->routeIs('admin.create')">
+                    <span class="text-gray-600">
+                        <i class="fas fa-plus fa-lg"></i>
+                    </span>
+                    <span>
+                        Crear
+                    </span>
+                </x-nav-links.admin>
+                
                 <li @click.away="open = false" class="flex flex-col w-full" x-data="{ open: false }">
-
-
                     <button @click="open = !open"
                         class="flex flex-row items-center w-full p-2 space-x-3 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:block hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                         <span>
                             <i class="fa fa-eye mr-2 fa-lg text-gray-600" aria-hidden="true"></i>
-                            Ver
+                            Mostrar
                         </span>
                         <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
                             class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
+                                clip-rule="evenodd">
+                            </path>
                         </svg>
                     </button>
                     <ul x-show="open" x-transition:enter="transition ease-out duration-100"
@@ -38,50 +48,58 @@
                         x-transition:enter-end="transform opacity-100 scale-100"
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="transform opacity-100 scale-100"
-                        x-transition:leave-end="transform opacity-0 scale-95" class="w-full py-2 pl-4 pr-2">
-                        <li>
-                            <a href="{{ route('admin.showtrademark') }}"
-                                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                Marca
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.showcategory') }}"
-                                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                Categoria
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{route('admin.showsubcategory')}}" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                             Subcategoria
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{route('admin.showorigin')}}" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                             Origen
-                            </a>
-                        </li>
-                        <li>
-                           <a href="{{route('admin.showprovider')}}" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                              Proveedor
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{route('admin.showwarehouse')}}" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                             Almacen
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('admin.showproduct') }}"
-                                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                Producto
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{route('admin.showstock')}}" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                             Existencias
-                            </a>
-                        </li>
+                        x-transition:leave-end="transform opacity-0 scale-95" class="w-full py-2 pl-4 pr-4">
+                        
+                            <x-nav-links.admindropdowns href="{{ route('admin.showtrademark') }}"
+                            :active="request()->routeIs('admin.showtrademark')">
+                                Marcas
+                            </x-nav-links.admindropdowns>
+                        
+                        
+                            <x-nav-links.admindropdowns href="{{ route('admin.showcategory') }}"
+                            :active="request()->routeIs('admin.showcategory')">
+                                Categorias
+                            </x-nav-links.admindropdowns>
+                        
+                        
+                            <x-nav-links.admindropdowns href="{{route('admin.showsubcategory')}}" 
+                            :active="request()->routeIs('admin.showsubcategory')">
+                                Subcategorias
+                            </x-nav-links.admindropdowns>
+                        
+                        
+                            <x-nav-links.admindropdowns href="{{route('admin.showorigin')}}" 
+                            :active="request()->routeIs('admin.showorigin')">
+                                Paises
+                            </x-nav-links.admindropdowns>
+                        
+                        
+                            <x-nav-links.admindropdowns href="{{route('admin.showprovider')}}"
+                            :active="request()->routeIs('admin.showprovider')">
+                                Proveedores
+                            </x-nav-links.admindropdowns>
+                        
+                        
+                            <x-nav-links.admindropdowns href="{{route('admin.showwarehouse')}}" 
+                            :active="request()->routeIs('admin.showwarehouse')">
+                                Almacenes
+                            </x-nav-links.admindropdowns>
+                            
+                            <x-nav-links.admindropdowns href="{{route('admin.showproduct')}}" 
+                            :active="request()->routeIs('admin.showproduct')"
+                            >
+                                Productos
+                            </x-nav-links.admindropdowns>
+
+                            <x-nav-links.admindropdowns href="{{route('admin.showstock')}}" 
+                            :active="request()->routeIs('admin.showstock')">
+                                Existencias
+                            </x-nav-links.admindropdowns>
+                        
+                            
+                            
+                        
+                        
 
                     </ul>
 

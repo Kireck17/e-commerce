@@ -17,7 +17,7 @@ class Origen extends Component
     {
         $this->is_show=false;
         $this->origenn=$origenn;
-        $this->emit('recargar');
+        
     }
 
     protected $rules = [

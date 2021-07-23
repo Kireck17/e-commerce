@@ -17,7 +17,7 @@ class SubCategory extends Component
     {
         $this->is_show=false;
         $this->subcategory=$subcategory;
-        $this->emit('recargar');
+        
     }
 
     protected $rules = [
