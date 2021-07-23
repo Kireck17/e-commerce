@@ -43,9 +43,10 @@
                                 <td class="py-3 px-6 text-center">
                                     <div class="flex item-center justify-center">
                                         {{--llamado del componente de editar marca--}}
-                                        <livewire:admin.edit.trademark :trademark="$mark" :wire:key="$mark->id"/>
+                                        <livewire:admin.edit.trademark :trademark="$mark" :wire:key="'edit-'.$mark->id"/>
 
-                                        <livewire:admin.delete.trademarks :trademark="$mark" :wire:key="$mark->id"/>
+                                        <livewire:admin.delete.trademarks :trademark="$mark" :wire:key="'delete-'.$mark->id"/>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>

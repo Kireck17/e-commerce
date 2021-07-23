@@ -29,13 +29,19 @@
 
         <x-slot name="footer">
             <div class="flex items-center justify-center">
-                <x-buttons.turquoise wire:click="remove()">
-                    {{__('Eliminar')}}
-                </x-buttons.turquoise>
-                <x-buttons.red @Click="show = !show">
+               <div class="pr-4">
+                    <x-buttons.turquoise wire:click="remove()">
+                        {{__('Eliminar')}}
+                    </x-buttons.turquoise>
+               </div> 
+               <div class="pl-4">
+                    <x-buttons.red @Click="show = !show">
                         
-                    {{__('Cancelar')}}
-                </x-buttons.red>
+                        {{__('Cancelar')}}
+                    </x-buttons.red>
+               </div>
+               
+                
             </div>
             
 	    </x-slot>
