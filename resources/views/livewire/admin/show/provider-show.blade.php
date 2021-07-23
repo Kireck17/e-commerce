@@ -61,7 +61,7 @@
                                 </td>
                             @endif
                             <td class="py-3 px-6 text-center">
-                                <div class="flex item-center justify-center">
+                                <div class="flex item-center justify-center cursor-pointer">
                                     {{--llamado del componente de editar proveedor--}}
                                     <livewire:admin.edit.provider :providder="$pro" :wire:key="'edit-'.$pro->id"/>
                                     <livewire:admin.delete.provider :providder="$pro" :wire:key="'delete-'.$pro->id"/>

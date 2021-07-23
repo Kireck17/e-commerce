@@ -53,7 +53,7 @@
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">
-                                    <div class="flex item-center justify-center">
+                                    <div class="flex item-center justify-center cursor-pointer">
                                         {{--llamando a las modeles de detalles del producto--}}
                                         <div class="text-indigo-500 w-4 mr-2 transform hover:text-indigo-900 hover:scale-110"
                                             wire:click="description({{$product->id}})">
@@ -66,7 +66,7 @@
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">
-                                    <div class="flex item-center justify-center">
+                                    <div class="flex item-center justify-center cursor-pointer">
                                         {{--llamando a la ruta de edicion del producto y la funcion de eliminar--}}
                                         <div class="text-blue-500 w-4 mr-2 transform hover:text-blue-900 hover:scale-110">  
                                             <a href="{{route('admin.updateproduct',['product_id' => $product->id])}}">
