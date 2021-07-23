@@ -76,7 +76,7 @@
                         
                             <x-nav-links.admindropdowns href="{{route('admin.showprovider')}}"
                             :active="request()->routeIs('admin.showprovider')">
-                                Proveedorores
+                                Proveedores
                             </x-nav-links.admindropdowns>
                         
                         

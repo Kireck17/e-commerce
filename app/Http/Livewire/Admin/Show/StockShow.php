@@ -46,17 +46,7 @@ class StockShow extends Component
         $this->resetPage();
     }
 
-    //ELIMINAR UN STOCK
-    public function remove_stock($id)
-    {
-       
-        $this->stocck=Stock::find($id);
-        $this->stocck->delete();
-        $this->banner('Stock Eliminado correctamente');
-        $this->emit('StockReload');
-
-    }
-
+   
     public function render()
     {
         return view('livewire.admin.show.stock-show',[
