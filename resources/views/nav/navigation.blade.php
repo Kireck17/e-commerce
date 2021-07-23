@@ -85,7 +85,8 @@
                                 Almacenes
                             </x-nav-links.admindropdowns>
                             
-                            <x-nav-links.admindropdowns href="" 
+                            <x-nav-links.admindropdowns href="{{route('admin.showproduct')}}" 
+                            :active="request()->routeIs('admin.showproduct')"
                             >
                                 Productos
                             </x-nav-links.admindropdowns>
