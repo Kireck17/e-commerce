@@ -22,11 +22,12 @@ use App\Http\Livewire\Admin\show\ProviderShow;
 use App\Http\Livewire\Admin\show\ShowProducts;
 use App\Http\Livewire\Admin\show\ShowSubCategory;
 use App\Http\Livewire\Admin\show\update\UpdateProduct;
-
 use App\Http\Livewire\Admin\show\ShowTrademark;
 use App\Http\Livewire\Admin\show\CategoryShow;
-
 use App\Http\Livewire\Admin\show\ShowOrigin;
+//user,permis
+use App\Http\Livewire\Admin\User\UserCreate;
+use App\Http\Livewire\Admin\User\UserShow;
 
 Route::get('/', Showlobby::class)->name('lobby');
 
@@ -97,6 +98,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
             )->name('showproduct');
 
             Route::get('/{product_id}/updateproduct',UpdateProduct::class)->name('updateproduct');
+
+            Route::get('/insertuser',UserCreate::class
+            )->name('insertuser');
+
+            Route::get('/showuser',UserShow::class
+            )->name('showuser');
         });
     });
 });
