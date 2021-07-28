@@ -43,7 +43,10 @@
                                     <div class="flex justify-center item-center space-x-3">
                                         {{--llamado del componente de editar marca--}}
                                         <livewire:admin.edit.trademark :trademark="$mark" :wire:key="'edit-'.$mark->id"/>
+
                                         <livewire:admin.delete.trademarks :trademark="$mark" :wire:key="'delete-'.$mark->id"/>
+                                        
+                                        
                                     </div>
                                 </td>
                             </tr>

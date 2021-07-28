@@ -3,7 +3,7 @@
     wire:click="open_modal()">
         <i class="fas fa-trash-alt"></i>
     </div>
-    {{--Ventana Modal de marca--}}
+    {{--Start The Modal--}}
     <x-modal.confirmation wire:model="is_show">
 		<x-slot name="title">  
         </x-slot>
@@ -13,7 +13,7 @@
             </div>
             <div class="flex flex-col items-center justify-center">
                 <h1 class="p-4 text-lg font-bold">
-                    ¿DESEA ELIMINAR LA  MARCA {{$this->trademark->name}}?
+                    ¿DESEA ELIMINAR LA  PRODUCTO {{$this->product->name}}?
                 </h1>
             </div>
 		</x-slot>
@@ -26,5 +26,5 @@
             </x-buttons.red>
 	    </x-slot>
 	</x-modal.confirmation>
-    {{--Fin de la ventana modal--}}
+    {{--END the Modal--}}
 </div>

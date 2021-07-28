@@ -6,9 +6,7 @@
             </x-slot>
             @if($origins->count())
                 <x-slot name="upload">
-                    <x-buttons.cian>
-                        {{__('Carga masiva . . .')}}
-                    </x-buttons.cian>
+                    <livewire:admin.upload.providers/>
                 </x-slot>
                 <x-slot name="content">
                     <x-containers.formbody>

@@ -92,7 +92,7 @@ class Stocks extends Component
             }
             foreach ($contents as $row)
             {
-                $stock= new Stock();
+                $stock= [];
                 $provider = Provider::where('name',$row[2])->get();
                 $warehouse = WareHouse::where('name',$row[3])->get();
                 $variation = Variation::find($row[1]);
@@ -126,6 +126,18 @@ class Stocks extends Component
                     $stock->price= $row[5];
                     $variation->stock()->save($stock);
                 }
+                else
+                {
+                    $variation= new Variation();
+                    $variation->save();
+                }
+
+                $stock['provider_id']= $provider;
+                $stock['warehouse_id']= $warehouse;
+                $stock['quantity']= $row[4];
+                $stock['price']= $row[5];
+                $variationable= Variation::find($variation);
+                $variationable->stock()->save(new Stock($stock));
 
                 
                 

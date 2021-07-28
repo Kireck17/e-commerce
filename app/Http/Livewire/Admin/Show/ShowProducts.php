@@ -13,44 +13,26 @@ class ShowProducts extends Component
     use WithPagination;
 
     public $search;
-    public $description_show;
-    public $caracteristics;
-    public $product;
-    public $variation;
+    public $show;
+    public $identifier;
     public $porpagina=5;
+    public $description;
 
-    protected $rules = [
-        'product.description' => "required",
-        'product.name' => "required"
-    ];
 
     public function mount()
     {
         $this->search = "";
-        $this->description_show = false;
-        $this->caracteristics = false;
+        $this->show = false;
         $this->product = [];
+        $this->description= "";
     }
 
-    public function description($id)
+    public function variation($id)
     {
 
-        $this->description_show = true;
-        $this->product = Product::find($id);
-    }
-    public function variation($name)
-    {
-
-        $this->caracteristics = true;
-        $this->variation = $name;
-    }
-    public function cancel($active = 0)
-    {
-        if ($active != 0) {
-            $this->description_show = false;
-        } else {
-            $this->caracteristics = false;
-        }
+        $this->show = true;
+        $this->identifier = $id;
+        $this->description = Product::where('id',$this->identifier)->get();
     }
 
     //ELIMINAR UN PRODUCT
@@ -66,10 +48,14 @@ class ShowProducts extends Component
     public function render()
     {
         return view('livewire.admin.show.show-products', [
-            'products' => Product::where('name', 'LIKE', "%{$this->search}%")->orderBy('name', 'ASC')->paginate($this->porpagina),
+            'products' => Product::where('name', 'LIKE', "%{$this->search}%")
+                ->orderBy('name', 'ASC')
+                ->paginate($this->porpagina),
+
             'variaciones' => Variation::whereHas('product',function(Builder $query){
-                $query->where('id',$this->variation);
+                $query->where('id',$this->identifier);
             })->get(),
+
         ])->layout("layouts.admin");
     }
 }

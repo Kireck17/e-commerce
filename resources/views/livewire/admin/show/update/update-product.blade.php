@@ -10,157 +10,18 @@
                         :class="{
                             'border-b-2 border-turquoise-dark text-turquoise-dark': active === key,
                             'border-b-2 border-gray-400 text-gray-400': active != key,
-                        }">
-                            <span x-text="tb" @click="active = key"></span>
+                        }" @click="active = key">
+                            <span x-text="tb"></span>
                         </div>
                         {{--END Navigation menu title--}}
                     </template>
                 </div>
                 {{--Containers forms--}}
                 <div x-show="active ===  0">
-                    {{--Form Product--}}
-                    <x-containers.secondary>
-                        {{--Start of the Form--}}
-                        <x-containers.form>
-                            {{--Header--}}
-                            <x-slot name="title">
-                                {{ __('Editando producto') }}
-                            </x-slot>
-                            {{--Form--}}
-                            <x-slot name="content">
-                                {{--Name--}}
-                                <x-containers.formbody>
-                                    <x-slot name="label">
-                                        {{ __('Nombre') }}
-                                    </x-slot>
-                                    <x-slot name="input">
-                                        <x-component.input wire:model="product.name" class="w-full"/>
-                                    </x-slot>
-                                </x-containers.formbody>
-                                {{--Barcode--}}
-                                <x-containers.formbody :bg="true">
-                                    <x-slot name="label">
-                                        {{ __('Codigo de barras') }}
-                                    </x-slot>
-                                    <x-slot name="input">
-                                        <x-component.input type="number" min="0" wire:model.number="product.barcode" class="w-full"/>
-                                    </x-slot>
-                                </x-containers.formbody>
-                                {{--Trademarks--}}
-                                <x-containers.formbody>
-                                    <x-slot name="label">
-                                        {{ __('Marcas') }}
-                                    </x-slot>
-                                    <x-slot name="input">
-                                        <x-component.select wire:model="product.trademark_id" class="w-full">
-                                            <x-slot name="default">
-                                                {{__('--Selecciona--')}}  
-                                            </x-slot>
-                                            @foreach($trademarks as $trademark)
-                                                <option value="{{$trademark->id}}">{{$trademark->name}}</option>
-                                            @endforeach
-                                        </x-component.select>
-                                    </x-slot>
-                                </x-containers.formbody>
-                                {{--Category--}}
-                                <x-containers.formbody :bg="true">
-                                    <x-slot name="label">
-                                        {{ __('Categoría') }}
-                                    </x-slot>
-                                    <x-slot name="input">
-                                        <x-component.select wire:model="product.category_id" class="w-full">
-                                            <x-slot name="default">
-                                                {{__('--Selecciona--')}}  
-                                            </x-slot>
-                                            @foreach($categories as $category)
-                                                <option value="{{$category->id}}">{{$category->name}}</option>
-                                            @endforeach
-                                        </x-component.select>
-                                    </x-slot>
-                                </x-containers.formbody>
-                                {{--Sub Category--}}
-                                <x-containers.formbody>
-                                    <x-slot name="label">
-                                        {{ __('Sub Categoría') }}
-                                    </x-slot>
-                                    <x-slot name="input">
-                                        <x-component.select wire:model="product.subcategory_id" class="w-full">
-                                            <x-slot name="default">
-                                                {{__('--Selecciona--')}}  
-                                            </x-slot>
-                                            @foreach($subcategories as $subcategory)
-                                                <option value="{{$subcategory->id}}">{{$subcategory->name}}</option>
-                                            @endforeach
-                                        </x-component.select>
-                                    </x-slot>
-                                </x-containers.formbody>
-                                {{--Description--}}
-                                <x-containers.formbody :bg="true">
-                                    <x-slot name="label">
-                                        {{ __('Descripción') }}
-                                    </x-slot>
-                                    <x-slot name="input">
-                                        <x-component.inputarea wire:model="product.description" rows="10" cols="10"></x-component.inputarea>
-                                    </x-slot>
-                                </x-containers.formbody> 
-                            </x-slot>
-                            {{--Footer--}}
-                            <x-slot name="save">
-                                <div class="justify-between">
-                                    <x-buttons.cian wire:click="save()" class="bg-blue-500">
-                                        {{__('Guardar')}}
-                                    </x-buttons.cian>
-                                    <x-buttons.red wire:click="cancel()">
-                                        <i class="far fa-window-close"></i>
-                                    </x-buttons.red>
-                                </div>
-                            </x-slot>
-                        </x-containers.form>
-                    </x-containers.secondary>
-                    {{--End of the Form--}}
+                    <livewire:admin.show.update.product :product="$this->product" />
                 </div>
                 <div x-show="active === 1">
-                    {{--Form Variation--}}
-                    <x-containers.secondary>
-                        <x-containers.form>
-                            {{--Header--}}
-                            <x-slot name="title">
-                                {{ __('Características') }}
-                            </x-slot>
-                            {{--Form--}}
-                            <x-slot name="content">
-                                <div class="fixed bottom-0 right-0">
-                                    <x-buttons.turquoise class="my-3 mx-2" wire:click="add_variation()">
-                                        {{__('Agregar variacion')}}
-                                    </x-buttons.turquoise>
-                                </div>
-                                <div class="space-y-4">
-                                    @foreach($this->variations as $key => $variation)
-                                        <div class="bg-gray-200 py-3 px-2">
-                                            <div class="flex justify-between items-center border-b border-white">
-                                                <h2 class="mt-3 text-sm uppercase font-bold leading-4 tracking-widest">
-                                                    {{__('Variación')." ".$variation->id}}
-                                                </h2>
-                                                <x-buttons.red class="my-3 mx-2" wire:click="remove_variation({{$variation->id}})">
-                                                {{__('Quitar variacion')}}
-                                                </x-buttons.red>
-                                            </div>
-                                            <livewire:admin.show.update.variations :variation="$variation" :wire:key="$variation->id"/>
-                                        </div>
-                                    @endforeach
-                                </div>    
-                            </x-slot>
-                            {{--Footer--}}
-                            <x-slot name="save">
-                                <div class="justify-between">
-                                    <x-buttons.red wire:click="cancel()">
-                                        <i class="far fa-window-close"></i>
-                                    </x-buttons.red>
-                                </div>
-                            </x-slot>
-                        </x-containers.form>
-                    </x-containers.secondary>
-                    {{--End of the Form--}}
+                    <livewire:admin.show.update.variation :product="$this->product" />
                 </div>
                 <div x-show="active === 2">
                     {{--Form Image--}}
@@ -191,7 +52,11 @@
                 {{--END Containers forms--}}
             </div>
             {{--END Container father--}}
+            <div class="flex justify-center items-center py-6">
+                <x-buttons.default wire:click="cancel()">
+                    {{__('Cancelar')}}
+                </x-buttons.default>
+            </div>
         </x-containers.secondary>
     </x-containers.main>
-    
 </div>
