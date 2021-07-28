@@ -41,7 +41,7 @@
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">
-                                    <div class="flex item-center justify-center">
+                                    <div class="flex item-center justify-center cursor-pointer">
                                                     
                                     {{--llamado del componente de editar Origen--}}
                                         <livewire:admin.edit.origen :origenn="$ori" :wire:key="'edit-'.$ori->id"/>

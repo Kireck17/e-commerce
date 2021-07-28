@@ -46,7 +46,7 @@
                                             @else
                                                 src="{{asset('storage/images/producto-sin-imagen.png')}}"
                                             @endif
-                                            
+
                                         />
                                         <span class="font-medium">
                                             {{ $product->name }}
@@ -61,12 +61,16 @@
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">
-                                    <div class="flex item-center justify-center">
+                                    <div class="flex item-center justify-center cursor-pointer">
                                         {{--llamando a las modeles de detalles del producto--}}
                                         <div class="text-purple-500 w-4 mr-3 transform hover:text-purple-900 hover:scale-110"
                                         wire:click="variation({{$product->id}})">
-                                            <i class="fas fa-scroll"></i>                                  
+                                            <i class="fas fa-scroll"></i>
                                         </div>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-6 text-center">
+                                    <div class="flex item-center justify-center cursor-pointer">
                                         {{--llamando a la ruta de edicion del producto y la funcion de eliminar--}}
                                         <div class="text-blue-500 w-4 mr-2 transform hover:text-blue-900 hover:scale-110">  
                                             <a href="{{route('admin.updateproduct',['product_id' => $product->id])}}">
@@ -101,7 +105,7 @@
         <x-slot name="title">
             <div class="py-2 uppercase bg-cian-light rounded-sm"">
                 Caracteristicas del Producto
-            </div> 
+            </div>
         </x-slot>
         <x-slot name="content">
             <div class="divide-x-0">

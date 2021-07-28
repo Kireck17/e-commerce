@@ -33,22 +33,18 @@ class ProviderShow extends Component
         $this->va=Variation::all();
     }
 
-    public function updateSearch()
+    public function updatedSearch()
+    {
+        $this->resetPage();
+    }
+    
+    public function updatedPorpagina()
     {
         $this->resetPage();
     }
 
 
-    //ELIMINAR UN PROVIDER
-    public function remove_provider($id)
-    {
-       
-        $this->provi=Provider::find($id);
-        $this->provi->delete();
-        $this->banner('Provider Eliminado correctamente');
-        $this->emit('StockReload');
 
-    }
 
     public function render()
     {

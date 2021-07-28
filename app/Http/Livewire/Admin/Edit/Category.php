@@ -47,6 +47,7 @@ class Category extends Component
 	{
 		$this->is_show=false;
 	}
+    
     public function render()
     {
         return view('livewire.admin.edit.category');

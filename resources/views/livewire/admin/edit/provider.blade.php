@@ -27,16 +27,16 @@
 
                 </div>
 
-                <div class="bg-gray-50 text-sm font-medium text-gray-500 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
+                <div class="bg-gray-50 text-sm font-medium text-black px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm text-black font-medium text-gray-500">
                         <x-adminver.label for="auts">
                             Origen:
                         </x-adminver.label>
                     </dt>
                         
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">
                         <select class="border border-gray-400 rounded-md w-full focus:outline-none px-3 
-                        focus:border-blue-700 text-base text-gray-400" wire:model="providder.origin_id" >
+                        focus:border-blue-700 text-base text-black" wire:model="providder.origin_id" >
                         <option value="">Seleccionar..</option>
                         @foreach($this->orig as $aut)
                         <option value="{{$aut->id}}">{{$aut->country}}</option>
