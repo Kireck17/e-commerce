@@ -131,20 +131,13 @@ class Stocks extends Component
                     $variation= new Variation();
                     $variation->save();
                 }
+                $stock->provider_id= $provider;
+                $stock->warehouse_id= $warehouse;
+                $stock->quantity= $row[4];
+                $stock->price= $row[5];
 
-                $stock['provider_id']= $provider;
-                $stock['warehouse_id']= $warehouse;
-                $stock['quantity']= $row[4];
-                $stock['price']= $row[5];
                 $variationable= Variation::find($variation);
-                $variationable->stock()->save(new Stock($stock));
-
-                
-                
-                
-                
-                
-
+                $variationable->stock()->save($stock);
             }
         }
         Storage::disk('public')->delete($save);

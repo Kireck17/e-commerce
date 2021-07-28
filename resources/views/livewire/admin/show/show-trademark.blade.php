@@ -40,7 +40,7 @@
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">
-                                    <div class="flex justify-center item-center space-x-3">
+                                    <div class="flex justify-center item-center space-x-3 cursor-pointer">
                                         {{--llamado del componente de editar marca--}}
                                         <livewire:admin.edit.trademark :trademark="$mark" :wire:key="'edit-'.$mark->id"/>
 

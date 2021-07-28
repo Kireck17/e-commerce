@@ -74,8 +74,8 @@
                     Ver mas
                 </a>
             </div>
-            <div class="px-3 md:px-0 py-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10">
-                <x-design.card-offer >
+            <div class="px-0 sm:px-4 py-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                <x-cards.card-offer >
                     <x-slot name="image">
                         imagen
                     </x-slot>
@@ -88,8 +88,8 @@
                     <x-slot name="price">
                         $98.00
                     </x-slot>
-                </x-design.card-offer>
-                <x-design.card-offer >
+                </x-cards.card-offer>
+                <x-cards.card-offer >
                     <x-slot name="image">
                         imagen
                     </x-slot>
@@ -102,8 +102,8 @@
                     <x-slot name="price">
                         $98.00
                     </x-slot>
-                </x-design.card-offer>
-                <x-design.card-offer >
+                </x-cards.card-offer>
+                <x-cards.card-offer >
                     <x-slot name="image">
                         imagen
                     </x-slot>
@@ -116,8 +116,8 @@
                     <x-slot name="price">
                         $98.00
                     </x-slot>
-                </x-design.card-offer>
-                <x-design.card-offer >
+                </x-cards.card-offer>
+                <x-cards.card-offer >
                     <x-slot name="image">
                         imagen
                     </x-slot>
@@ -130,21 +130,38 @@
                     <x-slot name="price">
                         $98.00
                     </x-slot>
-                </x-design.card-offer>
+                </x-cards.card-offer>
+                <x-cards.card-offer >
+                    <x-slot name="image">
+                        imagen
+                    </x-slot>
+                    <x-slot name="trademark">
+                        Sax Shields
+                    </x-slot>
+                    <x-slot name="name">
+                        Kit de Snaker Shields 2 Pares (4 piezas) Escoge tus colores
+                    </x-slot>
+                    <x-slot name="price">
+                        $98.00
+                    </x-slot>
+                </x-cards.card-offer>
+
+                
             </div>
         </x-containers.secondary>
+
         {{--popular--}}
         <x-containers.secondary>
             <div>
                 <span class="text-black font-bold text-center text-4xl">
-                    Artículos Más Comprados
+                Artículos Más Comprados
                 </span>
                 <a href="/best" class="text-blue-500 font-extrabold underline text-center text-base hover:text-yellow-500">
                     Ver mas
                 </a>
             </div>
-            <div class="px-3 md:px-0 py-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10">
-                <x-design.card-default >
+            <div class="px-0 sm:px-4 py-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                <x-cards.card-default >
                     <x-slot name="image">
                         imagen
                     </x-slot>
@@ -157,8 +174,8 @@
                     <x-slot name="price">
                         $98.00
                     </x-slot>
-                </x-design.card-default>
-                <x-design.card-default >
+                </x-cards.card-default >
+                <x-cards.card-default >
                     <x-slot name="image">
                         imagen
                     </x-slot>
@@ -171,8 +188,8 @@
                     <x-slot name="price">
                         $98.00
                     </x-slot>
-                </x-design.card-default>
-                <x-design.card-default >
+                </x-cards.card-default >
+                <x-cards.card-default >
                     <x-slot name="image">
                         imagen
                     </x-slot>
@@ -185,8 +202,8 @@
                     <x-slot name="price">
                         $98.00
                     </x-slot>
-                </x-design.card-default>
-                <x-design.card-default >
+                </x-cards.card-default >
+                <x-cards.card-default >
                     <x-slot name="image">
                         imagen
                     </x-slot>
@@ -199,7 +216,22 @@
                     <x-slot name="price">
                         $98.00
                     </x-slot>
-                </x-design.card-default>
+                </x-cards.card-default >
+                <x-cards.card-default >
+                    <x-slot name="image">
+                        imagen
+                    </x-slot>
+                    <x-slot name="trademark">
+                        Sax Shields
+                    </x-slot>
+                    <x-slot name="name">
+                        Kit de Snaker Shields 2 Pares (4 piezas) Escoge tus colores
+                    </x-slot>
+                    <x-slot name="price">
+                        $98.00
+                    </x-slot>
+                </x-cards.card-default >
+                
             </div>
         </x-containers.secondary>
     </x-containers.main>

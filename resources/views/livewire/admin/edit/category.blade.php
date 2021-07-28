@@ -48,7 +48,7 @@
 		</x-slot>
 
         <x-slot name="footer">
-            <x-buttons.red @Click="show = !show">
+            <x-buttons.red @click="cancelar()">
                 {{__('Cancelar')}}
             </x-buttons.red>
             <x-buttons.cian wire:click="save_changes()">

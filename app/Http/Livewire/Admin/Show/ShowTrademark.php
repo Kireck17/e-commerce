@@ -22,6 +22,7 @@ class ShowTrademark extends Component
     {
         $this->search="";
     }
+    
     public function updatedSearch()
     {
         $this->resetPage();
