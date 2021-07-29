@@ -1,7 +1,10 @@
 <div>
-    <div class="text-purple-500 w-4 mr-3 transform hover:text-purple-900 hover:scale-110"
-    wire:click="variation({{$product->id}})">
-        <i class="fas fa-scroll"></i>                                  
+    <div class="flex item-center justify-center cursor-pointer">
+        {{--llamando a las modeles de detalles del producto--}}
+        <div class="text-purple-500 w-4 mr-3 transform hover:text-purple-900 hover:scale-110"
+        wire:click="variation({{$this->product->id}})">
+            <i class="fas fa-scroll"></i>
+        </div>
     </div>
     <!-- Modal caracteristicas -->
     <x-jet-dialog-modal wire:model="show">
@@ -62,11 +65,11 @@
                                 </tr>
                             @endforeach
                         @else
-                        <div class="lg:col-span-5 sm:col-span-4 col-span-1 text-center">
-                            <span class="ml-6 text-transparent text-gray-400 text-4xl font-extrabold">
-                                Sin resultados de variaciones
-                            </span>
-                        </div>
+                            <div class="lg:col-span-5 sm:col-span-4 col-span-1 text-center">
+                                <span class="ml-6 text-transparent text-gray-400 text-4xl font-extrabold">
+                                    Sin resultados de variaciones
+                                </span>
+                            </div>
                         @endif
                     </tbody>
                     {{-- Fin del cuerpo de la tabla --}}
@@ -81,7 +84,7 @@
                     </div>
                     {{--Content Description--}}
                     <p class="bg-gray-200 my-2 rounded-sm">
-                        @if($this->description != "")
+                        @if(isset($this->description))
                             {{__(
                                 $this->description->first()->description
                             )}}

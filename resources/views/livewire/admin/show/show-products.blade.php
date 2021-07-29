@@ -62,15 +62,9 @@
                                 </td>
                                 <td class="py-3 px-6 text-center">
                                     <div class="flex item-center justify-center cursor-pointer">
-                                        {{--llamando a las modeles de detalles del producto--}}
-                                        <div class="text-purple-500 w-4 mr-3 transform hover:text-purple-900 hover:scale-110"
-                                        wire:click="variation({{$product->id}})">
-                                            <i class="fas fa-scroll"></i>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="py-3 px-6 text-center">
-                                    <div class="flex item-center justify-center cursor-pointer">
+
+                                        <livewire:admin.show.variation :product="$product" :wire:key="'modal-'.$product->id"/>
+
                                         {{--llamando a la ruta de edicion del producto y la funcion de eliminar--}}
                                         <div class="text-blue-500 w-4 mr-2 transform hover:text-blue-900 hover:scale-110">  
                                             <a href="{{route('admin.updateproduct',['product_id' => $product->id])}}">
