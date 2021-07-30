@@ -52,7 +52,11 @@
                             {{$producto->name}}
                         </x-slot>
                         <x-slot name="price">
-                            $ {{$producto->variation()->first()->stock()->first()->price}}
+                            @if(isset($producto->variation()->first()->stock()->first()->price))
+                                $ {{$producto->variation()->first()->stock()->first()->price}}
+                            @else
+                                {{__('PROXIMAMENTE')}}
+                            @endif
                         </x-slot>
                     </x-cards.three>
                 @empty
