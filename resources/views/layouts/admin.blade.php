@@ -56,14 +56,16 @@
                                         </span>
                                     </div>
                                 </div>
-                                <a href="#" class="flex justify-center py-3 items-center  text-gray-700 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline">
-                                    <span class="text-gray-600">
-                                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                                        </svg>
-                                    </span>
-                                    <span>Logout</span>
-                                </a>
+                                <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <x-nav-links.responsive href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                    <i class="fas fa-sign-out-alt mr-2"></i>
+                                    {{ __('Log Out') }}
+                                </x-nav-links.responsive>
+                                </form>
                             
                           </x-slot>   
 
@@ -97,8 +99,10 @@
                 @endif
                 <!-- Page Content-->
                 <main>
-                    <x-banners.toast />
-                    {{ $slot }}
+                    <x-containers.main>
+                        <x-banners.toast />
+                        {{ $slot }}
+                    </x-containers.main>
                 </main>
             </div>
         </div>

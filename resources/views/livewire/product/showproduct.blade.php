@@ -14,7 +14,13 @@
                 <div class="flex flex-col items-center w-full lg:flex-row lg:w-1/2">
                     <div class="max-w-lg lg:mx-12 lg:order-2 space-y-2">
                         <h2 class="text-3xl font-medium tracking-wide text-gray-800 dark:text-white lg:text-3xl">{{__($product->name)}}</h2>
-                        <h1 class="text-3xl font-medium tracking-wide text-gray-800 dark:text-white lg:text-4xl">${{__($product->variation()->first()->stock()->first()->price)}}</h1>
+                        @if(isset($product->variation()->first()->stock()->first()->price))
+                            <h1 class="text-3xl font-medium tracking-wide text-gray-800 dark:text-white lg:text-4xl">
+                                ${{$product->variation()->first()->stock()->first()->price}}
+                            </h1>
+                        @else
+                            {{__('Proximamente')}}
+                        @endif
                         <p class="mt-4 text-gray-600 dark:text-gray-300">{{__($product->description)}}</p>
                         <!--Variations-->
                         <div>
@@ -108,7 +114,7 @@
                             {{$product->name}}
                         </x-slot>
                         <x-slot name="price">
-                            $ {{$product->variation()->first()->stock()->first()->price}}
+                            $ 000
                         </x-slot>
                     </x-cards.three>
                 @endforeach

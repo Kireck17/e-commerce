@@ -235,7 +235,326 @@ class ProductSeeder extends Seeder
          grandes resultados.";
         $product -> save();
 
+//16
+        //Mujeres
+        $product = new Product();
+        $product -> barcode = 398587;
+        $product -> name = 'Conjunto Pants Para Dama Barcelona';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 7;
+        $product -> trademark_id = 7;
+        $product -> description = "Las tallas vienen dobles , es importante mencionar que la tela cuenta con strech.
+        • CH/M : ESTA TALLA LE QUEDA A UNA 30, 32
+        • G/XG: ESTA TALLA LE QUEDA A UNA 34, 36
+        ES IMPORTANTE MENCIONAR QUE LA TALLA G/XG AUNQUE CUENTE CON STRECH DIFICILMENTE DARA UNA TALLA MAS ¡¡¡¡ 
+        TE SUGERIMOS ADQUIRIR LA TALLA QUE REGULARMENTE USAS ¡¡";
+        $product -> save();
+        
+        //17
+        $product = new Product();
+        $product -> barcode = 937463;
+        $product -> name = 'Playera Crop Top Deportivo Girl Power Ropa Mujer Deportiva';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 8;
+        $product -> trademark_id = 8;
+        $product -> description = "Crop Top camiseta femenina de algodón sólido cuello redondo de manga corta
+        Camisetas para mujeres USO cintura alta Slim Short Sport Blanc Femme camiset.
+        EFECTO SUELTO
+        Luce chic y presume tu ombligo O SUBE TU PANTS A LA CINTURA para lucir sencillamente genial con este 
+        lindo crop top. Es ideal para llevar con tus pants, leggings, jeans, shorts y minifaldas.
+        Este lindo crop top se ha destacado como una prenda que puede usarse en cualquier ocasión casual. 
+        Tiene un diseño corto con manga corta para que lo combines con una variedad de prendas que lucen
+        maravillosas.
+        ---El paquete Contiene:
+        1x Blusa.---ATRÉVETE A LUCIRLO!!!
+        TELA LIGERA !
+        100% ALGODÓN Super suave, NO tieso, ni áspero , hermosa sensación en la piel
+        camiseta corta TIPO premium excelente calidad y diseño en ALTA COSTURA...
+        Disponible en talla XS, S, M, L, XL ";
+        $product -> save();
 
+        //18
+        $product = new Product();
+        $product -> barcode = 294754;
+        $product -> name = 'Leggins Mujer , Licra Colombiana Deportivos Ejercicio Moda';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 9;
+        $product -> trademark_id = 9;
+        $product -> description = "Leggins licra colombiana de Dama deportivos , casual , Gym , correr , yoga.
+        5 increíbles colores de calidad
+        -Alta Calidad
+        -Cintura Alta que le da forma a tu Cuerpo
+        -Super Calidad y Ajuste
+        -Licra Resistentes, No Transparenta
+        -Elasticos (Con Spandex para mejor ajuste y movimientos)
+        -Licra y estilo colombiano
+        -Levanta pompa
+        -Sexy
+        -ayuda molestias de celulitis
+        -Tallas S, M, L";
+        $product -> save();
+
+        //19
+        $product = new Product();
+        $product -> barcode = 304858;
+        $product -> name = 'Blusa Ropa Dama Mujer Precio Mayoreo Palassi Moda';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 10;
+        $product -> trademark_id = 10;
+        $product -> description = "
+        -Alta Calidad
+        -Super Calidad y Ajuste";
+        $product -> save();
+
+        //20
+        $product = new Product();
+        $product -> barcode = 837649;
+        $product -> name = 'Sudadera Tie Dye Chamarras Mujer Blusas Dama Ropa Mujer';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 1;
+        $product -> trademark_id = 8;
+        $product -> description = "CHICA: Busto 115 a 120 cm, Manga 49 cm, Largo 65 cm
+        MEDIANA: Busto 120 a 125 cm, Manga 50 cm, Largo 66 cm
+        GRANDE: Busto 125 a 130 cm, Manga 51 cm, Largo 67 cm";
+        $product -> save();
+
+        //21
+        $product = new Product();
+        $product -> barcode = 4098641;
+        $product -> name = 'Pantufla Glam Shoes';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 11;
+        $product -> trademark_id = 11;
+        $product -> description = "Hermosa pantufla sandalia de moda con los mejores materiales mejor
+        calidad y el mejor surtido en colores, somos fabricantes";
+        $product -> save();
+
+        //22
+        $product = new Product();
+        $product -> barcode = 6395023;
+        $product -> name = 'Conjunto Pants Para Dama Arsenal';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 9;
+        $product -> trademark_id = 7;
+        $product -> description = "TALLAS
+        Las tallas vienen dobles , es importante mencionar que la tela cuenta con strech.
+        • CH/M : ESTA TALLA LE QUEDA A UNA 30, 32
+        • G/XG: ESTA TALLA LE QUEDA A UNA 34, 36
+        ES IMPORTANTE MENCIONAR QUE LA TALLA G/XG AUNQUE CUENTE CON STRECH DIFICILMENTE DARA UNA TALLA MAS ¡¡¡¡ 
+        TE SUGERIMOS ADQUIRIR LA TALLA QUE REGULARMENTE USAS ¡¡
+        MATERIALES
+        • Tela French Terry
+        95% Polyester
+        5% Elastano";
+        $product -> save();
+
+        //23
+        $product = new Product();
+        $product -> barcode = 21203945;
+        $product -> name = 'Pantalon Pants Dama Stretch Sin Felpa Jogger Gym Majo Moda';
+        $product -> category_id = 6;
+        $product -> subcategory_id = 9;
+        $product -> trademark_id = 10;
+        $product -> description = "Pantalon tipo jogger de dama.
+        -Garantía: La garantía es de 15 días en su empaque original.
+        -Corte a la cintura, super comodo para todo tipo de cuerpos.
+        -Ajustable, con elastico en la cintura y jaretas para el perfecto ajuste.
+        -Ligeros sin felpa pero muy confortables al estar hechos con algodón, sirven para hacer ejercicio o estar simplente comodas.
+        -Hechos en México.
+        -Excelente calidad.
+        -Disponible de la talla XCH, M, y G , consulte guía de tallas.";
+        $product -> save();
+
+//productos hombres
+        //24
+        $product = new Product();
+        $product -> barcode = 679320987;
+        $product -> name = 'Playera tipo Polo Blanca';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 8;
+        $product -> trademark_id = 12;
+        $product -> description = "Playera casual tipo polo, presenta una suave confección de algodón y 
+        poliéster, beneficiando tu día de forma estupenda. ¡Adquiere la tuya!";
+        $product -> save();
+
+        //25
+        $product = new Product();
+        $product -> barcode = 455938402;
+        $product -> name = 'Playera tipo Polo Negra';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 8;
+        $product -> trademark_id = 13;
+        $product -> description = "Se trata de una prenda tipo polo, confeccionada con materiales 
+        duraderos, en negro: es de manga corta con franjas en tonos gris y amarillo que resaltan y 
+        lo más imporntante en la parte de enfrente trae el logo de tu equipo favorito.";
+        $product -> save();
+
+        //26
+        $product = new Product();
+        $product -> barcode = 430297284;
+        $product -> name = 'Playera tipo Polo Azul Marino';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 8;
+        $product -> trademark_id = 13;
+        $product -> description = "Es una prenda básica en azul marino, con cuello tipo polo acompañado de 
+        botones de ajuste; es de manga corta con líneas gruesas en gris y rojo, lo que le da un toque especial.
+        En la parte de enfrente tiene el nombre del equipo y en una manga el logo de la marca.";
+        $product -> save();
+
+        //27
+        $product = new Product();
+        $product -> barcode = 224695543;
+        $product -> name = 'Pantalón casual';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 12;
+        $product -> trademark_id = 14;
+        $product -> description = "Jeans Contempo de caballero tela premium corte slim cintura media";
+        $product -> save();
+
+        //28
+        $product = new Product();
+        $product -> barcode = 11093853;
+        $product -> name = 'Jeans Silver';
+        $product -> category_id = 7;
+        $product -> subcategory_id = 12;
+        $product -> trademark_id = 15;
+        $product -> description = "Jeans Silver Plate corte skinny con bolsillos para caballero";
+        $product -> save();
+
+//productos de autos
+        //29
+        $product = new Product();
+        $product -> barcode = 20485855;
+        $product -> name = 'Vagcom 20.12 Version Mas Actual Y Completa Vw Audi Seat Vcds';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 16;
+        $product -> description = "CABLE VAGCOM 20.12 COMPLETO EN INGLÉS Y ESPAÑOL VERSION 20.4.2
+        CALIDAD PREMIUM
+        ES LA VERSION MÁS RECIENTE PARA MODELOS 2021
+        Compatible con los últimos Motores FSI TDI TFSI TSI
+        Del grupo VW (Seat, Audi y Volkswagen) fabricados desde 1994 hasta 2020
+        Excepto ibiza A Partir del 2018
+        Con este dispositivo usted podrá realizar funciones a nivel concesionario como:
+        Adaptación, codificación, ajustes Básicos, lectura de fallas y Eliminación de Testigos, reseteo de
+        intervalos de servicio, análisis OBD2, mediciones y gráficas individuales de sensores, pruebas de
+        actuadores.
+        CARACTERISTICAS
+        Este cable Le permite probar actuadores, indicadores y realizar ajustes de Sistema CAN-BUS como:
+        • cuerpo de aceleración
+        • Programación de llaves
+        • Lectura de kilometraje real
+        • Reseteo de intervalos de servicio,
+        • Activar Cámaras
+        • Inmovilizadores.
+        • Control de Tracción.
+        • Sistema de tracción Quattro y 4Motion.
+        • Asistencia de estacionamiento
+        • ABS
+        • Airbags
+        • Bombas Diésel
+        • Cajas Automáticas.
+        • Tableros de Instrumentos
+        • Climatizador Electrónico
+        • Centrales de Confort
+        • Radio
+        • Alarma
+        • Luz de estacionamiento Izquierda y Derecha.
+        • Navegador GPS
+        • Dirección Hidráulica.
+        • Techo Automático y quemacocos.
+        • Sistema de Sonido
+        • Control Eléctrico
+        • Suspensión";
+        $product -> save();
+
+        //30
+        $product = new Product();
+        $product -> barcode = 553943056;
+        $product -> name = 'Carista Scanner Original Obd2 Bluetooth Para Android Y Apple Licencia';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 17;
+        $product -> description = "JESCANER AVANZADO OBD2 BLUETOOTH
+        Cada auto tiene personalizaciones y ajustes diferentes. Esto depende de los módulos disponibles
+        de su vehículo, por lo que lo invitamos a verificar que hace con su vehículo en la página oficial.
+        Revise compatibilidad antes de comprar en la página oficial no hay cambios o no aceptamos reclamos
+        por no funcionar en su auto.
+        Al seleccionar su auto viene todo lo que puede hacer incluso una lista de ejemplos de 
+        personalización.
+        Carista le ofrece todo esto por una mínima parte de lo que le costaría una visita al concesionario.
+        Carista es compatible con numerosos modelos de Volkswagen, Audi, BMW, Lexus, Mini, Scion, Toyota,
+        SEAT y Skoda.
+        Hágase con el adaptador Carista OBD2 y obtendrá:
+        —1 mes de prueba con opciones de compra en la app.
+        —Compatibilidad con gran cantidad de aplicaciones asociadas
+        como Engie, Torque Pro, DashCommand, OBD Fussion, OBD Car Doctor entre otras.
+        —Compatibilidad con sistemas iOS y Android.
+        Las opciones avanzadas solo son compatibles con algunos modelos de Volkswagen, Audi, BMW, Lexus,
+        Mini, Scion, Toyota, SEAT y Skoda.
+        Asegúrese de que su vehículo es compatible con el adaptador antes de adquirirlo.
+        —Con la compra del adaptador Carista OBD2 obtendrá 1 mes de prueba de todas las funciones de pago que ofrece la aplicación Carista. Para poder seguir utilizando estas opciones tras el período de prueba deberá adquirir una suscripción.
+        Entre las funcionalidades se encuentran :
+        -Escaneo de autos para códigos de falla.
+        -Activación de diversas funciones como barrido de agujas del tablero, modo verano, leaving home, 
+        coming home, reseteo de testigo de servicio, reseteo de testigos en general, kilómetros por litro, 
+        activar o desactivar el pitido de la alarma y del cinturón de seguridad, activación de cierre y 
+        apertura de puertas, entre otras.";
+        $product -> save();
+
+        //31
+        $product = new Product();
+        $product -> barcode = 1304500573;
+        $product -> name = 'Baba De Monito Original Abrillantador Detallado Automotriz';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 18;
+        $product -> description = "Abrillantador Detallado Automotriz";
+        $product -> save();
+
+        //32
+        $product = new Product();
+        $product -> barcode = 3304855;
+        $product -> name = 'Luz Cortesia Proyector Puertas Mini Cooper Logos Originales';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 19;
+        $product -> description = "COMPATIBLES CON VEHICULOS QUE TENGAN LUCES DE CORTESÍA DEBAJO DE LAS PUERTAS.
+        INCLUYE:
+        •2 Proyectores ( útiles para 2 puertas)
+        •Tecnología LED
+        •Emblema proyectado (Varios modelos)
+        •Fácil Instalación sin adaptaciones
+        • Calidad PREMIUM
+        Sin cortar cables sólo quitas las luces actuales de cortesia de tu vehículo e instalas
+        ****Se entrega en caja";
+        $product -> save();
+
+        //33
+        $product = new Product();
+        $product -> barcode = 6637593;
+        $product -> name = 'Luz De Cortesia Proyector Led Para Puertas Bmw Serie M';
+        $product -> category_id = 8;
+        $product -> subcategory_id = 13;
+        $product -> trademark_id = 19;
+        $product -> description = "Compatibilidad modelos:
+        • 3 series-E90 E91 E92 E93 M3
+        • 5 series-E60 E61 F10 F07 M5
+        • 6 series-E63 E64 F12 F13 M6
+        • 7 series-E65 E66 E67 E68 F01 F02
+        • Z series-E85 E86 E89 Z4
+        • Serie GT-2010-14
+        COMPATIBLES CON VEHICULOS QUE TENGAN LUCES DE CORTESÍA DEBAJO DE LAS PUERTAS.
+        INCLUYE:
+        •2 Proyectores ( útiles para 2 puertas)
+        •Tecnología LED
+        •Emblema proyectado (Varios modelos)
+        •Fácil Instalación sin adaptaciones
+        • Calidad PREMIUM
+        ***Sin cortar cables sólo quitas las luces actuales de cortesia de tu vehículo e instalas
+        ****Se entrega en caja";
+        $product -> save();
+        
 
     }
 }

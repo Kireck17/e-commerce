@@ -15,19 +15,21 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call([
-            TrademarkSeeder::class,
-            CategorySeeder::class,
-            SubcategorySeeder::class,
+            TrademarkSeeder::class, // FORMULARIO
+            CategorySeeder::class, // FORMULARIO
+            SubcategorySeeder::class, // FORMULARIO
             AttributeSeeder::class,
             AttributeValuesSeeder::class,
-            //KitSeeder::class,
-            OriginSeeder::class,
-            WarehouseSeeder::class,
-            ProductSeeder::class,
+            OriginSeeder::class, // FORMULARIO
+            WarehouseSeeder::class, // FORMULARIO
+            ProductSeeder::class, // FORMULARIO
             VariationSeeder::class,
+            ProviderSeeder::class, // FORMULARIO
+            //KitSeeder::class,
             //KitDetailSeeder::class,
             ProviderSeeder::class,
             StockSeeder::class,
+            FileSeeder::class,
         ]);
     }
 }

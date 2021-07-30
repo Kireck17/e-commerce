@@ -13,28 +13,30 @@ class CategoryShow extends Component
     use WithPagination;
     public $search;
     public $catt;
+    public $porpagina=5;
+    
+    protected $listeners=['recargar'=>'render'];
 
     public function mount()
     {
         $this->search="";
         
     }
-
-    //ELIMINAR UN CATEGORY
-    public function remove_category($id)
+    public function updatedSearch()
     {
-       
-        $this->catt=Category::find($id);
-        $this->catt->delete();
-        $this->banner('Category Eliminado correctamente');
-        $this->emit('CategoryReload');
-
+        $this->resetPage();
     }
+    public function updatedPorpagina()
+    {
+        $this->resetPage();
+    }
+
+   
 
     public function render()
     {
         return view('livewire.admin.show.category-show',[
-            'category'=> Category::where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->paginate(10),
+            'category'=> Category::where('name','LIKE',"%{$this->search}%")->orderBy('name','ASC')->paginate($this->porpagina),
         ])
         ->layout("layouts.admin");
     }

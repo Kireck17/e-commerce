@@ -1,16 +1,20 @@
 <div>
     <x-containers.secondary>
+        {{--Start the form--}}
         <x-containers.form>
+            {{--Title--}}
             <x-slot name="title">
                 {{ __('Productos') }}
             </x-slot>
+            {{--Conditions--}}
             @if($trademarks->count() && $categories->count() && $subcategories->count())
+                {{--Upload--}}
                 <x-slot name="upload">
-                    <x-buttons.cian>
-                        {{__('Carga masiva . . .')}}
-                    </x-buttons.cian>
+                    <livewire:admin.upload.products/>
                 </x-slot>
+                {{--Start the content--}}
                 <x-slot name="content">
+                    {{--Name--}}
                     <x-containers.formbody :bg="true">
                         <x-slot name="label">
                             {{ __('Nombre') }}
@@ -20,6 +24,7 @@
                             <x-jet-input-error for="product.name"/>
                         </x-slot>
                     </x-containers.formbody>
+                     {{--Barcode--}}
                     <x-containers.formbody>
                         <x-slot name="label">
                             {{ __('Codigo de barras') }}
@@ -29,6 +34,7 @@
                             <x-jet-input-error for="product.barcode"/>
                         </x-slot>
                     </x-containers.formbody>
+                    {{--Category--}}
                     <x-containers.formbody :bg="true">
                         <x-slot name="label">
                             {{ __('Categoria') }}
@@ -45,6 +51,7 @@
                             <x-jet-input-error for="product.category_id"/>
                         </x-slot>
                     </x-containers.formbody>
+                    {{--Sub Category--}}
                     <x-containers.formbody>
                         <x-slot name="label">
                             {{ __('Sub categoria') }}
@@ -61,6 +68,7 @@
                             <x-jet-input-error for="product.subcategory_id"/>
                         </x-slot>
                     </x-containers.formbody>
+                    {{--Trademark--}}
                     <x-containers.formbody :bg="true">
                         <x-slot name="label">
                             {{ __('Marca') }}
@@ -77,6 +85,7 @@
                             <x-jet-input-error for="product.trademark_id"/>
                         </x-slot>
                     </x-containers.formbody>
+                    {{--Description--}}
                     <x-containers.formbody>
                         <x-slot name="label">
                             {{__('Descripción')}}
@@ -87,6 +96,7 @@
                             <x-jet-input-error for="product.description"/>
                         </x-slot>
                     </x-containers.formbody>
+                    {{--Variations--}}
                     <div class="flex justify-between items-center">
                         <span class="text-black font-bold text-center text-4xl">
                             {{__('Características')}}
@@ -96,6 +106,7 @@
                             {{__('Agregar')}}
                         </x-buttons.turquoise>
                     </div>
+                    {{--Variations add--}}
                     @foreach($this->attributes as $key => $attribute)
                         <x-containers.formbody class="border-t border-gray-300">
                             <x-slot name="label">
@@ -124,6 +135,9 @@
                         </div>
                     @endforeach
                 </x-slot>
+                {{--END the content--}}
+                
+                {{--Save--}}
                 <x-slot name="save">
                     <x-buttons.cian wire:click="saveproduct()">
                         {{__('Guardar')}}
@@ -131,21 +145,23 @@
                 </x-slot>
             @endif
         </x-containers.form>
-            @if($trademarks->count() == 0)
-                <span class="text-gray-300 font-bold text-center text-4xl">
-                    No hay Marcas registradas 
-                </span>
-            @endif
-            
-            @if($categories->count() == 0)
-                <span class="text-gray-300 font-bold text-center text-4xl">
-                    No hay Categorías registradas 
-                </span>
-            @endif
-            @if($subcategories->count() == 0)
-                <span class="text-gray-300 font-bold text-center text-4xl">
-                    No hay Sub categorías registradas 
-                </span>
-            @endif
+        {{--END the form--}}
+
+        {{--STATE CONDITIONS--}}    
+        @if($trademarks->count() == 0)
+            <span class="text-gray-300 font-bold text-center text-4xl">
+                No hay Marcas registradas 
+            </span>
+        @endif        
+        @if($categories->count() == 0)
+            <span class="text-gray-300 font-bold text-center text-4xl">
+                No hay Categorías registradas 
+            </span>
+        @endif
+        @if($subcategories->count() == 0)
+            <span class="text-gray-300 font-bold text-center text-4xl">
+                No hay Sub categorías registradas 
+            </span>
+        @endif
     </x-containers.secondary> 
 </div>
