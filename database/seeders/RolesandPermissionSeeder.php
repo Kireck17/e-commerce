@@ -27,8 +27,8 @@ class RolesandPermissionSeeder extends Seeder
     ]);
 
         $role=Role::create(['name' => 'Administrador','guard_name' => 'web']);
+        $role=Role::create(['name' => 'General','guard_name' => 'web']);
         $role=Role::create(['name' => 'Comprador','guard_name' => 'web']);
-        $role=Role::create(['name' => 'Agente de Ventas','guard_name' => 'web']);
-        $role=Role::create(['name' => 'Encargado de Almacen','guard_name' => 'web']);
+        
     }
 }
