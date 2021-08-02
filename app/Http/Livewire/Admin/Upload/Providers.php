@@ -66,18 +66,9 @@ class Providers extends Component
 
             foreach ($contents as $row)
             {
-                $proveedor=new Provider();
+                
                 $provider=Provider::where('name',$row[1])->get();
                 $origin=Origin::where('country',$row[0])->get();
-                if($provider->count())
-                {
-                    $provider=$provider->first();
-                }
-                else
-                {
-                    $provider=new Provider();
-                    $provider->name=ucwords($row[1]);
-                }
                 if($origin->count())
                 {
                     $origin=$origin->first();
@@ -88,9 +79,20 @@ class Providers extends Component
                     $origin->country=ucwords($row[0]);
                     $origin->save();
                 }
-                $proveedor->name=ucwords($row[1]);
-                $proveedor->origin_id=$origin->id;
-                $proveedor->save();
+                if($provider->count())
+                {
+                    $provider=$provider->first();
+                }
+                else
+                {
+                    $provider=new Provider();
+
+                    $provider->name=ucwords($row[1]);
+                    $provider->origin_id=$origin->id;
+                    $provider->save();
+                }
+                
+                
             }
         }
         Storage::disk('public')->delete($save);
