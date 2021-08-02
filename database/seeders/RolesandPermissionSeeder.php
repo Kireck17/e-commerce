@@ -26,10 +26,12 @@ class RolesandPermissionSeeder extends Seeder
         $permission = Permission::create(['name' => 'Ver Usuarios'
     ]);
 
+
         //Roles que puede tener un Usuario
         $role=Role::create(['name' => 'Administrador']);
         $role=Role::create(['name' => 'General']);
         $role=Role::create(['name' => 'Comprador']);
+
 
     }
 }
