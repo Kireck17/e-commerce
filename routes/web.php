@@ -21,7 +21,7 @@ use App\Http\Livewire\Admin\Show\StockShow;
 use App\Http\Livewire\Admin\Show\ProviderShow;
 use App\Http\Livewire\Admin\Show\ShowProducts;
 use App\Http\Livewire\Admin\Show\ShowSubCategory;
-use App\Http\Livewire\Admin\Show\update\UpdateProduct;
+use App\Http\Livewire\Admin\Show\Update\UpdateProduct;
 use App\Http\Livewire\Admin\Show\ShowTrademark;
 use App\Http\Livewire\Admin\Show\CategoryShow;
 use App\Http\Livewire\Admin\Show\ShowOrigin;
