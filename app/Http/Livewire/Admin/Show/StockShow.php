@@ -16,6 +16,8 @@ class StockShow extends Component
 {
     use InteractsWithBanner;
     use WithPagination;
+
+    public $stockId;
     public $search;
     public $stocck;
     public $pro;
@@ -24,7 +26,10 @@ class StockShow extends Component
     public $vari;
     public $porpagina=5;
 
-    
+    protected $queryString = [
+        'search' => ['except' => ""],
+        'stockId' => ['except' => ""],
+    ];
     //recargar a la hora de actualizar
     protected $listeners=['recargar'=>'render'];
 
@@ -45,7 +50,6 @@ class StockShow extends Component
     {
         $this->resetPage();
     }
-
    
     public function render()
     {
@@ -62,7 +66,7 @@ class StockShow extends Component
                     return $stock->whereHas('warehouse',function(Builder $warehouse){
                         return $warehouse->where('name','LIKE',"%{$this->search}%");
                     });
-                })
+                })->orWhere('id',$this->stockId)
                 ->paginate($this->porpagina),
         ])
         ->layout("layouts.admin");
