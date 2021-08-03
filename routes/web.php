@@ -14,17 +14,17 @@ use App\Http\Livewire\Tutorials\Content;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
 //use de admin inicio
-use App\Http\Livewire\Admin\show\Welcome;
+use App\Http\Livewire\Admin\Show\Welcome;
 //Use de admin apartado de ver
-use App\Http\Livewire\Admin\show\WarehouseShow;
-use App\Http\Livewire\Admin\show\StockShow;
-use App\Http\Livewire\Admin\show\ProviderShow;
-use App\Http\Livewire\Admin\show\ShowProducts;
-use App\Http\Livewire\Admin\show\ShowSubCategory;
-use App\Http\Livewire\Admin\show\update\UpdateProduct;
-use App\Http\Livewire\Admin\show\ShowTrademark;
-use App\Http\Livewire\Admin\show\CategoryShow;
-use App\Http\Livewire\Admin\show\ShowOrigin;
+use App\Http\Livewire\Admin\Show\WarehouseShow;
+use App\Http\Livewire\Admin\Show\StockShow;
+use App\Http\Livewire\Admin\Show\ProviderShow;
+use App\Http\Livewire\Admin\Show\ShowProducts;
+use App\Http\Livewire\Admin\Show\ShowSubCategory;
+use App\Http\Livewire\Admin\Show\update\UpdateProduct;
+use App\Http\Livewire\Admin\Show\ShowTrademark;
+use App\Http\Livewire\Admin\Show\CategoryShow;
+use App\Http\Livewire\Admin\Show\ShowOrigin;
 //user,permis
 use App\Http\Livewire\Admin\User\UserCreate;
 use App\Http\Livewire\Admin\User\UserShow;
