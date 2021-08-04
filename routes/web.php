@@ -29,6 +29,14 @@ use App\Http\Livewire\Admin\Show\ShowOrigin;
 use App\Http\Livewire\Admin\User\UserCreate;
 use App\Http\Livewire\Admin\User\UserShow;
 
+// Rutas del ecommerce
+/*
+ aqui van sus rutas
+*/
+// Rutas para el panel de administración
+ /*
+ aqui van sus rutas del panel de adminisracion
+*/
 Route::get('/', Showlobby::class)->name('lobby');
 
 
