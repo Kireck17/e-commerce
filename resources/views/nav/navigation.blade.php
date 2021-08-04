@@ -18,6 +18,7 @@
                         Inicio
                     </span>
                 </x-nav-links.admin>
+                
 
                 <li @click.away="open = false" class="flex flex-col w-full" x-data="{ open: false }">
                     <button @click="open = !open"

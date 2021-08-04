@@ -10,6 +10,10 @@
                     <i class="fas fa-edit mr-3"></i>
                     {{__('Editar')}}
                 </span>
+                <span>
+                    <i class="fas fa-trash-alt mr-3"></i>
+                    {{__('Eliminar')}}
+                </span>
             </x-slot>
             <x-slot name="controls">
                 <x-searchadmin.search wire:model="search"/>
@@ -61,7 +65,8 @@
                                 <td class="py-3 px-6 text-center">
                                     <div class="flex item-center justify-center cursor-pointer">
                                         {{--llamado del componente de editar usuario--}}
-                                        <livewire:admin.user.edit.users-edit :user="$user" :wire:key="$user->id"/>
+                                        <livewire:admin.user.edit.users-edit :user="$user" :wire:key="'edit-'.$user->id"/>
+                                        <livewire:admin.user.delete.user-delete :user="$user" :wire:key="'delete-'.$user->id"/>
                                     </div>
                                 </td>
                             </tr>

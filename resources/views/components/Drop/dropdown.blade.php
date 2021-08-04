@@ -1,4 +1,4 @@
-@props(['align' => 'right', 'width' => '', 'contentClasses' => 'py-1 bg-white', 'dropdownClasses' => ''])
+@props(['align' => 'right', 'width' => '48', 'contentClasses' => 'py-1 bg-white', 'dropdownClasses' => ''])
 
 @php
 switch ($align) {
@@ -17,10 +17,9 @@ switch ($align) {
         $alignmentClasses = 'origin-top-right right-0';
         break;
 }
-
 switch ($width) {
     case '48':
-        $width = 'w-56';
+        $width = 'w-48';
         break;
     default:
         $width = 'w-96';
@@ -43,7 +42,7 @@ switch ($width) {
             class="absolute z-50 mt-2 {{ $width }} rounded-md shadow-lg {{ $alignmentClasses }} {{ $dropdownClasses }}"
             style="display: none;"
             @click="open = false">
-        <div class="rounded-md ring-1 ring-black ring-opacity-5 {{ $contentClasses }} h-96 overflow-y-auto">
+        <div class="rounded-md ring-1 ring-black ring-opacity-5 {{ $contentClasses }}">
             {{ $content }}
         </div>
     </div>
