@@ -28,8 +28,6 @@ use App\Http\Livewire\Admin\Show\ShowOrigin;
 //user,permis
 use App\Http\Livewire\Admin\User\UserCreate;
 use App\Http\Livewire\Admin\User\UserShow;
-//
-use App\Http\Middleware\EnsureUserHasRole;
 
 Route::get('/', Showlobby::class)->name('lobby');
 
@@ -119,9 +117,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
 
 
-Route::middleware([EnsureUserHasRole::class,'auth:sanctum'])->group(function(){
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     // Ruta para entrar al dashboard
-    Route::get('/dashboard',Showlobby::class)->middleware('role:Comprador');
+    Route::get('/dashboard',Showlobby::class);
 });
 
 
