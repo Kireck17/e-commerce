@@ -18,6 +18,8 @@ class UserCreate extends Component
     public $name,$email,$role;
     public $user_permissions;
 
+    
+
     protected $rules=[
         'name' => 'required',
         'email' => 'required|unique:users,email',
