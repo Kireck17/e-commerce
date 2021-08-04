@@ -15,6 +15,7 @@ class UserShow extends Component
  
     protected $listeners=['updatePermissions' => 'render'];
     
+    
 
     public function mount()
     {
