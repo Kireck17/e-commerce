@@ -23,14 +23,17 @@ class RolesandPermissionSeeder extends Seeder
         $permission = Permission::create(['name' => 'Permisos Usuarios']);
         $permission = Permission::create(['name' => 'Ver Cuentas']);
         $permission = Permission::create(['name' => 'Ver Usuarios']);
+        $permission = Permission::create(['name' => 'Ver Usuarios']);
         $permission = Permission::create(['name' => 'Ver Inventario']);
         $permission = Permission::create(['name' => 'Agregar Inventario']);
         $permission = Permission::create(['name' => 'Editar Inventario']);
         $permission = Permission::create(['name' => 'Eliminar Inventario']);
 
+        
+        
+        //Roles que puede tener un Usuario
         $role=Role::create(['name' => 'Administrador']);
         $role=Role::create(['name' => 'General']);
         $role=Role::create(['name' => 'Comprador']);
-        
     }
 }
