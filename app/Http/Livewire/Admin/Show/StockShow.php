@@ -28,6 +28,7 @@ class StockShow extends Component
 
     protected $queryString = [
         'search' => ['except' => ""],
+        'porpagina' => ['except' => ""],
         'stockId' => ['except' => ""],
     ];
     //recargar a la hora de actualizar
@@ -35,7 +36,6 @@ class StockShow extends Component
 
     public function mount()
     {
-        $this->search="";
         $this->pro=Provider::all();
         $this->ware=WareHouse::all();
         $this->produ=Product::all();
@@ -50,11 +50,13 @@ class StockShow extends Component
     {
         $this->resetPage();
     }
-   
-    public function render()
+    public function get_stock()
     {
-        return view('livewire.admin.show.stock-show',[
-            'stocks'=> Stock::whereHasMorph(
+        if ($this->stockId != "" && $this->search == "") {
+            return Stock::where('id',$this->stockId);
+        }else{
+            $this->stockId="";
+            return Stock::whereHasMorph(
                 'stockable',
                 Variation::class,
                 function (Builder $variation) {
@@ -66,8 +68,13 @@ class StockShow extends Component
                     return $stock->whereHas('warehouse',function(Builder $warehouse){
                         return $warehouse->where('name','LIKE',"%{$this->search}%");
                     });
-                })->orWhere('id',$this->stockId)
-                ->paginate($this->porpagina),
+                });
+        }
+    }
+    public function render()
+    {
+        return view('livewire.admin.show.stock-show',[
+            'stocks'=> $this->get_stock()->paginate($this->porpagina),
         ])
         ->layout("layouts.admin");
     }

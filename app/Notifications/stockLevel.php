@@ -63,6 +63,7 @@ class stockLevel extends Notification
             'stock_id' => $this->level['stock_id'],
             'product' => $this->level['product'],
             'level' => $this->level['level'],
+            'resource' => url(route('admin.showstock')."?stockId=".$this->level['stock_id'])
         ];
     }
 }

@@ -15,20 +15,22 @@ class RolesandPermissionSeeder extends Seeder
      */
     public function run()
     {
-        //
-        $permission = Permission::create(['name' => 'Agregar Cuentas','guard_name' => 'web']);
-        $permission = Permission::create(['name' => 'Cambiar Permisos','guard_name' => 'web']);
-        $permission = Permission::create(['name' => 'Cambiar Roles','guard_name' => 'web']);
-        $permission = Permission::create(['name' => 'Crear Usuarios','guard_name' => 'web']);
-        $permission = Permission::create(['name' => 'Eliminar Cuentas','guard_name' => 'web']);
-        $permission = Permission::create(['name' => 'Permisos Usuarios','guard_name' => 'web']);
-        $permission = Permission::create(['name' => 'Ver Cuentas','guard_name' => 'web']);
-        $permission = Permission::create(['name' => 'Ver Usuarios','guard_name' => 'web'
-    ]);
+        $permission = Permission::create(['name' => 'Agregar Cuentas']);
+        $permission = Permission::create(['name' => 'Cambiar Permisos']);
+        $permission = Permission::create(['name' => 'Cambiar Roles']);
+        $permission = Permission::create(['name' => 'Crear Usuarios']);
+        $permission = Permission::create(['name' => 'Eliminar Cuentas']);
+        $permission = Permission::create(['name' => 'Permisos Usuarios']);
+        $permission = Permission::create(['name' => 'Ver Cuentas']);
+        $permission = Permission::create(['name' => 'Ver Usuarios']);
+        $permission = Permission::create(['name' => 'Ver Inventario']);
+        $permission = Permission::create(['name' => 'Agregar Inventario']);
+        $permission = Permission::create(['name' => 'Editar Inventario']);
+        $permission = Permission::create(['name' => 'Eliminar Inventario']);
 
-        $role=Role::create(['name' => 'Administrador','guard_name' => 'web']);
-        $role=Role::create(['name' => 'Comprador','guard_name' => 'web']);
-        $role=Role::create(['name' => 'Agente de Ventas','guard_name' => 'web']);
-        $role=Role::create(['name' => 'Encargado de Almacen','guard_name' => 'web']);
+        //Roles que puede tener un Usuario
+        $role=Role::create(['name' => 'Administrador']);
+        $role=Role::create(['name' => 'General']);
+        $role=Role::create(['name' => 'Comprador']);
     }
 }

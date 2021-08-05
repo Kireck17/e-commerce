@@ -30,6 +30,8 @@ class DatabaseSeeder extends Seeder
             ProviderSeeder::class,
             StockSeeder::class,
             FileSeeder::class,
+            RolesandPermissionSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

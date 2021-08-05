@@ -18,6 +18,7 @@
                         Inicio
                     </span>
                 </x-nav-links.admin>
+                
 
                 <li @click.away="open = false" class="flex flex-col w-full" x-data="{ open: false }">
                     <button @click="open = !open"
@@ -40,12 +41,12 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="transform opacity-100 scale-100"
                         x-transition:leave-end="transform opacity-0 scale-95" class="w-full py-2 pl-4 pr-4">
-
+                            @can('Crear Usuarios')
                             <x-nav-links.admindropdowns href="{{ route('admin.insertuser') }}"
                             :active="request()->routeIs('admin.insertuser')">
                                 Agregar
                             </x-nav-links.admindropdowns>
-
+                            @endcan
 
                             <x-nav-links.admindropdowns href="{{ route('admin.showuser') }}"
                             :active="request()->routeIs('admin.showuser')">
@@ -55,7 +56,7 @@
                     </ul>
 
                 </li>
-
+                @can('Agregar Inventario')
                 <x-nav-links.admin href="{{ route('admin.create') }}" 
                 :active="request()->routeIs('admin.create')">
                     <span class="text-gray-600">
@@ -65,6 +66,8 @@
                         Crear
                     </span>
                 </x-nav-links.admin>
+                @endcan
+                @can('Ver Inventario')
                 <li @click.away="open = false" class="flex flex-col w-full" x-data="{ open: false }">
                     <button @click="open = !open"
                         class="flex flex-row items-center w-full p-2 space-x-3 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:block hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
@@ -133,6 +136,7 @@
                     </ul>
 
                 </li>
+                @endcan
 
 
                 <li>
