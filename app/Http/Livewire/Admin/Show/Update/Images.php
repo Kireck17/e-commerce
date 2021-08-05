@@ -6,10 +6,12 @@ use Livewire\Component;
 use App\Models\File;
 use App\Models\Variation;
 use Livewire\WithFileUploads;
+use App\Traits\InteractsWithBanner;
 
 class Images extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, InteractsWithBanner;
+
     public $files;
     public $images;
 
@@ -41,11 +43,27 @@ class Images extends Component
             }
             else
             {
-                
+                $imagess = new File();
+                $imagess->url = "storage/".$this->images[$key]['url']->storePublicly('images',['public']);
+                $imagess->save();
             }
        }
        //dd($this->files);
     }
+
+    public function delete_file($file_id)
+    {
+        $this->files= File::find($file_id)->delete();
+        $this->files= $files->get()->toArray();
+        $this->banner('Attributo eliminado correctamente','warning');
+    }
+
+    public function remove_file($key)
+    {
+        unset($this->files[$key]);
+        $this->banner('Attributo eliminado correctamente','warning');
+    }
+
     public function render()
     {
         return view('livewire.admin.show.update.images');
