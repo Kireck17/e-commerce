@@ -50,10 +50,12 @@ class Images extends Component
        {
             if(isset($file['id']))
             {
-                $this->change_old_image($file['url']);
-                $imagess = File::find($file['id']);
-                $imagess->url = "storage/".$this->images[$key]['url']->storePublicly('images',['disk' => 'public']);
-                $imagess->save();
+                if (isset($this->images[$key]['url'])) {
+                    $this->change_old_image($file['url']);
+                    $imagess = File::find($file['id']);
+                    $imagess->url = "storage/".$this->images[$key]['url']->storePublicly('images',['disk' => 'public']);
+                    $imagess->save();
+                }
             }else{
                 $imagess = new File();
                 $imagess->url = "storage/".$this->images[$key]['url']->storePublicly('images',['disk' => 'public']);
