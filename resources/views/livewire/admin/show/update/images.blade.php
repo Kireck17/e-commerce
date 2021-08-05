@@ -36,7 +36,19 @@
                             <x-component.input type="file" class="w-1/2" wire:model="images.{{$key}}.url"/>
                         </td>
                         <td class="px-3 py-2">
-                            opciones
+                            @if(isset($file['id']))
+
+                                <x-buttons.default wire:click="delete_file({{$file['id']}})">
+                                    Eliminar
+                                </x-buttons.default>
+
+                            @else
+                                <x-buttons.default wire:click="remove_file({{$key}})">
+                                    Eliminar
+                                </x-buttons.default>
+
+                            @endif
+                            
                         </td>
                     </tr>
                 @endforeach
