@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TrademarkSeeder::class, // FORMULARIO
             CategorySeeder::class, // FORMULARIO
-            SubcategorySeeder::class, // FORMULARIO
+            SubCategorySeeder::class, // FORMULARIO
             AttributeSeeder::class,
             AttributeValuesSeeder::class,
             OriginSeeder::class, // FORMULARIO
