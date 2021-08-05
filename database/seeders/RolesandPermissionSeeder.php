@@ -23,7 +23,6 @@ class RolesandPermissionSeeder extends Seeder
         $permission = Permission::create(['name' => 'Permisos Usuarios']);
         $permission = Permission::create(['name' => 'Ver Cuentas']);
         $permission = Permission::create(['name' => 'Ver Usuarios']);
-        $permission = Permission::create(['name' => 'Ver Usuarios']);
         $permission = Permission::create(['name' => 'Ver Inventario']);
         $permission = Permission::create(['name' => 'Agregar Inventario']);
         $permission = Permission::create(['name' => 'Editar Inventario']);

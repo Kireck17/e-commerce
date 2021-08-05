@@ -22,7 +22,7 @@
                 </x-containers.formbody>
 
                 <h1 class="text-sm font-medium text-black font-extrabold">Seleccionar Permisos</h1>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5" class="w-full">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5">
                             @foreach($this->permissions as $key => $permission)
                                 <label class="text-sm uppercase ">
                                     <x-forms.checkbox class="mr-3" type="checkbox" wire:model="user_permissions.{{$key}}" value="{{$permission->name}}"/>
