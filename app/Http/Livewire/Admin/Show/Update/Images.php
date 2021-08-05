@@ -57,7 +57,7 @@ class Images extends Component
             }else{
                 $imagess = new File();
                 $imagess->url = "storage/".$this->images[$key]['url']->storePublicly('images',['disk' => 'public']);
-                $imagess->save();
+                $this->variation->files()->save($imagess);
             }
        }
        $this->banner('Imágenes actualizadas correctamente');
