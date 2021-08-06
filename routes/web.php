@@ -77,45 +77,46 @@ Route::middleware(['auth:sanctum','verified', 'restriction.users'])->group(funct
             )->middleware('can:Agregar Inventario')->name('create');
 
             Route::get('/showtrademark',ShowTrademark::class
-            )->name('showtrademark');
+            )->middleware('can:Ver Inventario')->name('showtrademark');
 
             Route::get('/showcategory',CategoryShow::class
-            )->name('showcategory');
+            )->middleware('can:Ver Inventario')->name('showcategory');
 
             Route::get('/showsubcategory',ShowSubCategory::class
-            )->name('showsubcategory');
+            )->middleware('can:Ver Inventario')->name('showsubcategory');
 
             Route::get('/showorigin',ShowOrigin::class
-            )->name('showorigin');
+            )->middleware('can:Ver Inventario')->name('showorigin');
 
             Route::get('/showtrademark',ShowTrademark::class
-            )->name('showtrademark');
+            )->middleware('can:Ver Inventario')->name('showtrademark');
 
             Route::get('/showcategory',CategoryShow::class
-            )->name('showcategory');
+            )->middleware('can:Ver Inventario')->name('showcategory');
 
             Route::get('/showarehouse',WarehouseShow::class
-            )->name('showwarehouse');
+            )->middleware('can:Ver Inventario')->name('showwarehouse');
 
             Route::get('/showprovider',ProviderShow::class
-            )->name('showprovider');
+            )->middleware('can:Ver Inventario')->name('showprovider');
 
             Route::get('/showstock',StockShow::class
-            )->name('showstock');
+            )->middleware('can:Ver Inventario')->name('showstock');
 
             Route::get('/showorigin',ShowOrigin::class
-            )->name('showorigin');
+            )->middleware('can:Ver Inventario')->name('showorigin');
 
             Route::get('/showproduct',ShowProducts::class
-            )->name('showproduct');
+            )->middleware('can:Ver Inventario')->name('showproduct');
 
-            Route::get('/{product_id}/updateproduct',UpdateProduct::class)->name('updateproduct');
+            Route::get('/{product_id}/updateproduct',UpdateProduct::class
+            )->middleware('can:Editar Inventario')->name('updateproduct');
 
             Route::get('/insertuser',UserCreate::class
             )->middleware('can:Crear Usuarios')->name('insertuser');
 
             Route::get('/showuser',UserShow::class
-            )->name('showuser');
+            )->middleware('can:Ver Usuarios')->name('showuser');
         });
     });
 });

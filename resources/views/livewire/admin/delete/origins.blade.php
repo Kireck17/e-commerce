@@ -1,8 +1,10 @@
 <div>
-    <div class="text-red-500 hover:text-red-700 w-4 mr-2 transform hover:scale-110"
-    wire:click="open_modal()">
-        <i class="fas fa-trash-alt"></i>
-    </div>
+    @can('Eliminar Inventario')
+        <div class="text-red-500 hover:text-red-700 w-4 mr-2 transform hover:scale-110"
+        wire:click="open_modal()">
+            <i class="fas fa-trash-alt"></i>
+        </div>
+    @endcan
 {{--Ventana Modal de marca--}}
     <x-modal.confirmation wire:model="is_show">
 		<x-slot name="title">  

@@ -34,6 +34,9 @@
                         <th class="py-3 px-6 text-center">
                             {{__('Opciones')}}
                         </th>
+                        <th class="py-3 px-6 text-center">
+                            
+                        </th>
                     </x-slot>
                     <x-slot name="Content">
                         @forelse($products  as $product)
@@ -72,11 +75,13 @@
                                 <td class="py-3 px-6 text-center">
                                     <div class="flex item-center justify-center cursor-pointer">
                                         {{--llamando a la ruta de edicion del producto y la funcion de eliminar--}}
+                                        @can('Editar Inventario')
                                         <div class="text-blue-500 w-4 mr-2 transform hover:text-blue-900 hover:scale-110">  
                                             <a href="{{route('admin.updateproduct',['product_id' => $product->id])}}">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                         </div>
+                                        @endcan
                                         <livewire:admin.delete.products :product="$product" :wire:key="'delete-'.$product->id"/>
                                     </div>
                                 </td>

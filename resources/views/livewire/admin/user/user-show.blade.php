@@ -58,11 +58,9 @@
                                     </div>
                                 </td>
 
-                                <td class="py-3 px-6 text-center">
-                                    <div class="flex item-center justify-center cursor-pointer">
-                                        {{--llamado del componente de editar usuario--}}
-                                        <livewire:admin.user.edit.users-edit :user="$user" :wire:key="$key"/>
-                                    </div>
+                                <td class="py-3 px-6 flex item-center justify-center">
+                                    {{--llamado del componente de editar usuario--}}
+                                    <livewire:admin.user.edit.users-edit :user="$user" :wire:key="$key"/>
                                 </td>
                             </tr>
                         

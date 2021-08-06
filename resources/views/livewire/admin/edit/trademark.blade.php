@@ -1,9 +1,9 @@
 <div>
     @can('Editar Inventario')
-    <div class="text-blue-500 hover:text-blue-700 w-4 mr-2 transform hover:scale-110"
-        wire:click="edit_componente()">
-        <i class="fas fa-edit"></i>
-    </div>
+        <div class="text-blue-500 hover:text-blue-700 w-4 mr-2 transform hover:scale-110"
+            wire:click="edit_componente()">
+            <i class="fas fa-edit"></i>
+        </div>
     @endcan
 {{--Ventana Modal de marca--}}
     <x-jet-dialog-modal wire:model="is_show">
