@@ -111,6 +111,7 @@
                         <x-containers.formbody class="border-t border-gray-300">
                             <x-slot name="label">
                                 {{ __('Atributo') }}
+                                
                             </x-slot>
                             <x-slot name="input">
                                 <x-component.dropdown-input :datos="$atrivute_values" :columna="'type'" wire:model="attributes.{{$key}}.type">

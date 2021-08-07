@@ -18,6 +18,7 @@ class ShowProducts extends Component
     public $porpagina=5;
     public $description;
 
+    
 
     public function mount()
     {

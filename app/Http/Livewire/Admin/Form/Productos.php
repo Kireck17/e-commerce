@@ -19,7 +19,7 @@ class Productos extends Component
     public $product;
     public $attribute_value;
     public $attributes;
-
+    
 
     protected $rules = [
         'product.name' => "required|max:200|unique:products,name",

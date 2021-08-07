@@ -33,10 +33,10 @@
                 
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5 w-full">
                         @foreach($this->permissions as $key => $permission)
-                            <label class="text-sm uppercase ">
-                                <x-forms.checkbox class="mr-3" type="checkbox" wire:model="user_permissions.{{$key}}" value="{{$permission->name}}"/>
-                                    {{$permission->name}}
-                            </label>
+                        <label class="text-sm uppercase ">
+                            <x-forms.checkbox class="mr-3" type="checkbox" wire:model="user_permissions.{{$key}}" value="{{$permission->name}}"/>
+                            {{$permission->name}}
+                        </label>
                         @endforeach  
                     </div>
                 @endcan

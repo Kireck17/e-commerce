@@ -36,6 +36,7 @@ class UsersEdit extends Component
         $this->role=$this->get_role();
         $this->user_permissions=[];
         $this->validate_permission();
+        $this->emit('updatePermissions');
     }
     public function get_role()
     {
@@ -69,6 +70,7 @@ class UsersEdit extends Component
         $this->user->syncPermissions($this->user_permissions);
         $this->banner('Permisos actualizados correctamente');
         //dd($this->user_permissions);
+        
     }
     public function render()
     {

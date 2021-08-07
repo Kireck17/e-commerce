@@ -21,20 +21,13 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased ">
-        
-
         <div class="flex flex-col sm:flex-row min-h-screen h-full">
             <div class="sm:w-3/12 h-auto bg-white">
-              
                 @include('nav.navigation')
-              
-              
             </div>
-
             <div class="sm:w-9/12 bg-gray-200 py-3  sm:py-0 ">
                 <div class="hidden bg-white py-2 h-16 sm:flex flex-row-reverse items-center px-6">
-            
-                        <x-Drop.dropdown>
+                        <x-Drop.dropdown :width="48">
                           <x-slot name="trigger">
                             <h4 class="cursor-pointer px-2 font-semibold text-lg text-gray-700 capitalize font-poppins tracking-wide hover:bg-gray-200 rounded-md">
                              <i class="fa fa-cog mr-2" aria-hidden="true"></i>
@@ -42,7 +35,6 @@
                             </h4>
                           </x-slot>
                           <x-slot name="content">
-                            
                                 <div class="flex items-center space-x-4 p-2">
                                     <img class="h-12 rounded-full" src="{{ Auth::user()->profile_photo_url }}" alt="James Bhatta">
                                     <div>
@@ -68,25 +60,8 @@
                                 </form>
                             
                           </x-slot>   
-
                         </x-Drop.dropdown>
-
-                        <x-Drop.dropdown>
-
-                         <x-slot name="trigger">
-                         <h4 class="cursor-pointer px-2 font-semibold text-lg text-gray-700 capitalize font-poppins tracking-wide hover:bg-gray-200 rounded-md">
-                          <i class="fa fa-bell mr-2" aria-hidden="true"></i>
-                             Notificaciones
-                            </h4>
-                         </x-slot>
-
-                         <x-slot name="content">
-                          Notificaciones x2
-                         </x-slot>
-
-                        </x-Drop.dropdown>
-                    
-                   
+                        <livewire:notifications.show/>
                 </div>
                
                 <!-- Page Heading -->
@@ -106,9 +81,7 @@
                 </main>
             </div>
         </div>
-
         @stack('modals')
-
         @livewireScripts
     </body>
 </html>
