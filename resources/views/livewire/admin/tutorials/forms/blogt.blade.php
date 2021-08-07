@@ -47,12 +47,12 @@
                         <span class="text-black font-bold text-center text-4xl">
                             {{__('Pasos')}}
                         </span>
-                        <x-buttons.turquoise wire:click="add_contentblog()">
+                        <x-buttons.turquoise wire:click="add_stepblog()">
                             <i class="far fa-plus-square mr-3"></i>
                             {{__('Agregar')}}
                         </x-buttons.turquoise>
                 </div>
-                
+                @foreach($this->stepblog as $key => $stepblo)
                         <x-containers.formbody class="border-t border-gray-300">
                             <x-slot name="label">
                                 {{ __('Sub Titulo') }}
@@ -63,7 +63,24 @@
                             </x-slot>
                             
                         </x-containers.formbody>
-                        
+                        <div class="py-3 flex justify-center">
+                            <x-buttons.red wire:click="remove_stepblog({{$key}})">
+                                {{__('Quitar característica')}}
+                            </x-buttons.red>
+                        </div>
+
+                        <div class="flex justify-between items-center">
+                            <span class="text-black font-bold text-center text-4xl">
+                                {{__('Contenido')}}
+                            </span>
+                            <x-buttons.turquoise wire:click="add_contentblog()">
+                                <i class="far fa-plus-square mr-3"></i>
+                                {{__('Agregar')}}
+                            </x-buttons.turquoise>
+                        </div>
+                
+                    @foreach($this->contentblog as $key => $content)
+                    
                         <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                 <dt class="text-sm font-medium text-gray-500">
                                     <x-forms.label for="imagen">
@@ -83,6 +100,8 @@
                                         </div>
                                 </dd>  
                         </div>
+                    
+
                         <x-containers.formbody>
                             <x-slot name="label">
                                 {{ __('Contenido') }}
@@ -91,13 +110,17 @@
                             <x-slot name="input">
                                 <x-component.inputarea wire:model="" rows="10" cols="10"></x-component.inputarea>
                             </x-slot>
-               
                         </x-containers.formbody>
+
                         <div class="py-3 flex justify-center">
-                            <x-buttons.red>
+                            <x-buttons.red wire:click="remove_contentblog({{$key}})">
                                 {{__('Quitar característica')}}
                             </x-buttons.red>
                         </div>
+                    @endforeach
+
+                        
+                @endforeach 
                 
             </x-slot>
              {{--END the content--}}
