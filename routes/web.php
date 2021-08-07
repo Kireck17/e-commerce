@@ -26,7 +26,9 @@ use App\Http\Livewire\Admin\Show\ShowOrigin;
 //user,permis
 use App\Http\Livewire\Admin\User\UserCreate;
 use App\Http\Livewire\Admin\User\UserShow;
-
+//tutorials
+use App\Http\Livewire\Admin\Tutorials\CreateTutorials;
+use App\Http\Livewire\Admin\Tutorials\Show\ShowContent;
 // Rutas del ecommerce
 /*
  aqui van sus rutas
@@ -124,6 +126,13 @@ Route::middleware(['auth:sanctum','verified', 'restriction.users'])->group(funct
 
             Route::get('/showuser',UserShow::class
             )->name('showuser');
+
+            Route::get('/creatutorial',CreateTutorials::class
+            )->name('creatutorial');
+
+            Route::get('/showtutorial',ShowContent::class
+            )->name('showtutorial');
+
         });
     });
 });
