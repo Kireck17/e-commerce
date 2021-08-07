@@ -136,6 +136,3 @@ Route::middleware(['auth:sanctum','verified', 'restriction.users'])->group(funct
         });
     });
 });
-
-
-

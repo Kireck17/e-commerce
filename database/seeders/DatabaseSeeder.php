@@ -13,12 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
         $this->call([
-            RolesandPermissionSeeder::class,
             TrademarkSeeder::class, // FORMULARIO
             CategorySeeder::class, // FORMULARIO
-            SubcategorySeeder::class, // FORMULARIO
+            SubCategorySeeder::class, // FORMULARIO
             AttributeSeeder::class,
             AttributeValuesSeeder::class,
             OriginSeeder::class, // FORMULARIO
@@ -31,6 +29,8 @@ class DatabaseSeeder extends Seeder
             ProviderSeeder::class,
             StockSeeder::class,
             FileSeeder::class,
+            RolesandPermissionSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

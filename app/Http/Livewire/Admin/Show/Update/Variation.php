@@ -15,15 +15,18 @@ class Variation extends Component
     public $variations;
 
     protected $listeners=['variationsReload'];
+
     public function mount(Product $product)
     {
         $this->product=$product;
         $this->variations=$this->product->variation()->get();
     }
+
     public function variationsReload()
     {
         $this->variations = $this->product->variation()->get();
     }
+    
     public function add_variation()
     {
         $this->product->variation()->save(new Variacion());
