@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Shopping_Cart extends Model
+class ShoppingCart extends Model
 {
     use HasFactory;
+
     protected $table = 'shopping_cart';
 
-    protected $fillable=['stock_id, user_id,  quantity'];
+    protected $fillable=['stock_id, user_id,quantity'];
 
-   
     public function user()
     {
         return $this->belongsTo(User::class);
