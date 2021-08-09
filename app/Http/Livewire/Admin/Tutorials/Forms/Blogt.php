@@ -14,6 +14,7 @@ class Blogt extends Component
     public $blogs;
     public $stepblog;
     public $contentblog;
+    public $count =0;
 
     protected $listeners=['blogReload' => 'render'];
 
@@ -40,6 +41,9 @@ class Blogt extends Component
        $this->contentblog=[];
     }
 
+    public function increment(){
+        $this->count++;
+    }
 
     public function add_contentblog()
     {

@@ -43,21 +43,24 @@
                                 </div>
                         </dd>  
                 </div>
-                @if(count($this->stepblog) == 0)
+                
                     <div class="flex justify-between items-center">
                             <span class="text-black font-bold text-center text-4xl">
                                 {{__('Pasos')}}
                             </span>
-                            <x-buttons.turquoise wire:click="add_stepblog()">
+                            <x-buttons.turquoise wire:click="add_stepblog()" >
                                 <i class="far fa-plus-square mr-3"></i>
                                 {{__('Agregar')}}
+                                
                             </x-buttons.turquoise>
                     </div>
-                @endif
+               
                 @foreach($this->stepblog as $key => $stepblo)
-                        <x-containers.formbody class="border-t border-gray-300">
+                        <x-containers.formbody class="border-t border-gray-300" wire:model="increment">
                             <x-slot name="label">
                                 {{ __('Sub Titulo') }}
+                                
+                                {{$count}}
                             </x-slot>
                             <x-slot name="input">
                                 <x-component.input wire:model="" class="w-full"/>

@@ -31,6 +31,7 @@ class Variations extends Component
     {
         $this->attribute_values[]="";
     }
+    
     public function delete_attribute($attribute_id)
     {
         AttributeValue::find($attribute_id)->delete();
