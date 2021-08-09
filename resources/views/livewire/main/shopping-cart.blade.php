@@ -11,6 +11,7 @@
         {{-- Vizualizacion de productos --}}
         <x-containers.secondary>
             <div class="px-3 py-4 space-y-3">
+                {{--
                 @foreach($products as $product)
                     <x-cards.cart>
                         <x-slot name="image">
@@ -50,6 +51,20 @@
                         </x-slot>
                     </x-cards.cart>
                 @endforeach
+
+                 
+                @foreach($this->shop as $shopping)
+                    {{__('USER')}} : {{$shopping->user_id}}
+                    {{__('Name')}} : {{$shopping->stock()->first()->variation()->first()->product()->first()->name}}
+                    {{__('PRICE')}} : {{$shopping->stock()->first()->price}}
+                    {{__('QANTITY')}} : {{$shopping->quantity}}
+                    ||
+                @endforeach  --}}
+                   
+                @foreach($shopping as $shopp)
+                    {{print_r($shopp->stock())}}
+                @endforeach  
+
             </div>
         </x-containers.secondary>
         <x-containers.secondary>
@@ -86,6 +101,7 @@
         </x-containers.secondary>
     </x-containers.main>
 </div>
+
 
     
 

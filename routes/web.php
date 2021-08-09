@@ -5,12 +5,15 @@ use App\Http\Livewire\Main\Showlobby;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\Main\MensClothing;
+use App\Http\Livewire\Main\ShoppingCart;
+
 use App\Http\Livewire\Product\Showproduct;
 use App\Http\Livewire\Tutorials\ViewTutorial;
 use App\Http\Livewire\Tutorials\ViewContent;
 use App\Http\Livewire\Tutorials\Content;
 use App\Http\Livewire\Admin\Prueba;
 use App\Http\Livewire\Admin\Create;
+
 //use de admin inicio
 use App\Http\Livewire\Admin\Show\Welcome;
 //Use de admin apartado de ver

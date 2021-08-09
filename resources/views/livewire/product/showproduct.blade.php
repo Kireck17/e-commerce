@@ -1,4 +1,5 @@
 <div>
+    <x-banners.toast/>
     <x-containers.main>
         <!-- header -->
         <x-containers.secondary>
@@ -44,7 +45,7 @@
                             <span class="p-2">
                                {{$this->quantity}}
                             </span>
-                            <x-buttons.cian wire:click="add">
+                            <x-buttons.cian wire:click="cuantityadd">
                                 <i class="fas fa-plus"></i>
                             </x-buttons.cian>
                         </div>
@@ -53,9 +54,10 @@
                                 {{__('Cantidad disponible')}} : {{$this->get_stock()}}
                             </span>
                         </div>
+                        
                         <!-- sale -->
-                        <x-buttons.cian>
-                            Agregar al carrito
+                        <x-buttons.cian wire:click="fillcart">
+                            {{__('Agregar al carrito')}}
                         </x-buttons.cian>
                     </div>
                 </div>
@@ -114,7 +116,11 @@
                             {{$product->name}}
                         </x-slot>
                         <x-slot name="price">
-                            $ 000
+                            @if(isset($product->variation()->first()->stock()->first()->price))
+                                ${{$product->variation()->first()->stock()->first()->price}}
+                            @else
+                                {{__('Proximamente')}}
+                            @endif
                         </x-slot>
                     </x-cards.three>
                 @endforeach
