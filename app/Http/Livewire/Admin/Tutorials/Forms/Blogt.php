@@ -14,28 +14,55 @@ class Blogt extends Component
     public $blogs;
     public $stepblog;
     public $contentblog;
+    
+    protected $listeners=['blogReload' => 'render'];
 
     protected $rules = [
         'blogs.title' => "required|max:200|unique:blogs,title",
+        'blogs.image' => 'required',
         'stepblog.*.title' => 'required',
-        'stepblog.*.value' => 'required'
+        'contentblog.*.image' => 'required',
+        'contentblog.*.content' => 'required'
     ];
 
     protected $validationAttributes = [
         'blogs.title' => "Titulo Blog",
+        'blogs.*.image' => 'Imagen',
+        'stepblog.*.title' => 'Sub titulo',
+        'contentblog.*.image' => 'Imagen',
+        'contentblog.*.content' => 'Contenido'
     ];
 
-    public function Mount()
+    public function mount()
     {
+       
+       $this->blogs=[];
        $this->stepblog=[];
        $this->contentblog=[];
     }
 
-
+    
     public function add_contentblog()
     {
+        
         $this->contentblog[]="";
+    }
+
+    public function remove_contentblog($key)
+    {
+        unset($this->contentblog[$key]);
+        $this->banner('Contenido eliminado correctamente','warning');
+    }
+
+    public function add_stepblog()
+    {
         $this->stepblog[]="";
+    }
+
+    public function remove_stepblog($key)
+    {
+        unset($this->stepblog[$key]);
+        $this->banner('Subtitulo eliminado correctamente','warning');
     }
 
     public function get_attribute($index)
