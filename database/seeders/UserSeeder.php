@@ -36,6 +36,8 @@ class UserSeeder extends Seeder
         'Crear Usuarios','Eliminar Cuentas','Permisos Usuarios','Ver Cuentas','Ver Usuarios',
         'Ver Inventario','Agregar Inventario','Editar Inventario','Eliminar Inventario');
         
+
+
         $user=User::create([
             'name' => 'Michelle',
             'email' => 'michelmiranda3786@gmail.com',
@@ -45,6 +47,8 @@ class UserSeeder extends Seeder
         $user->givePermissionTo('Agregar Cuentas','Cambiar Permisos','Cambiar Roles',
         'Crear Usuarios','Eliminar Cuentas','Permisos Usuarios','Ver Cuentas','Ver Usuarios',
         'Ver Inventario','Agregar Inventario','Editar Inventario','Eliminar Inventario');
+        
+
         
         $user=User::create([
             'name' => 'Orlando',
